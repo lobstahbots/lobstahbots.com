@@ -1,9 +1,10 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import '../styles/globals.css';
-import styles from './styles.module.css';
+import "../styles/globals.css";
+import styles from "./styles.module.css";
+import React from "react";
 
-export default function RootLayout({ children }: {
+export default function RootLayout ({ children }: {
   children: React.ReactNode;
 }) {
   return (
