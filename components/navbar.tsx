@@ -1,10 +1,11 @@
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import react from "react" 
+import styles from './navbar.module.css'
 
 export default function Navbar() {
     return (
-      <div className={styles.navbar}>
-      </div>
+      <header className={styles.navbar}>
+        <nav>
+          Temporary navbar
+        </nav>
+      </header>
     )
 } 
