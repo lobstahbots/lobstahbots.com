@@ -6,10 +6,12 @@
 
 .content {
   flex-grow: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .blurb {
   min-height: 400px;
   background-color: #eeeeee;
+  font-size:large
 }
 
