@@ -7,3 +7,9 @@
 .content {
   flex-grow: 1;
 }
+
+.blurb {
+  min-height: 400px;
+  background-color: #eeeeee;
+}
+

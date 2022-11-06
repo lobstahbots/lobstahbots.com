@@ -11,6 +11,7 @@ export default function RootLayout ({ children }: {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Team 246 | Lobstah Bots</title>
       </head>
       <body>
         <div className={styles.layout}>

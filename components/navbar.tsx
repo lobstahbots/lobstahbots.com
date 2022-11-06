@@ -4,7 +4,7 @@ export default function Navbar () {
   return (
     <header className={styles.navbar}>
       <nav>
-        Temporary navbar
+        Lobstah Bots Temporary Navbar
       </nav>
     </header>
   );
