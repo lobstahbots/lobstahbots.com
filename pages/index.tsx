@@ -3,7 +3,6 @@ import styles from "./index.module.css";
 export default function Page () {
   return (
     <main>
-      <h1>Team 246: Lobstah Bots</h1>
       <p>Boston University Academy&apos;s Robotics Team</p>
       <p>This website is a work-in-progress. Please check back later!</p>
       <div className = {styles.blurb}>
@@ -14,7 +13,7 @@ export default function Page () {
         <div>FIRST (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of FIRST is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership.
 The FIRST Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most FIRST alumni go to a 4-year college and end up employed in the STEM industry.
         </div>
-        <a href = "https://www.youtube.com/watch?v=-SjPVVeNdKY" target="_blank" rel="noopener noreferrer">
+        <a href = "/contact" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Learn More </button>
         </a>
       </div>
@@ -31,25 +30,25 @@ The FIRST Robotics Competition is an international program consisting of thousan
           <li>FIRST North Shore District Event Winner</li>
           <li>FIRST UMass Dartmouth District Event Finalist</li>
         </ul>
-        <a href = "https://www.youtube.com/watch?v=-SjPVVeNdKY" target="_blank" rel="noopener noreferrer">
+        <a href = "/history/awards" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Explore Our Awards</button>
         </a>
       </div>
       <div className = {styles.blurb}>
         <h2>Sponsors</h2>
-        <a href = "https://www.youtube.com/watch?v=-SjPVVeNdKY" target="_blank" rel="noopener noreferrer">
+        <a href = "/sponsors" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Explore Our Sponsors</button>
         </a>
       </div>
       <div className = {styles.blurb}>
         <h2>Our Team</h2>
-        <a href = "https://www.youtube.com/watch?v=-SjPVVeNdKY" target="_blank" rel="noopener noreferrer">
+        <a href = "/team" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Meet The Team</button>
         </a>
       </div>
       <div className = {styles.blurb}>
         <h2>Our Newsletter</h2>
-        <a href = "https://www.youtube.com/watch?v=-SjPVVeNdKY" target="_blank" rel="noopener noreferrer">
+        <a href = "/newsletter" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Explore The Newsletter</button>
         </a>
       </div>
