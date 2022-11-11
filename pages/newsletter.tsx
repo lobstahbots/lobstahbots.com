@@ -1,5 +1,5 @@
 export default function Newsletter () {
-  return(
+  return (
     <div>
       Newsletter
     </div>

@@ -2,7 +2,7 @@ import styles from "./gallery.module.css";
 import Image from "next/image";
 
 export default function Gallery () {
-  return(
+  return (
     <div> 
       <div className={styles.gallery}>
           <Image src="" alt="Cinque Terre" width="600" height="400"/>

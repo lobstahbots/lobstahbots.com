@@ -1,5 +1,5 @@
 export default function Donate () {
-  return(
+  return (
     <div>
       Donate
     </div>

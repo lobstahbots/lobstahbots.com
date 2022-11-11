@@ -1,7 +1,8 @@
 export default function Sponsors () {
-  return(
+  return (
     <div>
       Sponsors
     </div>
   );
 }
+

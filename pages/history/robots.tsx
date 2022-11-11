@@ -1,5 +1,5 @@
 export default function Robots () {
-  return(
+  return (
     <div>
       Robots
     </div>

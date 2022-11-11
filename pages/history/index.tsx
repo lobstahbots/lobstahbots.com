@@ -1,5 +1,5 @@
 export default function History () {
-  return(
+  return (
     <div>
       History
     </div>

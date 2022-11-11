@@ -1,5 +1,5 @@
 export default function Team () {
-  return(
+  return (
     <div>
       Team
     </div>

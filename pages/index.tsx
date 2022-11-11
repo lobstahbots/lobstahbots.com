@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Page () {
   return (

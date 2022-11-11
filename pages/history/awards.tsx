@@ -1,5 +1,5 @@
 export default function Awards () {
-  return(
+  return (
     <div>
       Awards
     </div>
