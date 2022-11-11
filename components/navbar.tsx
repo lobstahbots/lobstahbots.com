@@ -16,6 +16,9 @@ export default function Navbar () {
           <Link href = "/contact" className = {styles.menuOption}>Contact</Link>
           <Link href = "/newsletter" className = {styles.menuOption}>Newsletter</Link>
           <Link href = "/sponsors" className = {styles.menuOption}>Sponsors</Link>
+          <Link href = "/donate">
+            <button className={styles.button}>Donate!</button>
+          </Link>
         </div>
       </nav>
     </header>
