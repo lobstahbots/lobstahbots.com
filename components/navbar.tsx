@@ -9,13 +9,13 @@ export default function Navbar () {
           <a className = {styles.title}>Lobstah Bots</a>
         </div>
         <div className = {styles.menu}>
-          <a href = "/" className = {styles.menuOption}>Home</a>
-          <a href = "/history" className = {styles.menuOption}>History</a>
-          <a href = "/team" className = {styles.menuOption}>Our Team</a>
-          <a href = "/gallery" className = {styles.menuOption}>Gallery</a>
-          <a href = "/contact" className = {styles.menuOption}>Contact</a>
-          <a href = "/newsletter" className = {styles.menuOption}>Newsletter</a>
-          <a href = "/sponsors" className = {styles.menuOption}>Sponsors</a>
+          <Link href = "/" className = {styles.menuOption}>Home</Link>
+          <Link href = "/history" className = {styles.menuOption}>History</Link>
+          <Link href = "/team" className = {styles.menuOption}>Our Team</Link>
+          <Link href = "/gallery" className = {styles.menuOption}>Gallery</Link>
+          <Link href = "/contact" className = {styles.menuOption}>Contact</Link>
+          <Link href = "/newsletter" className = {styles.menuOption}>Newsletter</Link>
+          <Link href = "/sponsors" className = {styles.menuOption}>Sponsors</Link>
         </div>
       </nav>
     </header>
