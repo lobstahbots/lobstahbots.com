@@ -1,36 +1,7 @@
-.navbar {
-  padding: 2rem;
-  position: sticky;
-  align-self: flex-start;
+.header {
+  position: fixed;
   top: 0;
+  z-index: 10;
   width: 100%;
-  background-color: #FFF;
-  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.1);
-}
-
-.menuOption {
-  padding:10px;
-}
-
-.menu {
-  text-align:right;
-}
-
-.title {
-  color: #cc0000;
-  font-size:30px;
-}
-
-.button {
-  border: none;
-  background-color: #cc0000;
-  font-size: large;
-  color: white;
-  padding: 16px 16px;
-  border-radius: 2px;
-}
-
-.button:hover {
-  background-color: #aa0000;
-  color: white;
+  background-color: var(--color-primary);
 }
