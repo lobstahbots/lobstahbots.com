@@ -1,7 +1,85 @@
-.header {
+.wrapper {
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   background-color: var(--color-primary);
+  color: white;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 767.5px) {
+  .content {
+    padding: 0 2rem;
+  }
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  height: 6rem;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbarLinks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbarLinks {
+    display: flex;
+    align-items: baseline;
+    justify-content: right;
+    gap: 2rem;
+  }
+}
+
+.link {
+  padding: 1rem 0;
+  transition: opacity 0.15s;
+}
+
+.link:hover {
+  opacity: 80%;
+}
+
+.mobileNavToggle {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .mobileNavToggle {
+    display: none;
+  }
+}
+
+.mobileNav {
+  height: 100vh;
+}
+
+.mobileNav .link {
+  display: block;
+  font-size: 1.5rem;
 }

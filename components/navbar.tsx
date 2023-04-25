@@ -37,51 +37,50 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <header className={styles.header}>
-      <nav className="container">
-        <div className="flex h-24 flex-row items-center justify-between px-4 py-4 md:px-0">
-          <Link href="/" className="h-full">
+    <header className={styles.wrapper}>
+      <nav className={`container ${styles.content}`}>
+        <div className={styles.navbar}>
+          <Link href="/" className={styles.logo}>
             <Image
               src={logo}
               alt= "Claw Logo"
-              className="h-full max-w-full"
             />
-            <span className="sr-only">Home</span>
+            <span className="visually-hidden">Home</span>
           </Link>
-          <ul className="hidden list-none flex-row items-baseline justify-end gap-8 md:flex">
+          <ul className={styles.navbarLinks}>
             {links.map(({ label, to }) => (
-              <li key={to} className="group relative">
+              <li key={to}>
                 <Link
                   href={to}
-                  className="py-4 text-lg transition-colors hover:text-myro-blue"
+                  className={styles.link}
                 >
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-          <button className="md:hidden" onClick={() => setOpen(!isOpen)}>
+          <button className={styles.mobileNavToggle} onClick={() => setOpen(!isOpen)}>
             {isOpen ? (
               <>
                 <X />
-                <span className="sr-only">Close Menu</span>
+                <span className="visually-hidden">Close Menu</span>
               </>
             ) : (
               <>
                 <Menu />
-                <span className="sr-only">Menu</span>
+                <span className="visually-hidden">Menu</span>
               </>
             )}
           </button>
         </div>
         {isOpen && (
-          <div className="h-screen px-4 md:hidden">
+          <div className={styles.mobileNav}>
             <ul>
               {links.map(({ label, to }) => (
-                <li key={to}>
+                <li key={to} className={styles.mobileLinks}>
                   <Link
                     href={to}
-                    className="block py-4 text-2xl transition-colors hover:text-primary-500"
+                    className={styles.link}
                   >
                     {label}
                   </Link>
