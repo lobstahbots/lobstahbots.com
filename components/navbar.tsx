@@ -8,12 +8,14 @@ import styles from "./navbar.module.css";
 const Navbar = () => {
   let links = [
     {
-      label: "About",
-      to: "/about",
+      label: "History",
+      to: "/history",
     },
-    { label: "Science", to: "/science" },
-    { label: "News & Events", to: "/news-events" },
-    { label: "Join Us", to: "/join-us" },
+    { label: "Our Team", to: "/our-team" },
+    { label: "Newsletter", to: "/newsletter" },
+    { label: "Sponsors", to: "/sponsors" },
+    { label: "Gallery", to: "/gallery" },
+    { label: "Contact", to: "/contact" },
   ];
 
   const [isOpen, setOpen] = React.useState(false);
@@ -58,6 +60,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <Link href={"/donate"} className = {styles.donateButton}>Donate</Link>
           </ul>
           <button className={styles.mobileNavToggle} onClick={() => setOpen(!isOpen)}>
             {isOpen ? (

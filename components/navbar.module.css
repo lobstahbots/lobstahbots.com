@@ -83,3 +83,18 @@
   display: block;
   font-size: 1.5rem;
 }
+
+.donateButton {
+  border: 1px;
+  border-radius: 1em;
+  background-color: white;
+  color: #c40000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.donateButton:hover {
+  opacity: 80%;
+}
