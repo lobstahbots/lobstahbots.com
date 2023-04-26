@@ -96,5 +96,5 @@
 }
 
 .donateButton:hover {
-  opacity: 80%;
+  box-shadow: .5em .5em 0em rgb(80, 78, 78);
 }
