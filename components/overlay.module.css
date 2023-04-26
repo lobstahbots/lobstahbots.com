@@ -1,0 +1,14 @@
+.overlayContainer {
+  display: grid;
+  grid-template-areas: "area";
+}
+
+.background {
+  height: 100%;
+  grid-area: area;
+}
+
+.overlay {
+  height: 100%;
+  grid-area: area;
+}

@@ -1,0 +1,14 @@
+.section {
+  min-height: 1fr;
+  background-color: white;
+  color: black;
+}
+
+.teamPhoto {
+  width: 100%;
+  height: auto;
+}
+
+.photoText {
+  color: white;
+}

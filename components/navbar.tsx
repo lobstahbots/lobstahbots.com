@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { Menu, X } from "react-feather";
-import logo from "../images/claw-logo.svg";
+import logo from "../images/logos/claw-logo.svg";
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
