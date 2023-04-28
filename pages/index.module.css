@@ -12,3 +12,33 @@
 .photoText {
   color: white;
 }
+
+.sectionWithCols {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1em;
+}
+
+.rightCol {
+  grid-area: right;
+}
+
+.leftCol {
+  grid-area: left;
+}
+
+.moreButton {
+  border: 1px;
+  border-radius: 1em;
+  background-color: #c40000;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.moreButton:hover {
+  opacity: 80%;
+}
