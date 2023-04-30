@@ -42,3 +42,8 @@
 .moreButton:hover {
   opacity: 80%;
 }
+
+.mediaIcons {
+  display: flex;
+  gap: 1em;
+}

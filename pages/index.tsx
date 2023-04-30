@@ -3,6 +3,9 @@ import Overlay from "../components/overlay";
 import Image from "next/image";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
+import { Twitter } from "react-feather";
+import { Instagram } from "react-feather";
+import { Youtube } from "react-feather";
 
 export default function Page () {
   return (
@@ -55,6 +58,30 @@ export default function Page () {
               <Image src = {teamPhoto} alt = "Robot Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
+        </div>
+      </div>
+      <div className = {styles.section}>
+        <div className = "container">
+          <h2>See The Latest</h2>
+          <h4>Follow Us!</h4>
+          <div className = {styles.mediaIcons}>
+            <Link href = "https://twitter.com/"><Twitter/></Link>
+            <Link href = "https://instagram.com/"><Instagram/></Link>
+            <Link href = "https://youtube.com/"><Youtube/></Link>
+          </div>
+          <Link href= "/gallery" className = {styles.moreButton}>Gallery</Link>
+        </div>
+      </div>
+      <div className = {styles.section}>
+        <div className = "container">
+          <h2>See The Latest</h2>
+          <h4>Follow Us!</h4>
+          <div className = {styles.mediaIcons}>
+            <Link href = "https://twitter.com/"><Twitter/></Link>
+            <Link href = "https://instagram.com/"><Instagram/></Link>
+            <Link href = "https://youtube.com/"><Youtube/></Link>
+          </div>
+          <Link href= "/gallery" className = {styles.moreButton}>Gallery</Link>
         </div>
       </div>
     </main>
