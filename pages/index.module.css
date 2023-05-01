@@ -1,12 +1,10 @@
 .section {
   min-height: 12fr;
-  color: black;
 }
 
 .highlightedSection {
   min-height: 1fr;
-  color: black;
-  background-color: #c40000;
+  background-color: var(--color-primary);
 }
 
 .teamPhoto {
