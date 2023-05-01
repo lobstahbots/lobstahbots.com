@@ -20,7 +20,7 @@ export default function Page () {
       <div className = {styles.section}>
         <div className = "container">
           <h2>What is the FIRST Robotics Competition?</h2>
-          <div className = {styles.sectionWithCols}>
+          <div className = {styles.sectionWith2_1Cols}>
             <div className = {styles.leftCol}>
               <p>
                 FIRST (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of FIRST is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership. The FIRST Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most FIRST alumni go to a 4-year college and end up employed in the STEM industry.
@@ -37,8 +37,8 @@ export default function Page () {
       <div className = {styles.section}>
         <div className = "container">
           <h2>Explore the 2023 Season</h2>
-          <div className = {styles.sectionWithCols}>
-            <div className = {styles.leftCol}>
+          <div className = {styles.sectionWith1_2Cols}>
+            <div className = {styles.rightCol}>
               <h4>
                 <Link href = "https://www.thebluealliance.com/event/2023week0">Event 1: 2023 Week 0 in Nashua, NH</Link>
               </h4>
@@ -54,7 +54,7 @@ export default function Page () {
               <Link href= "/history" className = {styles.moreButton}>Explore Past Years</Link>
             </div>
 
-            <div className = {styles.rightCol}>
+            <div className = {styles.leftCol}>
               <Image src = {teamPhoto} alt = "Robot Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
@@ -74,14 +74,40 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h2>See The Latest</h2>
-          <h4>Follow Us!</h4>
-          <div className = {styles.mediaIcons}>
-            <Link href = "https://twitter.com/"><Twitter/></Link>
-            <Link href = "https://instagram.com/"><Instagram/></Link>
-            <Link href = "https://youtube.com/"><Youtube/></Link>
+          <div className = {styles.sectionWith1_1Cols}>
+            <div className = {styles.leftCol}>
+              <h2>Our Members Matter</h2>
+              <Link href= "/team" className = {styles.moreButton}>Our Team Members</Link>
+            </div>
+            <div className = {styles.rightCol}>
+              <Image src = {teamPhoto} alt = "Team Photo" className = {styles.teamPhoto}/>
+            </div>
           </div>
-          <Link href= "/gallery" className = {styles.moreButton}>Gallery</Link>
+        </div>
+      </div>
+      <div className = {styles.highlightedSection}>
+        <div className = "container">
+          <div className = {styles.sectionWith1_1Cols}>
+            <div className = {styles.leftCol}>
+              <h1>Support Us!</h1>
+              <Link href= "/sponsors" className = {styles.moreButton}>Sponsor Package</Link>
+              <Link href= "/contact" className = {styles.moreButton}>Contact Us</Link>
+              <Link href= "/donate" className = {styles.moreButton}>Donate!</Link>
+            </div>
+            <div className = {styles.rightCol}>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className = {styles.section}>
+        <div className = "container">
+          <h2>Our Sponsors</h2>
+          <div className = {styles.gallery}>
+            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
+            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
+            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
+          </div>
+          <Link href= "/sponsors" className = {styles.moreButton}>Explore Our Sponsors</Link>
         </div>
       </div>
     </main>
