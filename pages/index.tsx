@@ -44,29 +44,28 @@ export default function Page () {
           <div className = "sectionWith1_2Cols">
             <div className = "rightCol">
               <h4>
-                <Link href = "https://www.thebluealliance.com/event/2023week0">Event 1: 2023 Week 0 in Nashua, NH</Link>
+                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">Event 1: 2023 Week 0 in Nashua, NH</Link>
               </h4>
               <h4>
-                <Link href = "https://www.thebluealliance.com/event/2023rinsc">Event 2: 2023 New England District Rhode Island Event</Link>
+                <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">Event 2: 2023 New England District Rhode Island Event</Link>
               </h4>
               <h4>
-                <Link href = "https://www.thebluealliance.com/event/2023mabos">Event 3: 2023 New England District Greater Boston Event</Link>
+                <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">Event 3: 2023 New England District Greater Boston Event</Link>
               </h4>
               <h4>
-                <Link href = "https://www.thebluealliance.com/event/2023necmp2">Event 4: 2023 New England FIRST District Championships - Wilson Division</Link>
+                <Link href = "https://www.thebluealliance.com/event/2023necmp2" className="link">Event 4: 2023 New England FIRST District Championships - Wilson Division</Link>
               </h4>
               <div className={styles.buttonRow}>
                 <Link href= "/history" className ="button">Explore Past Years</Link>
               </div>
             </div>
-
             <div className = "leftCol">
               <Image src = {teamPhoto} alt = "Robot Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
         </div>
       </div>
-      <div className = {styles.section}>
+      <div className = {styles.graySection}>
         <div className = "container">
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
@@ -85,6 +84,9 @@ export default function Page () {
           <div className = "sectionWith1_1Cols">
             <div className = "leftCol">
               <h1>Our Members Matter</h1>
+              <div>
+              <p>What would a team be without its dedicated members? From freshman to senior year, high school students from all over the Greater Boston area collaborate, innovate, and cultivate a variety of practical real-world skills on Team 246.</p>
+              </div>
               <div className={styles.leftButtonRow}>
                 <Link href= "/team" className ="button">Our Team Members</Link>
               </div>
@@ -97,16 +99,19 @@ export default function Page () {
       </div>
       <div className = {styles.highlightedSection}>
         <div className = "container">
-          <div className = "sectionWith1_1Cols">
+          <div className = "sectionWith1_2Cols">
             <div className = "leftCol">
               <h1>Support Us!</h1>
               <div className={styles.leftButtonRow}>
                 <Link href= "/sponsors" className ="button">Sponsor Package</Link>
                 <Link href= "/contact" className ="button">Contact Us</Link>
-                <Link href= "/donate" className ="button">Donate!</Link>
+                <Link href= "/donate" className ="button">Donate</Link>
               </div>
             </div>
             <div className = "rightCol">
+            <div className = {styles.textBlock}>
+              <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
+            </div>
             </div>
           </div>
         </div>
@@ -118,9 +123,6 @@ export default function Page () {
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
-          </div>
-          <div className={styles.buttonRow}>
-            <Link href= "/sponsors" className ="button">Explore Our Sponsors</Link>
           </div>
         </div>
       </div>

@@ -20,6 +20,13 @@
   padding-bottom: 2rem;
 }
 
+.graySection {
+  background-color: #d2d4d6;
+  min-height: 1fr;
+  color: black;
+  padding-bottom: 2rem;
+}
+
 .teamPhoto {
   width: 100%;
   height: auto;
@@ -51,4 +58,8 @@
 .sponsorLogo {
   width: 12em;
   height: auto;
+}
+
+.textBlock {
+  padding-top: 5em;
 }
