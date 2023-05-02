@@ -14,18 +14,22 @@ export default function Page () {
         <Overlay background = {
           <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = {styles.teamPhoto}/>
         } content = {
-          <p className = {`${styles.photoText} container`}>We are Lobstah Bots, a FIRST Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
+          <div className={styles.photoDimBackground}>
+            <p className = {`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a FIRST Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
+          </div>
         }/>
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h2>What is the FIRST Robotics Competition?</h2>
-          <div className = {styles.sectionWith2_1Cols}>
+          <h1>What is the FIRST Robotics Competition?</h1>
+          <div className = {styles.sectionWith1_1Cols}>
             <div className = {styles.leftCol}>
               <p>
                 FIRST (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of FIRST is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership. The FIRST Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most FIRST alumni go to a 4-year college and end up employed in the STEM industry.
               </p>
-              <Link href= "https://www.firstinspires.org/" className = {styles.moreButton}>Explore FIRST</Link>
+              <div className={styles.rightButtonRow}>
+                <Link href= "https://www.firstinspires.org/" className ="button">Explore FIRST</Link>
+              </div>
             </div>
 
             <div className = {styles.rightCol}>
@@ -36,7 +40,7 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h2>Explore the 2023 Season</h2>
+          <h1>Explore the 2023 Season</h1>
           <div className = {styles.sectionWith1_2Cols}>
             <div className = {styles.rightCol}>
               <h4>
@@ -51,7 +55,9 @@ export default function Page () {
               <h4>
                 <Link href = "https://www.thebluealliance.com/event/2023necmp2">Event 4: 2023 New England FIRST District Championships - Wilson Division</Link>
               </h4>
-              <Link href= "/history" className = {styles.moreButton}>Explore Past Years</Link>
+              <div className={styles.buttonRow}>
+                <Link href= "/history" className ="button">Explore Past Years</Link>
+              </div>
             </div>
 
             <div className = {styles.leftCol}>
@@ -62,24 +68,28 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h2>See The Latest</h2>
+          <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
           <div className = {styles.mediaIcons}>
             <Link href = "https://twitter.com/"><Twitter/></Link>
             <Link href = "https://instagram.com/"><Instagram/></Link>
             <Link href = "https://youtube.com/"><Youtube/></Link>
           </div>
-          <Link href= "/gallery" className = {styles.moreButton}>Gallery</Link>
+          <div className={styles.buttonRow}>
+            <Link href= "/gallery" className ="button">Gallery</Link>
+          </div>
         </div>
       </div>
       <div className = {styles.section}>
         <div className = "container">
           <div className = {styles.sectionWith1_1Cols}>
             <div className = {styles.leftCol}>
-              <h2>Our Members Matter</h2>
-              <Link href= "/team" className = {styles.moreButton}>Our Team Members</Link>
+              <h1>Our Members Matter</h1>
+              <div className={styles.leftButtonRow}>
+                <Link href= "/team" className ="button">Our Team Members</Link>
+              </div>
             </div>
-            <div className = {styles.rightCol}>
+            <div className = {styles.leftButtonRow}>
               <Image src = {teamPhoto} alt = "Team Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
@@ -90,9 +100,11 @@ export default function Page () {
           <div className = {styles.sectionWith1_1Cols}>
             <div className = {styles.leftCol}>
               <h1>Support Us!</h1>
-              <Link href= "/sponsors" className = {styles.moreButton}>Sponsor Package</Link>
-              <Link href= "/contact" className = {styles.moreButton}>Contact Us</Link>
-              <Link href= "/donate" className = {styles.moreButton}>Donate!</Link>
+              <div className={styles.leftButtonRow}>
+                <Link href= "/sponsors" className ="button">Sponsor Package</Link>
+                <Link href= "/contact" className ="button">Contact Us</Link>
+                <Link href= "/donate" className ="button">Donate!</Link>
+              </div>
             </div>
             <div className = {styles.rightCol}>
             </div>
@@ -101,13 +113,15 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h2>Our Sponsors</h2>
+          <h1>Our Sponsors</h1>
           <div className = {styles.gallery}>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
           </div>
-          <Link href= "/sponsors" className = {styles.moreButton}>Explore Our Sponsors</Link>
+          <div className={styles.buttonRow}>
+            <Link href= "/sponsors" className ="button">Explore Our Sponsors</Link>
+          </div>
         </div>
       </div>
     </main>

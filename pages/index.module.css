@@ -2,9 +2,22 @@
   min-height: 12fr;
 }
 
+.buttonRow {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.rightButtonRow {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: right;
+}
+
 .highlightedSection {
+  color: white;
   min-height: 1fr;
   background-color: var(--color-primary);
+  padding-bottom: 2rem;
 }
 
 .teamPhoto {
@@ -12,8 +25,17 @@
   height: auto;
 }
 
+.photoDimBackground {
+  background: #000000AA;
+  height: 100%;
+}
+
 .photoText {
   color: white;
+  padding-top: 15rem;
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: 'Mundial';
 }
 
 .sectionWith2_1Cols {
@@ -43,21 +65,6 @@
 
 .leftCol {
   grid-area: left;
-}
-
-.moreButton {
-  border: 1px;
-  border-radius: 1em;
-  background-color: #c40000;
-  color: white;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.moreButton:hover {
-  opacity: 80%;
 }
 
 .mediaIcons {
