@@ -1,6 +1,24 @@
 .footer {
-  background-color: #AAA;
+  background-color: #c40000;
   padding: 4rem;
-  text-align: center;
+  text-align: left;
   margin-top: 2em;
+  color: white;
+}
+
+.logo {
+  height: 10em;
+  width: auto;
+  max-width: 100%;
+}
+
+.footerLinks {
+  list-style-type: none;
+  text-decoration: underline;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+.footerMenu {
+  padding-left: 12em;
 }

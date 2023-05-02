@@ -57,6 +57,46 @@ h1 {
   white-space: nowrap;
 }
 
+.sectionWith2_1Cols {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1em;
+}
+
+.sectionWith1_2Cols {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1em;
+}
+
+.sectionWith1_1Cols {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+}
+
+.sectionWith1_1_2Cols {
+  display: grid;
+  grid-template-areas: "left mid right";
+  grid-template-columns: 1fr 1fr 2fr;
+  column-gap: 1em;
+}
+
+.rightCol {
+  grid-area: right;
+}
+
+.leftCol {
+  grid-area: left;
+}
+
+.midCol {
+  grid-area: mid;
+}
+
 .container {
   margin: auto;
   padding: 0 1rem;

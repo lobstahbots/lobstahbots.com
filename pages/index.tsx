@@ -22,8 +22,8 @@ export default function Page () {
       <div className = {styles.section}>
         <div className = "container">
           <h1>What is the FIRST Robotics Competition?</h1>
-          <div className = {styles.sectionWith1_1Cols}>
-            <div className = {styles.leftCol}>
+          <div className = "sectionWith1_1Cols">
+            <div className = "leftCol">
               <p>
                 FIRST (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of FIRST is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership. The FIRST Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most FIRST alumni go to a 4-year college and end up employed in the STEM industry.
               </p>
@@ -32,7 +32,7 @@ export default function Page () {
               </div>
             </div>
 
-            <div className = {styles.rightCol}>
+            <div className = "rightCol">
               <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
@@ -41,8 +41,8 @@ export default function Page () {
       <div className = {styles.section}>
         <div className = "container">
           <h1>Explore the 2023 Season</h1>
-          <div className = {styles.sectionWith1_2Cols}>
-            <div className = {styles.rightCol}>
+          <div className = "sectionWith1_2Cols">
+            <div className = "rightCol">
               <h4>
                 <Link href = "https://www.thebluealliance.com/event/2023week0">Event 1: 2023 Week 0 in Nashua, NH</Link>
               </h4>
@@ -60,7 +60,7 @@ export default function Page () {
               </div>
             </div>
 
-            <div className = {styles.leftCol}>
+            <div className = "leftCol">
               <Image src = {teamPhoto} alt = "Robot Photo" className = {styles.teamPhoto}/>
             </div>
           </div>
@@ -82,8 +82,8 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <div className = {styles.sectionWith1_1Cols}>
-            <div className = {styles.leftCol}>
+          <div className = "sectionWith1_1Cols">
+            <div className = "leftCol">
               <h1>Our Members Matter</h1>
               <div className={styles.leftButtonRow}>
                 <Link href= "/team" className ="button">Our Team Members</Link>
@@ -97,8 +97,8 @@ export default function Page () {
       </div>
       <div className = {styles.highlightedSection}>
         <div className = "container">
-          <div className = {styles.sectionWith1_1Cols}>
-            <div className = {styles.leftCol}>
+          <div className = "sectionWith1_1Cols">
+            <div className = "leftCol">
               <h1>Support Us!</h1>
               <div className={styles.leftButtonRow}>
                 <Link href= "/sponsors" className ="button">Sponsor Package</Link>
@@ -106,7 +106,7 @@ export default function Page () {
                 <Link href= "/donate" className ="button">Donate!</Link>
               </div>
             </div>
-            <div className = {styles.rightCol}>
+            <div className = "rightCol">
             </div>
           </div>
         </div>
