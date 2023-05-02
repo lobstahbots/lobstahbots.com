@@ -14,13 +14,12 @@ export default function Footer () {
               <Image className = {styles.logo} src={logo} alt= "Claw Logo"/>
             </div>
             <div className = "midCol">
-              <h4>Copyright @2023 Lobstah Bots</h4>
+              <h4>Copyright &copy; 2023 Lobstah Bots</h4>
               <p>110 Cummington Mall <br></br>
                 Boston, MA 02478</p>
               <p>lobstahbots@gmail.com</p>
             </div>
             <div className= {`rightCol ${styles.footerMenu}`}>
-              <h3>Menu</h3>
               <ul className = {styles.footerLinks}>
                 <li><Link href = "/history">History</Link></li>
                 <li><Link href = "/team">Our Team</Link></li>
