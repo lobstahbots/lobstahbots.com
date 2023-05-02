@@ -3,7 +3,7 @@
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-black);
   color: white;
   font-size: 1.125rem;
 }
@@ -13,7 +13,6 @@
     padding: 0 2rem;
   }
 }
-
 
 .navbar {
   display: flex;
@@ -87,8 +86,8 @@
 .donateButton {
   border: 1px;
   border-radius: 1em;
-  background-color: white;
-  color: #c40000;
+  background-color: var(--color-primary);
+  color: white;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1em;

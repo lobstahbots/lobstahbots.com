@@ -1,0 +1,54 @@
+.section {
+  min-height: 12fr;
+}
+
+.buttonRow {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.rightButtonRow {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: right;
+}
+
+.highlightedSection {
+  color: white;
+  min-height: 1fr;
+  background-color: var(--color-primary);
+  padding-bottom: 2rem;
+}
+
+.teamPhoto {
+  width: 100%;
+  height: auto;
+}
+
+.photoDimBackground {
+  background: #000000AA;
+  height: 100%;
+}
+
+.photoText {
+  color: white;
+  padding-top: 15rem;
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: 'Mundial';
+}
+
+.mediaIcons {
+  display: flex;
+  gap: 1em;
+}
+
+.gallery {
+  display: flex;
+  gap: 1em;
+}
+
+.sponsorLogo {
+  width: 12em;
+  height: auto;
+}
