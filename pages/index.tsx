@@ -118,7 +118,7 @@ export default function Page () {
       </div>
       <div className = {styles.section}>
         <div className = "container">
-          <h1>Our Sponsors</h1>
+          <h1>2023 Sponsors</h1>
           <div className = {styles.gallery}>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
             <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
