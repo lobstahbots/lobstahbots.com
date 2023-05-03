@@ -6,6 +6,7 @@ import teamPhoto from "../images/index/team-photo.jpg";
 import { Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
+import { ArrowRight } from "react-feather";
 
 export default function Page () {
   return (
@@ -63,7 +64,7 @@ export default function Page () {
                 </div>
               
               <div className={styles.buttonRow}>
-                <Link href= "/history" className ="button">Explore Past Years</Link>
+                <Link href="/gallery" className={`${styles.seeMore} borderButton`}>Past Events <ArrowRight /></Link>
               </div>
             </div>
             <div className = "leftCol">
@@ -82,7 +83,7 @@ export default function Page () {
             <Link href = "https://youtube.com/"><Youtube/></Link>
           </div>
           <div className={styles.buttonRow}>
-            <Link href= "/gallery" className ="button">Gallery</Link>
+            <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link>
           </div>
         </div>
       </div>
@@ -95,7 +96,7 @@ export default function Page () {
                 <p>What would a team be without its dedicated members? From freshman to senior year, high school students from all over the Greater Boston area collaborate, innovate, and cultivate a variety of practical real-world skills on Team 246.</p>
               </div>
               <div className={styles.leftButtonRow}>
-                <Link href= "/team" className ="button">Our Team Members</Link>
+                <Link href= "/team" className ="button">Meet The Team</Link>
               </div>
             </div>
             <div className = {styles.leftButtonRow}>

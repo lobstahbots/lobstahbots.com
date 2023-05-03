@@ -40,6 +40,14 @@ h1 {
   padding: 0.5rem 1rem;
 }
 
+.borderButton {
+  display: inline-block;
+  border: 2px;
+  border-radius: 0.75em;
+  border-style: dotted;
+  padding: 0.5rem 1rem;
+}
+
 .button:hover {
   opacity: 80%;
 }
