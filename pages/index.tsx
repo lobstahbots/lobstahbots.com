@@ -12,7 +12,7 @@ export default function Page () {
     <main>
       <div className = {styles.section}>
         <Overlay background = {
-          <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = {styles.teamPhoto}/>
+          <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = "responsiveImage"/>
         } content = {
           <div className={styles.photoDimBackground}>
             <p className = {`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a FIRST Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
@@ -33,7 +33,7 @@ export default function Page () {
             </div>
 
             <div className = "rightCol">
-              <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = {styles.teamPhoto}/>
+              <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = "responsiveImage oppositeRoundCorners"/>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Page () {
               </div>
             </div>
             <div className = "leftCol">
-              <Image src = {teamPhoto} alt = "Robot Photo" className = {styles.teamPhoto}/>
+              <Image src = {teamPhoto} alt = "Robot Photo" className = "responsiveImage oppositeRoundCorners"/>
             </div>
           </div>
         </div>
@@ -92,14 +92,14 @@ export default function Page () {
             <div className = "leftCol">
               <h1>Our Members Matter</h1>
               <div>
-              <p>What would a team be without its dedicated members? From freshman to senior year, high school students from all over the Greater Boston area collaborate, innovate, and cultivate a variety of practical real-world skills on Team 246.</p>
+                <p>What would a team be without its dedicated members? From freshman to senior year, high school students from all over the Greater Boston area collaborate, innovate, and cultivate a variety of practical real-world skills on Team 246.</p>
               </div>
               <div className={styles.leftButtonRow}>
                 <Link href= "/team" className ="button">Our Team Members</Link>
               </div>
             </div>
             <div className = {styles.leftButtonRow}>
-              <Image src = {teamPhoto} alt = "Team Photo" className = {styles.teamPhoto}/>
+              <Image src = {teamPhoto} alt = "Team Photo" className = "responsiveImage oppositeRoundCorners"/>
             </div>
           </div>
         </div>
@@ -116,9 +116,9 @@ export default function Page () {
               </div>
             </div>
             <div className = "rightCol">
-            <div className = {styles.textBlock}>
-              <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
-            </div>
+              <div className = {styles.textBlock}>
+                <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
+              </div>
             </div>
           </div>
         </div>

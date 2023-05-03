@@ -102,6 +102,15 @@ h1 {
   grid-area: mid;
 }
 
+.responsiveImage {
+  width: 100%;
+  height: auto;
+}
+
+.oppositeRoundCorners {
+  border-radius: 1rem 0 1rem 0;
+}
+
 .container {
   margin: auto;
   padding: 0 1rem;

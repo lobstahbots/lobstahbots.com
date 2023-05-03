@@ -27,11 +27,6 @@
   padding-bottom: 2rem;
 }
 
-.teamPhoto {
-  width: 100%;
-  height: auto;
-}
-
 .photoDimBackground {
   background: #000000AA;
   height: 100%;
@@ -52,6 +47,7 @@
 
 .gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
