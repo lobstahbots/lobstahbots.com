@@ -43,18 +43,25 @@ export default function Page () {
           <h1>Explore the 2023 Season</h1>
           <div className = "sectionWith1_2Cols">
             <div className = "rightCol">
-              <h4>
-                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">Event 1: 2023 Week 0 in Nashua, NH</Link>
-              </h4>
-              <h4>
-                <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">Event 2: 2023 New England District Rhode Island Event</Link>
-              </h4>
-              <h4>
-                <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">Event 3: 2023 New England District Greater Boston Event</Link>
-              </h4>
-              <h4>
-                <Link href = "https://www.thebluealliance.com/event/2023necmp2" className="link">Event 4: 2023 New England FIRST District Championships - Wilson Division</Link>
-              </h4>
+              <div className={styles.eventLinks}>
+              <div className={styles.link}>
+                <h3>Event 1:</h3>
+                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
+              </div>
+                <div className={styles.link}>
+                  <h3>Event 2:</h3>
+                  <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">2023 New England District Rhode Island Event</Link>
+                </div>
+                <div className={styles.link}>
+                  <h3>Event 3:</h3>
+                  <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">2023 New England District Greater Boston Event</Link>
+                </div>
+                <div className={styles.link}>
+                  <h3>Event 4:</h3>
+                  <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
+                </div>
+                </div>
+              
               <div className={styles.buttonRow}>
                 <Link href= "/history" className ="button">Explore Past Years</Link>
               </div>

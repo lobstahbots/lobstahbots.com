@@ -63,3 +63,14 @@
 .textBlock {
   padding-top: 5em;
 }
+
+.eventLinks {
+  font-weight: 500;
+  display: flex;
+}
+
+.link {
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+}
