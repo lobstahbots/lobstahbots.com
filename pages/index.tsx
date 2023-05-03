@@ -11,7 +11,7 @@ import { ArrowRight } from "react-feather";
 export default function Page () {
   return (
     <main>
-      <div className = {styles.section}>
+      <div className = "section">
         <Overlay background = {
           <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = "responsiveImage"/>
         } content = {
@@ -20,7 +20,7 @@ export default function Page () {
           </div>
         }/>
       </div>
-      <div className = {styles.section}>
+      <div className = "section">
         <div className = "container">
           <h1>What is the FIRST Robotics Competition?</h1>
           <div className = "sectionWith1_1Cols">
@@ -39,16 +39,16 @@ export default function Page () {
           </div>
         </div>
       </div>
-      <div className = {styles.section}>
+      <div className = "section">
         <div className = "container">
           <h1>Explore the 2023 Season</h1>
           <div className = "sectionWith1_2Cols">
             <div className = "rightCol">
               <div className={styles.eventLinks}>
-              <div className={styles.link}>
-                <h3>Event 1:</h3>
-                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
-              </div>
+                <div className={styles.link}>
+                  <h3>Event 1:</h3>
+                  <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
+                </div>
                 <div className={styles.link}>
                   <h3>Event 2:</h3>
                   <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">2023 New England District Rhode Island Event</Link>
@@ -61,8 +61,8 @@ export default function Page () {
                   <h3>Event 4:</h3>
                   <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
                 </div>
-                </div>
-              
+              </div>
+
               <div className={styles.buttonRow}>
                 <Link href="/gallery" className={`${styles.seeMore} borderButton`}>Past Events <ArrowRight /></Link>
               </div>
@@ -73,7 +73,7 @@ export default function Page () {
           </div>
         </div>
       </div>
-      <div className = {styles.graySection}>
+      <div className = "graySection">
         <div className = "container">
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
@@ -87,7 +87,7 @@ export default function Page () {
           </div>
         </div>
       </div>
-      <div className = {styles.section}>
+      <div className = "section">
         <div className = "container">
           <div className = "sectionWith1_1Cols">
             <div className = "leftCol">
@@ -105,7 +105,7 @@ export default function Page () {
           </div>
         </div>
       </div>
-      <div className = {styles.highlightedSection}>
+      <div className = "highlightedSection">
         <div className = "container">
           <div className = "sectionWith1_2Cols">
             <div className = "leftCol">
@@ -124,7 +124,7 @@ export default function Page () {
           </div>
         </div>
       </div>
-      <div className = {styles.section}>
+      <div className = "section">
         <div className = "container">
           <h1>2023 Sponsors</h1>
           <div className = {styles.gallery}>

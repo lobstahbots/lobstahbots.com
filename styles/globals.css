@@ -70,6 +70,50 @@ h1 {
   white-space: nowrap;
 }
 
+.highlightedSection {
+  color: white;
+  min-height: 1fr;
+  background-color: var(--color-primary);
+  padding-bottom: 2rem;
+}
+
+.graySection {
+  background-color: #e2e4e6;
+  min-height: 1fr;
+  color: black;
+  padding-bottom: 2rem;
+}
+
+.section {
+  min-height: 12fr;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 1em;
+  text-align: start;
+}
+
+input:focus {
+  border: 3px solid #555;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 1em;
+  text-align: start;
+}
+
+textarea:focus {
+  border: 3px solid #555;
+}
+
 .sectionWith2_1Cols {
   display: grid;
   grid-template-areas: "left right";

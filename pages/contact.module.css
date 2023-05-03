@@ -1,0 +1,19 @@
+.main {
+  height: 60em;
+}
+
+.form {
+  display: block;
+}
+
+.longInput {
+  min-height: 5em;
+}
+
+.input {
+  margin: 1em 0;
+}
+
+.submit {
+  font-size: 1em;
+}
