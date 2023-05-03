@@ -3,6 +3,10 @@ import Overlay from "../components/overlay";
 import Image from "next/image";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
+import BULogo from "../images/sponsor-logos/BULogo.png";
+import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
+import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
+import HaasLogo from "../images/sponsor-logos/HaasLogo.png";
 import { Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
@@ -128,9 +132,10 @@ export default function Page () {
         <div className = "container">
           <h1>2023 Sponsors</h1>
           <div className = {styles.gallery}>
-            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
-            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
-            <Image src = {teamPhoto} alt = "Team Photo" className = {styles.sponsorLogo}/>
+            <Image src = {BayerLogo} alt = "Bayer Logo" className = {styles.sponsorLogo}/>
+            <Image src = {BoeingLogo} alt = "Boeing Logo" className = {styles.sponsorLogo}/>
+            <Image src = {BULogo} alt = "BU Logo" className = {styles.sponsorLogo}/>
+            <Image src = {HaasLogo} alt = "Haas Logo" className = {styles.sponsorLogo}/>
           </div>
         </div>
       </div>
