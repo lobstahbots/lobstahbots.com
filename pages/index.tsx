@@ -7,6 +7,7 @@ import BULogo from "../images/sponsor-logos/BULogo.png";
 import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
 import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
 import HaasLogo from "../images/sponsor-logos/HaasLogo.png";
+import BUALogo from "../images/sponsor-logos/BUALogo.png";
 import { Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
@@ -136,6 +137,7 @@ export default function Page () {
             <Image src = {BoeingLogo} alt = "Boeing Logo" className = {styles.sponsorLogo}/>
             <Image src = {BULogo} alt = "BU Logo" className = {styles.sponsorLogo}/>
             <Image src = {HaasLogo} alt = "Haas Logo" className = {styles.sponsorLogo}/>
+            <Image src = {BUALogo} alt = "BUA Logo" className = {styles.sponsorLogo}/>
           </div>
         </div>
       </div>
