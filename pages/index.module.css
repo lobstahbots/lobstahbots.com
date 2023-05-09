@@ -25,7 +25,8 @@
   padding-top: 15rem;
   font-size: 3rem;
   line-height: 5rem;
-  font-family: 'Mundial';
+  font-family: var(--font-primary);
+  font-weight: 400;
 }
 
 .mediaIcons {
