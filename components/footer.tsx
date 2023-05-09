@@ -16,7 +16,7 @@ export default function Footer () {
             <div className = "midCol">
               <h4>Copyright &copy; 2023 Lobstah Bots</h4>
               <p>110 Cummington Mall <br></br>
-                Boston, MA 02478</p>
+                Boston, MA 02215</p>
               <p>lobstahbots@gmail.com</p>
             </div>
             <div className= {`rightCol ${styles.footerMenu}`}>
