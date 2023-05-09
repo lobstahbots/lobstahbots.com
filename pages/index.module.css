@@ -9,6 +9,12 @@
   justify-content: right;
 }
 
+.leftButtonRow {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: left;
+}
+
 .photoDimBackground {
   background: #000000AA;
   height: 100%;
