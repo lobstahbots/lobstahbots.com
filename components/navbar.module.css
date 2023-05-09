@@ -3,7 +3,7 @@
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-neutral-100);
   color: white;
   font-size: 1.125rem;
 }
@@ -86,7 +86,7 @@
 .donateButton {
   border: 1px;
   border-radius: 1em;
-  background-color: var(--color-primary);
+  background-color: var(--color-brand);
   color: white;
   padding-top: 0.5em;
   padding-bottom: 0.5em;

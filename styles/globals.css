@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/blh0nax.css");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,9 +5,15 @@
 }
 
 body {
-  --color-primary: #c40000;
-  --color-black: #020406;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --color-brand: #c40000;
+  --color-neutral-10: #F2F4F6;
+  --color-neutral-70: #222426;
+  --color-neutral-90: #121416;
+  --color-neutral-100: #020406;
+  --font-primary: "Mundial", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-primary);
+  color: var(--color-neutral-100);
+  font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
@@ -24,7 +28,8 @@ p {
 }
 
 h1 {
-  font-family: "Mundial";
+  font-family: var(--font-primary);
+  font-weight: 700;
   font-size: 3rem;
   line-height: 4rem;
   margin-top: 4rem;
@@ -35,7 +40,7 @@ h1 {
   display: inline-block;
   border: 1px;
   border-radius: 0.75em;
-  background-color: #c40000;
+  background-color: var(--color-brand);
   color: white;
   padding: 0.5rem 1rem;
 }
@@ -54,7 +59,7 @@ h1 {
 
 .link {
   text-decoration: underline;
-  color: #c40000;
+  color: var(--color-brand);
 }
 
 .visually-hidden {
@@ -73,12 +78,12 @@ h1 {
 .highlightedSection {
   color: white;
   min-height: 1fr;
-  background-color: var(--color-primary);
+  background-color: var(--color-brand);
   padding-bottom: 2rem;
 }
 
 .graySection {
-  background-color: #e2e4e6;
+  background-color: var(--color-neutral-10);
   min-height: 1fr;
   color: black;
   padding-bottom: 2rem;
