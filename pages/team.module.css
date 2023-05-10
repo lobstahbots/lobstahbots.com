@@ -47,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  justify-content: center;
 }
 
 .profilePhoto {
@@ -62,7 +63,7 @@
 }
 
 .profile {
-  width: 20rem;
+  width: min-content;
   display: block;
 }
 
