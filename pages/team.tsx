@@ -51,7 +51,7 @@ export default function Team () {
           </div>
         </div>
       </div>
-      <div className="section">
+      <div className="graySection">
         <div className = "container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
