@@ -1,0 +1,70 @@
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 12em;
+  justify-content: center;
+  min-height: fit-content;
+  padding-bottom: 2em;
+}
+
+.stat {
+  width: auto;
+  height: fit-content;
+  text-align: center;
+}
+
+.number {
+  font-family: var(--font-primary);
+  color: var(--color-brand);
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-bottom: 0.1em;
+}
+
+.label {
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.centeredHeader {
+  font-family: var(--font-primary);
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.sectionWith2_1Cols {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2em;
+}
+
+.rightCol {
+  grid-area: right;
+}
+
+.leftCol {
+  grid-area: left;
+}
+
+.profilePhoto {
+  width: 20rem;
+  height: 20em;
+  object-fit: cover;
+}
+
+.name {
+  text-align: center;
+  font-weight: 600;
+}
+
+.blurb {
+  width: auto;
+  font-size: 0.9em;
+  line-height: 1em;
+}
