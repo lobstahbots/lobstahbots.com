@@ -1,0 +1,16 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.sponsorLogo {
+  width: auto;
+  height: 6em;
+}
+
+.leftButtonRow {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: left;
+}
