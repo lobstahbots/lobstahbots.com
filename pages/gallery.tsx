@@ -1,7 +1,7 @@
 
 export default function Gallery () {
   return (
-    <div>
-    </div>
+    <main>
+    </main>
   );
 }

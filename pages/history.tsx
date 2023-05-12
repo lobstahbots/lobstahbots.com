@@ -23,23 +23,17 @@ export default function History () {
           < div className = { styles.label } > Events Attended  </div>
         </div>
       </div>
-      <div className= "section">
-        <div className = "container">
-          <div className="sectionWith2_1Cols">
-            <div className="rightCol">
-              <div className={styles.profile}>
-                <Image className={styles.profilePhoto} src = {teamPhoto} alt = "Team Member Profile"/>
-                <div> Robot: Lobstah </div>
-                <p className = { styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
-              </div>
-            </div>
-            <div className="leftCol">
-              <div className={styles.name}> 2022 </div>
-              <div className={styles.name}> Rapid React </div>
-              <div className={styles.name}> Event </div>
-              <p className = { styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
-            </div>
-          </div>
+      <div className= "section container cols2_1">
+        <div>
+          <div className={styles.name}> 2022 </div>
+          <div className={styles.name}> Rapid React </div>
+          <div className={styles.name}> Event </div>
+          <p className = { styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
+        </div>
+        <div className={styles.profile}>
+          <Image className={styles.profilePhoto} src = {teamPhoto} alt = "Team Member Profile"/>
+          <div> Robot: Lobstah </div>
+          <p className = { styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
         </div>
       </div>
     </main>

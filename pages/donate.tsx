@@ -1,7 +1,7 @@
 export default function Donate () {
   return (
-    <div>
+    <main>
       Donate
-    </div>
+    </main>
   );
 }

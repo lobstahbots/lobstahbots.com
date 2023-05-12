@@ -1,9 +1,6 @@
-.main {
-  height: 60em;
-}
-
 .form {
   display: block;
+  max-width: 50%;
 }
 
 .longInput {

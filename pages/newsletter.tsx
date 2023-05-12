@@ -1,7 +1,7 @@
 export default function Newsletter () {
   return (
-    <div>
+    <main>
       Newsletter
-    </div>
+    </main>
   );
 }
