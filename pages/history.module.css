@@ -37,21 +37,6 @@
   padding-top: 3rem;
 }
 
-.sectionWith2_1Cols {
-  display: grid;
-  grid-template-areas: "left right";
-  grid-template-columns: 2fr 1fr;
-  column-gap: 2em;
-}
-
-.rightCol {
-  grid-area: right;
-}
-
-.leftCol {
-  grid-area: left;
-}
-
 .profilePhoto {
   width: 20rem;
   height: 20em;
