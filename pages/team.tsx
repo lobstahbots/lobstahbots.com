@@ -5,12 +5,12 @@ import Image from "next/image";
 export default function Team () {
   return (
     <main>
-      <div className="padded-block bg-gray">
+      <section className="padded-block bg-gray">
         <div className = "container">
           <Image src = {teamPhoto} className = {styles.headerImage} alt = "team photo"/>
         </div>
-      </div>
-      <div className = "section container">
+      </section>
+      <section className = "section container">
         <div className={styles.centeredHeader}>
             By The Numbers
         </div>
@@ -44,8 +44,8 @@ export default function Team () {
             < div className = { styles.label } > Students of Color </div>
           </div>
         </div>
-      </div>
-      <div className="section padded-block bg-gray">
+      </section>
+      <section className="section padded-block bg-gray">
         <div className="container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
@@ -92,8 +92,8 @@ export default function Team () {
             </div>
           </div>
         </div>
-      </div>
-      <div className="section container">
+      </section>
+      <section className="section container">
         <h1 > Student Leadership </h1>
         < div className = { styles.gallery } >
           <div className={ styles.profile }>
@@ -145,8 +145,8 @@ export default function Team () {
             < p className = { styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
         </div>
-      </div>
-      <div className="section container">
+      </section>
+      <section className="section container">
         < h1 > Student Members </h1>
         < div className = { styles.gallery } >
           <div className={ styles.profile }>
@@ -190,7 +190,7 @@ export default function Team () {
             < p className = { styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

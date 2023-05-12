@@ -6,10 +6,10 @@ import Image from "next/image";
 export default function History () {
   return (
     <main>
-      <div className={styles.centeredHeader}>
+      <h1 className={styles.centeredHeader}>
             Our History
-      </div>
-      <div className= {styles.stats}>
+      </h1>
+      <section className= {styles.stats}>
         <div className = { styles.stat }>
           <div className = { styles.number } > 25 </div>
           <div className = { styles.label } > Years </div>
@@ -22,8 +22,8 @@ export default function History () {
           <div className = { styles.number } > 55 </div>
           < div className = { styles.label } > Events Attended  </div>
         </div>
-      </div>
-      <div className= "section container cols2_1">
+      </section>
+      <section className= "section container cols2_1">
         <div>
           <div className={styles.name}> 2022 </div>
           <div className={styles.name}> Rapid React </div>
@@ -35,7 +35,7 @@ export default function History () {
           <div> Robot: Lobstah </div>
           <p className = { styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

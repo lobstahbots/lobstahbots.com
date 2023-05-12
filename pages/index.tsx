@@ -16,7 +16,7 @@ import { ArrowRight } from "react-feather";
 export default function Page () {
   return (
     <main>
-      <div>
+      <header>
         <Overlay background = {
           <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = "responsive-image"/>
         } content = {
@@ -24,8 +24,8 @@ export default function Page () {
             <p className = {`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a FIRST Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
           </div>
         }/>
-      </div>
-      <div className = "section container">
+      </header>
+      <section className = "section container">
         <h1>What is the FIRST Robotics Competition?</h1>
         <div className = "cols1_1">
           <div>
@@ -40,8 +40,8 @@ export default function Page () {
             <Image src = {teamPhoto} alt = "Lobstah Bots Team Photo" className = "responsive-image opposite-round-corners"/>
           </div>
         </div>
-      </div>
-      <div className = "section container">
+      </section>
+      <section className = "section container">
         <h1>Explore the 2023 Season</h1>
         <div className = "cols1_2">
           <div>
@@ -69,8 +69,8 @@ export default function Page () {
         <div className={styles.buttonRow}>
           <Link href="/gallery" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
         </div>
-      </div>
-      <div className="section padded-block bg-gray">
+      </section>
+      <section className="section padded-block bg-gray">
         <div className = "container">
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
@@ -83,8 +83,8 @@ export default function Page () {
             <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link>
           </div>
         </div>
-      </div>
-      <div className = "section container cols1_1">
+      </section>
+      <section className = "section container cols1_1">
         <div>
           <h1>Our Members Matter</h1>
           <div>
@@ -97,8 +97,8 @@ export default function Page () {
         <div>
           <Image src = {teamPhoto} alt = "Team Photo" className = "responsive-image opposite-round-corners"/>
         </div>
-      </div>
-      <div className="section padded-block bg-brand">
+      </section>
+      <section className="section padded-block bg-brand">
         <div className = "container cols1_2">
           <div>
             <h1>Support Us!</h1>
@@ -114,8 +114,8 @@ export default function Page () {
             </div>
           </div>
         </div>
-      </div>
-      <div className = "section container">
+      </section>
+      <section className = "section container">
         <h1>2023 Sponsors</h1>
         <div className = {styles.gallery}>
           <Image src = {BayerLogo} alt = "Bayer Logo" className = {styles.sponsorLogo}/>
@@ -124,7 +124,7 @@ export default function Page () {
           <Image src = {HaasLogo} alt = "Haas Logo" className = {styles.sponsorLogo}/>
           <Image src = {BUALogo} alt = "BUA Logo" className = {styles.sponsorLogo}/>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
