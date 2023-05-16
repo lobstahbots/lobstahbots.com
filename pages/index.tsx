@@ -37,7 +37,7 @@ export default function Page () {
             </div>
           </div>
           <div>
-            <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image opposite-round-corners"/>
+            <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image brand-border"/>
           </div>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function Page () {
         <h1>Explore the 2023 Season</h1>
         <div className="cols1_2">
           <div>
-            <Image src={teamPhoto} alt="Robot Photo" className="responsive-image opposite-round-corners"/>
+            <Image src={teamPhoto} alt="Robot Photo" className="responsive-image brand-border"/>
           </div>
           <div className={styles.eventLinks}>
             <div className={styles.link}>
@@ -95,7 +95,7 @@ export default function Page () {
           </div>
         </div>
         <div>
-          <Image src={teamPhoto} alt="Team Photo" className="responsive-image opposite-round-corners"/>
+          <Image src={teamPhoto} alt="Team Photo" className="responsive-image brand-border"/>
         </div>
       </section>
       <section className="section padded-block bg-brand">
