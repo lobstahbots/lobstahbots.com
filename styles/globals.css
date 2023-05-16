@@ -160,6 +160,21 @@ h1 {
   padding: 0.5rem 1rem;
 }
 
+.button-white {
+  display: inline-block;
+  border: 2px;
+  border-radius: 0.75em;
+  background-color: var(--color-brand);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-color: white;
+  border-style: solid;
+}
+
+.button-white:hover {
+  opacity: 80%;
+}
+
 .button:hover {
   opacity: 80%;
 }
