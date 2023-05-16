@@ -31,8 +31,8 @@ export default function History () {
           <p className={ styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
         </div>
         <div className={styles.profile}>
-          <Image className={styles.profilePhoto} src={teamPhoto} alt="Team Member Profile"/>
-          <div> Robot: Lobstah </div>
+          <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={teamPhoto} alt="2023 Robot (Llama)"/>
+          <div> Robot: Llama</div>
           <p className={ styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
         </div>
       </section>
