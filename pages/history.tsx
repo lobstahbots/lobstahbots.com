@@ -1,14 +1,15 @@
 
 
+import PageTitle from "../components/page-title";
 import teamPhoto from "../images/index/team-photo.jpg";
 import styles from "./history.module.css";
 import Image from "next/image";
 export default function History () {
   return (
     <main>
-      <h1 className={styles.centeredHeader}>
+      <PageTitle>
             Our History
-      </h1>
+      </PageTitle>
       <section className={styles.stats}>
         <div className={ styles.stat }>
           <div className={ styles.number } > 25 </div>

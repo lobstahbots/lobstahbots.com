@@ -1,3 +1,4 @@
+import PageTitle from "../components/page-title";
 import teamPhoto from "../images/index/team-photo.jpg";
 import styles from "./team.module.css";
 import Image from "next/image";
@@ -5,9 +6,10 @@ import Image from "next/image";
 export default function Team () {
   return (
     <main>
-      <section className="padded-block bg-gray">
+      <PageTitle>Our Team</PageTitle>
+      <section className="section">
         <div className="container">
-          <Image src={teamPhoto} className={"responsive-image {styles.headerImage}"} alt="team photo"/>
+          <Image src={teamPhoto} className={styles.headerImage} alt="team photo"/>
         </div>
       </section>
       <section className="section container">
