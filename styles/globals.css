@@ -122,9 +122,19 @@ img {
   column-gap: 3em;
 }
 
+.cols1_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -176,7 +186,6 @@ h1 {
 }
 
 .link {
-  text-decoration: underline;
   color: var(--color-brand);
 }
 

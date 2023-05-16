@@ -28,9 +28,24 @@
   line-height: 1.5rem;
 }
 
+<<<<<<< Updated upstream
 .profilePhoto {
   width: 20rem;
   height: 20em;
+=======
+.centeredHeader {
+  font-family: var(--font-primary);
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.robotPhoto {
+  width: 30rem;
+  height: 20rem;
+>>>>>>> Stashed changes
   object-fit: cover;
 }
 
@@ -40,7 +55,30 @@
 }
 
 .blurb {
-  width: auto;
   font-size: 0.9em;
   line-height: 1em;
+  max-width: 30rem;
+}
+
+.event {
+  display: flex;
+  padding-bottom: 0.3em;
+  gap: 0.5em;
+}
+
+.events {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+.externalLink {
+  vertical-align: top;
+  margin-top: 0.2em;
+}
+
+.robotName {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  max-width: 30rem;
 }
