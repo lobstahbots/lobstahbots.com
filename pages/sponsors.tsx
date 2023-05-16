@@ -24,8 +24,8 @@ export default function Sponsors () {
           <Image src={BUALogo} alt="BUA Logo" className={ styles.sponsorLogo }/>
         </div>
       </div>
-      <div className="section padded-block bg-brand">
-        <div className="container">
+      <div className="bg-brand">
+        <div className="section container">
           <h1>How Can You Help?</h1>
           <p>As a FIRST Robotics team, we rely on the support of our community to fund our robot builds, travel expenses, and outreach programs. We invite you to support the Lobstah Bots by making a donation! Your donation will help us continue our mission of providing students from all of Greater Boston with the opportunity to participate in the exciting and challenging world of robotics. From material to financial, contributions of any form are a huge support to our team.</p>
           <div className={ styles.leftButtonRow } >

@@ -87,20 +87,15 @@ img {
   margin-bottom: 4rem;
 }
 
-.padded-block {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .bg-brand {
+  display: flow-root;
   background-color: var(--color-brand);
   color: white;
-  padding: 2rem;
 }
 
 .bg-gray {
+  display: flow-root;
   background-color: var(--color-neutral-10);
-  padding: 2rem;
 }
 
 .cols2_1 {

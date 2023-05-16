@@ -70,8 +70,8 @@ export default function Page () {
           <Link href="/gallery" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
         </div>
       </section>
-      <section className="section padded-block bg-gray">
-        <div className="container">
+      <section className="bg-gray">
+        <div className="container section">
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
           <div className={styles.mediaIcons}>
@@ -98,8 +98,8 @@ export default function Page () {
           <Image src={teamPhoto} alt="Team Photo" className="responsive-image brand-border"/>
         </div>
       </section>
-      <section className="section padded-block bg-brand">
-        <div className="container cols1_2">
+      <section className="bg-brand">
+        <div className="section container cols1_2">
           <div>
             <h1>Support Us!</h1>
             <div className={styles.leftButtonRow}>

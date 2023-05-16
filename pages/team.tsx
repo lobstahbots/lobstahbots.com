@@ -47,8 +47,8 @@ export default function Team () {
           </div>
         </div>
       </section>
-      <section className="section padded-block bg-gray">
-        <div className="container">
+      <section className="bg-gray">
+        <div className="section container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
             <div className={styles.profile}>
