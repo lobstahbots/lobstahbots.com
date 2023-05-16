@@ -21,16 +21,16 @@ export default function Page () {
           <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image"/>
         } content={
           <div className={styles.photoDimBackground}>
-            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a FIRST Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
+            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i> Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
           </div>
         }/>
       </header>
       <section className="section container">
-        <h1>What is the FIRST Robotics Competition?</h1>
+        <h1>What is the <i>FIRST&reg;</i> Robotics Competition?</h1>
         <div className="cols1_1">
           <div>
             <p>
-                FIRST (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of FIRST is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership. The FIRST Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most FIRST alumni go to a 4-year college and end up employed in the STEM industry.
+              <i>FIRST</i> (For Inspiration and Recognition of Science and Technology) was founded in 1992 by Dean Kamen, inventor of the Segway. The mission of <i>FIRST</i> is to inspire young people to be science and technology leaders, by engaging them in exciting programs that build STEM skills and teach self-confidence, communication, and leadership. The <i>FIRST</i> Robotics Competition is an international program consisting of thousands of teams and tens of thousands of students. In FRC, students have just a few weeks to design, build, and code a 100+ pound robot that can compete in a complex engineering challenge. FRC gives students exposure to engineering, technical design, business management, marketing and many more skills that can be used in college and industry. Most <i>FIRST</i> alumni go to a 4-year college and end up employed in the STEM industry.
             </p>
             <div className={styles.rightButtonRow}>
               <Link href="https://www.firstinspires.org/" className="button">Explore FIRST</Link>
@@ -103,15 +103,13 @@ export default function Page () {
           <div>
             <h1>Support Us!</h1>
             <div className={styles.leftButtonRow}>
-              <Link href="/sponsors" className="button">Sponsor Package</Link>
-              <Link href="/contact" className="button">Contact Us</Link>
-              <Link href="/donate" className="button">Donate</Link>
+              <Link href="/sponsors" className="button-white">Sponsor Package</Link>
+              <Link href="/contact" className="button-white">Contact</Link>
+              <Link href="/donate" className="button-white">Donate</Link>
             </div>
           </div>
-          <div>
-            <div className={styles.textBlock}>
-              <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
-            </div>
+          <div className={styles.textBlock}>
+            <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
           </div>
         </div>
       </section>
