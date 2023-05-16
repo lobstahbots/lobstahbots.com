@@ -71,7 +71,8 @@ body {
   }
 }
 
-.responsive-image {
+img {
+  display: block;
   width: 100%;
   height: auto;
 }
