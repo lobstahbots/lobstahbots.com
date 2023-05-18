@@ -6,7 +6,7 @@ export default function Contact () {
       <div className={`section container ${styles.main}`}>
         <h1>Contact Us </h1>
         <p> 110 Cummington Mall <br></br>
-                Boston, MA 02478 </p>
+                Boston, MA 02215 </p>
         <p className="link"> lobstahbots@gmail.com</p>
         <div className={styles.form} >
           <form action="/email" method="post">

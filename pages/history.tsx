@@ -55,7 +55,7 @@ export default function History () {
           <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
         </div>
       </section>
-      <section className="section cols2_1 bg-gray">
+      <section className="section cols2_1">
         <div className="container">
           <h2>2022</h2>
           <Link href="https://www.youtube.com/watch?v=LgniEjI9cCM" className={styles.number}>Rapid React <ExternalLink className={styles.externalLink} /></Link>
