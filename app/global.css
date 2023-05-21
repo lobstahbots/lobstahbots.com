@@ -133,10 +133,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 p {
   margin-bottom: 1rem;
 }
@@ -187,6 +183,10 @@ h1 {
 
 .link {
   color: var(--color-brand);
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 input,
