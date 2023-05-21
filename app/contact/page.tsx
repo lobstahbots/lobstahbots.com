@@ -1,5 +1,9 @@
 import styles from "./styles.module.css";
 
+export const metadata = {
+  title: "Contact Us",
+};
+
 export default function Contact () {
   return (
     <main className="bg-gray">

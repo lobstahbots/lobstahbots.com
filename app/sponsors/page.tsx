@@ -7,6 +7,10 @@ import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Sponsors",
+};
+
 export default function Sponsors () {
   return (
     <main>

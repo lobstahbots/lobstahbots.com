@@ -7,6 +7,10 @@ import Link from "next/link";
 import { ExternalLink } from "react-feather";
 import PageTitle from "../../components/page-title";
 
+export const metadata = {
+  title: "Our History",
+};
+
 export default function History () {
   return (
     <main>

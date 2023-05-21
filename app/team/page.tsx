@@ -3,6 +3,10 @@ import teamPhoto from "../../images/index/team-photo.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 
+export const metadata = {
+  title: "Our Team",
+};
+
 export default function Team () {
   return (
     <main>

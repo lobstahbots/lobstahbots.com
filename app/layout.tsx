@@ -4,6 +4,19 @@ import Navbar from "../components/navbar";
 import "./global.css";
 import styles from "./layout.module.css";
 
+export const metadata = {
+  metadataBase: new URL("https://lobstahbots.com"),
+  title: {
+    template: "%s | 246 Lobstah Bots",
+    default: "Lobstah Bots | 246",
+  },
+  description: "The official website of Lobstah Bots, Boston University Academy's FIRST Robotics Competition team.",
+  alternates: {
+    canonical: "/",
+  },
+  themeColor: "#c40000",
+};
+
 export default function App ({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
