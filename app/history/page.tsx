@@ -1,7 +1,7 @@
 
 
-import teamPhoto from "../images/index/team-photo.jpg";
-import styles from "./history.module.css";
+import teamPhoto from "../../images/index/team-photo.jpg";
+import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "react-feather";

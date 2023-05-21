@@ -1,6 +1,6 @@
-import PageTitle from "../components/page-title";
-import teamPhoto from "../images/index/team-photo.jpg";
-import styles from "./team.module.css";
+import PageTitle from "../../components/page-title";
+import teamPhoto from "../../images/index/team-photo.jpg";
+import styles from "./styles.module.css";
 import Image from "next/image";
 
 export default function Team () {

@@ -1,4 +1,4 @@
-import styles from "./index.module.css";
+import styles from "./page.module.css";
 import Overlay from "../components/overlay";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,9 +1,9 @@
-import BULogo from "../images/sponsor-logos/BULogo.png";
-import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
-import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
-import HaasLogo from "../images/sponsor-logos/HaasLogo.png";
-import BUALogo from "../images/sponsor-logos/BUALogo.png";
-import styles from "./sponsors.module.css";
+import BULogo from "../../images/sponsor-logos/BULogo.png";
+import BayerLogo from "../../images/sponsor-logos/BayerLogo.png";
+import BoeingLogo from "../../images/sponsor-logos/BoeingLogo.png";
+import HaasLogo from "../../images/sponsor-logos/HaasLogo.png";
+import BUALogo from "../../images/sponsor-logos/BUALogo.png";
+import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
