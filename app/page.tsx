@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Overlay from "../components/overlay";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
 import BULogo from "../images/sponsor-logos/BULogo.png";

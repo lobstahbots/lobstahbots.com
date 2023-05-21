@@ -1,7 +1,7 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/team-photo.jpg";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 export default function Team () {
   return (

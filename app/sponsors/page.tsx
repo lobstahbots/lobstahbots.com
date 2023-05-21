@@ -4,7 +4,7 @@ import BoeingLogo from "../../images/sponsor-logos/BoeingLogo.png";
 import HaasLogo from "../../images/sponsor-logos/HaasLogo.png";
 import BUALogo from "../../images/sponsor-logos/BUALogo.png";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
 export default function Sponsors () {

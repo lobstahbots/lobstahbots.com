@@ -12,6 +12,10 @@
 /.next/
 /out/
 
+# next-image-export-optimizer
+/images/next-image-export-optimizer-hashes.json
+/public/optimized-images/
+
 # production
 /build
 
