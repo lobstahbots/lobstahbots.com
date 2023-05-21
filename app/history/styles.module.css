@@ -28,15 +28,6 @@
   line-height: 1.5rem;
 }
 
-.centeredHeader {
-  font-family: var(--font-primary);
-  text-align: center;
-  font-size: 4rem;
-  line-height: 4rem;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
-}
-
 .robotPhoto {
   width: 30rem;
   height: 20rem;
@@ -61,6 +52,7 @@
 }
 
 .events {
+  margin-left: 4em;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
 }
