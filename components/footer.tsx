@@ -21,9 +21,9 @@ export default function Footer () {
           <ul className={styles.footerLinks}>
             <li><Link href="/history">History</Link></li>
             <li><Link href="/team">Our Team</Link></li>
-            <li><Link href="/newsletter">Newsletter</Link></li>
+             {/* <li><Link href="/newsletter">Newsletter</Link></li> */}
             <li><Link href="/sponsors">Sponsors</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
+             {/* <li><Link href="/gallery">Gallery</Link></li> */}
             <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/donate">Donate</Link></li>
           </ul>

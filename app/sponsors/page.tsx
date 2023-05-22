@@ -3,6 +3,7 @@ import BayerLogo from "../../images/sponsor-logos/BayerLogo.png";
 import BoeingLogo from "../../images/sponsor-logos/BoeingLogo.png";
 import HaasLogo from "../../images/sponsor-logos/HaasLogo.png";
 import BUALogo from "../../images/sponsor-logos/BUALogo.png";
+import QualityGraphicsLogo from "../../images/sponsor-logos/QualityGraphicsLogo.svg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
@@ -26,6 +27,7 @@ export default function Sponsors () {
           <Image src={BULogo} alt="BU Logo" className={ styles.sponsorLogo }/>
           <Image src={HaasLogo} alt="Haas Logo" className={ styles.sponsorLogo }/>
           <Image src={BUALogo} alt="BUA Logo" className={ styles.sponsorLogo }/>
+          <Image src={QualityGraphicsLogo} alt = "Quality Graphics Logo" className = { styles.sponsorLogo } />
         </div>
       </div>
       <div className="bg-brand">

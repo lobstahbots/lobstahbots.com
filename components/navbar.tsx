@@ -14,9 +14,9 @@ const Navbar = () => {
       to: "/history",
     },
     { label: "Our Team", to: "/team" },
-    { label: "Newsletter", to: "/newsletter" },
+    // { label: "Newsletter", to: "/newsletter" },
     { label: "Sponsors", to: "/sponsors" },
-    { label: "Gallery", to: "/gallery" },
+    // { label: "Gallery", to: "/gallery" },
     { label: "Contact", to: "/contact" },
   ];
 

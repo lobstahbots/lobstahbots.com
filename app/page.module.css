@@ -53,12 +53,12 @@
 .eventLinks {
   font-weight: 500;
   display: flex;
+  align-self: center;
 }
 
 .link {
   flex-grow: 1;
   width: 100%;
-  text-align: center;
 }
 
 .seeMore {
