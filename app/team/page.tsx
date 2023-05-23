@@ -1,7 +1,11 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/team-photo.jpg";
+import teamPhoto2 from "../../images/index/week2-team-photo.jpg";
+import teamSelfie from "../../images/index/team-selfie.jpg";
+import placeholder from "../../images/profiles/placeholder-claw.png"
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
+import Overlay from "../../components/overlay";
 
 export const metadata = {
   title: "Our Team",
@@ -10,6 +14,13 @@ export const metadata = {
 export default function Team () {
   return (
     <main>
+      <Overlay background={
+        <Image src = { teamSelfie } alt = "Lobstah Bots Team Photo" className = "responsive-image"/>
+      } content = {
+        <div className = { styles.photoDimBackground }>
+          <p className={ `${styles.photoText} container` }>Our Team</p>
+        </div>
+      }/>
       <PageTitle>Our Team</PageTitle>
       <section className="section">
         <div className="container">
@@ -56,43 +67,43 @@ export default function Team () {
           <h1>Mentors</h1>
           <div className={styles.gallery}>
             <div className={styles.profile}>
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={teamPhoto} alt="Team Member Profile"/>
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile"/>
               <div className={styles.name}> Name </div>
               < div className={ styles.role } > Head Mentor </div>
               <p className={ styles.blurb }> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
             < div className={ styles.profile } >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
               <div className={ styles.name }> Name </div>
               < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
             </div>
@@ -103,49 +114,49 @@ export default function Team () {
         <h1 > Student Leadership </h1>
         < div className={ styles.gallery } >
           <div className={ styles.profile }>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             <div className={styles.role}>Mechanical Lead</div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             <div className={ styles.role }>CAD Lead</div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Programming Lead </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Electrical Lead </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Outreach & Business Lead </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Imagery & Branding Lead </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Student Board</div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < div className={ styles.role } > Student Board</div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
@@ -156,42 +167,42 @@ export default function Team () {
         < h1 > Student Members </h1>
         < div className={ styles.gallery } >
           <div className={ styles.profile }>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
           < div className={ styles.profile } >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ teamPhoto } alt="Team Member Profile" />
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ placeholder } alt="Team Member Profile" />
             <div className={ styles.name }> Name </div>
             < p className={ styles.blurb } > Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>

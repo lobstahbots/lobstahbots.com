@@ -3,6 +3,10 @@ import Overlay from "../components/overlay";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
+import eventPhoto from "../images/index/competition.jpeg";
+import matchPhoto from "../images/index/match-photo.JPG";
+import teamSelfie from "../images/index/team-selfie.jpg";
+import teamPhoto2 from "../images/index/week2-team-photo.jpg";
 import BULogo from "../images/sponsor-logos/BULogo.png";
 import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
 import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
@@ -39,7 +43,7 @@ export default function Page () {
             </div>
           </div>
           <div>
-            <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image brand-border"/>
+            <Image src={matchPhoto} alt="District Champs Match Photo" className="responsive-image brand-border"/>
           </div>
         </div>
       </section>
@@ -47,7 +51,7 @@ export default function Page () {
         <h1>Explore the 2023 Season</h1>
         <div className="cols1_2">
           <div>
-            <Image src={teamPhoto} alt="Robot Photo" className="responsive-image brand-border"/>
+            <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border"/>
           </div>
           <div className={styles.eventLinks}>
             <div className={styles.link}>
@@ -97,7 +101,7 @@ export default function Page () {
           </div>
         </div>
         <div>
-          <Image src={teamPhoto} alt="Team Photo" className="responsive-image brand-border"/>
+          <Image src={teamPhoto2} alt="Team Photo" className="responsive-image brand-border"/>
         </div>
       </section>
       <section className="bg-brand">

@@ -1,6 +1,8 @@
 
 
-import teamPhoto from "../../images/index/team-photo.jpg";
+import llama from "../../images/history/llama.JPG";
+import lobstah from "../../images/history/lobstah.jpeg";
+import burrito from "../../images/history/burrito.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
@@ -56,7 +58,7 @@ export default function History () {
             </div>
           </div>
           <div>
-            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={teamPhoto} alt="2023 Robot (Llama)" />
+            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={llama} alt="2023 Robot (Llama)" />
             <h3 className={styles.robotName}> Robot: <i>Llama</i></h3>
             <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
@@ -83,7 +85,7 @@ export default function History () {
             </div>
           </div>
           <div>
-            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={teamPhoto} alt="2022 Robot (Lobstah)" />
+            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={lobstah} alt="2022 Robot (Lobstah)" />
             <h3 className={styles.robotName}> Robot: <i>Lobstah</i></h3>
             <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
@@ -114,8 +116,8 @@ export default function History () {
             </div>
           </div>
           <div>
-            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={teamPhoto} alt="2021 Robot" />
-            <h3 className={styles.robotName}> Robot: <i>Lobstah</i></h3>
+            <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={burrito} alt="2021 Robot" />
+            <h3 className={styles.robotName}> Robot: <i>Burrito</i></h3>
             <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
           </div>
         </div>

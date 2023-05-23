@@ -29,7 +29,7 @@
 }
 
 .robotPhoto {
-  width: 30rem;
+  width: 20rem;
   height: 20rem;
   object-fit: cover;
 }
@@ -42,7 +42,7 @@
 .blurb {
   font-size: 0.9em;
   line-height: 1em;
-  max-width: 30rem;
+  max-width: 20rem;
 }
 
 .event {
@@ -66,5 +66,5 @@
   text-align: center;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  max-width: 30rem;
+  max-width: 20rem;
 }
