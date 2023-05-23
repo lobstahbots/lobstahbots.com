@@ -21,12 +21,12 @@ export default function Page () {
           <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image"/>
         } content={
           <div className={styles.photoDimBackground}>
-            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i> Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
+            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
           </div>
         }/>
       </header>
       <section className="section container">
-        <h1>What is the <i>FIRST&reg;</i> Robotics Competition?</h1>
+        <h1>What is the <i>FIRST</i> Robotics Competition?</h1>
         <div className="cols1_1">
           <div>
             <p>
