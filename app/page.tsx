@@ -3,11 +3,17 @@ import Overlay from "../components/overlay";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
+import eventPhoto from "../images/index/competition.jpeg";
+import matchPhoto from "../images/index/match-photo.JPG";
+import teamSelfie from "../images/index/team-selfie.jpg";
+import teamPhoto2 from "../images/index/week2-team-photo.jpg";
 import BULogo from "../images/sponsor-logos/BULogo.png";
 import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
 import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
 import HaasLogo from "../images/sponsor-logos/HaasLogo.png";
 import BUALogo from "../images/sponsor-logos/BUALogo.png";
+import QualityGraphicsLogo from "../images/sponsor-logos/QualityGraphicsLogo.svg";
+
 import { Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
@@ -37,7 +43,7 @@ export default function Page () {
             </div>
           </div>
           <div>
-            <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image brand-border"/>
+            <Image src={matchPhoto} alt="District Champs Match Photo" className="responsive-image brand-border"/>
           </div>
         </div>
       </section>
@@ -45,7 +51,7 @@ export default function Page () {
         <h1>Explore the 2023 Season</h1>
         <div className="cols1_2">
           <div>
-            <Image src={teamPhoto} alt="Robot Photo" className="responsive-image brand-border"/>
+            <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border"/>
           </div>
           <div className={styles.eventLinks}>
             <div className={styles.link}>
@@ -67,7 +73,7 @@ export default function Page () {
           </div>
         </div>
         <div className={styles.buttonRow}>
-          <Link href="/gallery" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
+          <Link href="/history" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
         </div>
       </section>
       <section className="bg-gray">
@@ -80,7 +86,7 @@ export default function Page () {
             <Link href="https://youtube.com/"><Youtube/></Link>
           </div>
           <div className={styles.buttonRow}>
-            <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link>
+            {/* <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link> */}
           </div>
         </div>
       </section>
@@ -95,7 +101,7 @@ export default function Page () {
           </div>
         </div>
         <div>
-          <Image src={teamPhoto} alt="Team Photo" className="responsive-image brand-border"/>
+          <Image src={teamPhoto2} alt="Team Photo" className="responsive-image brand-border"/>
         </div>
       </section>
       <section className="bg-brand">
@@ -121,6 +127,7 @@ export default function Page () {
           <Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo}/>
           <Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo}/>
           <Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo}/>
+          <Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} />
         </div>
       </section>
     </main>
