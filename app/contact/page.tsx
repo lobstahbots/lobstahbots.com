@@ -25,6 +25,7 @@ export default function Contact () {
               <textarea name="message" required className={styles.longInput}/>
             </div>
             <input type="hidden" name="replyTo" value="@" />
+            <input type="text" name="honeypot" style={{ display: "none" }} />
             <div className={styles.input}> <button type="submit" className={`button ${styles.submit}`}>Submit</button></div>
           </form>
         </div>
