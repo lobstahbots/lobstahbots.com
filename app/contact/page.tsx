@@ -13,16 +13,18 @@ export default function Contact () {
                 Boston, MA 02215 </p>
         <p className="link"> lobstahbots@gmail.com</p>
         <div className={styles.form} >
-          <form action="/email" method="post">
-            <div className={styles.input}> <label htmlFor="Name">Name</label>
-              <input type="text" id="Name" name="Name" required/></div>
-            <div className={styles.input}> <label htmlFor="Email Address">Email Address</label>
-              <input type="text" id="email" name="email" required/> </div>
-            <div className={styles.input}> <label htmlFor="Subject">Subject</label>
-              <input type="text" id="subject" name="subject" required/></div>
-            <div className={styles.input}> <label htmlFor="Message"> Message</label>
-              <textarea id="message" name="message" required className={styles.longInput}/>
+          <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="hidden" name="accessKey" value="be01a97e-addd-41dd-9bb1-3550b427a525" />
+            <div className={styles.input}> <label htmlFor="name">Name</label>
+              <input type="text" name="name" required/></div>
+            <div className={styles.input}> <label htmlFor="email">Email Address</label>
+              <input type="text" name="email" required/> </div>
+            <div className={styles.input}> <label htmlFor="subject">Subject</label>
+              <input type="text" name="subject" required/></div>
+            <div className={styles.input}> <label htmlFor="message"> Message</label>
+              <textarea name="message" required className={styles.longInput}/>
             </div>
+            <input type="hidden" name="replyTo" value="@" />
             <div className={styles.input}> <button type="submit" className={`button ${styles.submit}`}>Submit</button></div>
           </form>
         </div>
