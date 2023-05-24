@@ -25,7 +25,7 @@ export default function History () {
           <div className={ styles.label } > Years </div>
         </div>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 100 </div>
+          <div className={ styles.number } > 20 </div>
           < div className={ styles.label } > Total Awards Earned </div>
         </div>
         <div className={ styles.stat }>
@@ -60,7 +60,7 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={llama} alt="2023 Robot (Llama)" />
             <h3 className={styles.robotName}> Robot: <i>Llama</i></h3>
-            <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
+            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={lobstah} alt="2022 Robot (Lobstah)" />
             <h3 className={styles.robotName}> Robot: <i>Lobstah</i></h3>
-            <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
+            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>
@@ -118,7 +118,7 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={burrito} alt="2021 Robot" />
             <h3 className={styles.robotName}> Robot: <i>Burrito</i></h3>
-            <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p>
+            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>

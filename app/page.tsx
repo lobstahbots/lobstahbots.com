@@ -24,7 +24,7 @@ export default function Page () {
     <main>
       <header>
         <Overlay background={
-          <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image"/>
+          <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className="responsive-image"/>
         } content={
           <div className={styles.photoDimBackground}>
             <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
