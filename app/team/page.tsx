@@ -18,6 +18,11 @@ import sonya from "../../images/profiles/sonya.jpg";
 import sudeep from "../../images/profiles/sudeep.JPG";
 import terry from "../../images/profiles/terry.jpg";
 import veronica from "../../images/profiles/veronica.jpg";
+import owen from "../../images/profiles/owen.jpeg";
+import luke from "../../images/profiles/luke.jpg";
+import ajay from "../../images/profiles/ajay.jpg";
+import ilan from "../../images/profiles/ilan.jpg";
+import metch from "../../images/profiles/metch.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Overlay from "../../components/overlay";
@@ -166,6 +171,10 @@ export default function Team() {
         < h1 > Student Members </h1>
         < div className={styles.gallery} >
           <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ajay} alt="Team Member Profile" />
+            <div className={styles.name}> Ajay </div>
+          </div>
+          <div className={styles.profile}>
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={eli} alt="Team Member Profile" />
             <div className={styles.name}> Eli </div>
           </div>
@@ -177,9 +186,25 @@ export default function Team() {
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={fillippo} alt="Team Member Profile" />
             <div className={styles.name}> Fillippo </div>
           </div>
+          <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ilan} alt="Team Member Profile" />
+            <div className={styles.name}> Ilan </div>
+          </div>
+          <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={luke} alt="Team Member Profile" />
+            <div className={styles.name}> Luke </div>
+          </div>
+          <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={metch} alt="Team Member Profile" />
+            <div className={styles.name}> Metch </div>
+          </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={nathan} alt="Team Member Profile" />
             <div className={styles.name}> Nathan </div>
+          </div>
+          <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={owen} alt="Team Member Profile" />
+            <div className={styles.name}> Owen </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={quinten} alt="Team Member Profile" />
