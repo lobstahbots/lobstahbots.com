@@ -139,17 +139,17 @@ export default function Team() {
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={kendree} alt="Team Member Profile" />
             <div className={styles.name}> Kendree </div>
-            < div className={styles.role} > Programming Lead; Student Board </div>
+            < div className={styles.role} > Programming Lead <br/> Student Board </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
             <div className={styles.name}> Sonya </div>
-            < div className={styles.role} > Electrical Lead; Student Board</div>
+            < div className={styles.role} > Electrical Lead <br/> Student Board</div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={george} alt="Team Member Profile" />
             <div className={styles.name}> George </div>
-            < div className={styles.role} > Outreach & Business Lead; CEO </div>
+            < div className={styles.role} > Outreach & Business Lead <br/> CEO </div>
           </div>
           {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
