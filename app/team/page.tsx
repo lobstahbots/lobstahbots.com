@@ -23,6 +23,7 @@ import luke from "../../images/profiles/luke.jpg";
 import ajay from "../../images/profiles/ajay.jpg";
 import ilan from "../../images/profiles/ilan.jpg";
 import metch from "../../images/profiles/metch.jpg";
+import zach from "../../images/profiles/zach.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Overlay from "../../components/overlay";
@@ -105,15 +106,15 @@ export default function Team() {
             </div>
             < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-              <div className={styles.name}> Name </div>
+              <div className={styles.name}> Carolyn </div>
             </div>
             < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-              <div className={styles.name}> Name </div>
+              <div className={styles.name}> Sherman </div>
             </div>
             < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-              <div className={styles.name}> Name </div>
+              <div className={styles.name}> Ragu </div>
             </div>
             < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
@@ -125,7 +126,7 @@ export default function Team() {
       <section className="section container">
         <h1 > Student Leadership </h1>
         < div className={styles.gallery} >
-          <div className={styles.profile}>
+          {/* <div className={styles.profile}>
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
             <div className={styles.name}> Name </div>
             <div className={styles.role}>Mechanical Lead</div>
@@ -134,37 +135,37 @@ export default function Team() {
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
             <div className={styles.name}> Name </div>
             <div className={styles.role}>CAD Lead</div>
-          </div>
+          </div> */}
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={kendree} alt="Team Member Profile" />
             <div className={styles.name}> Kendree </div>
-            < div className={styles.role} > Programming Lead </div>
+            < div className={styles.role} > Programming Lead; Student Board </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
             <div className={styles.name}> Sonya </div>
-            < div className={styles.role} > Electrical Lead </div>
+            < div className={styles.role} > Electrical Lead; Student Board</div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={george} alt="Team Member Profile" />
             <div className={styles.name}> George </div>
-            < div className={styles.role} > Outreach & Business Lead </div>
+            < div className={styles.role} > Outreach & Business Lead; CEO </div>
           </div>
-          < div className={styles.profile} >
+          {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
             <div className={styles.name}> Name </div>
             < div className={styles.role} > Imagery & Branding Lead </div>
-          </div>
+          </div> */}
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={maxwell} alt="Team Member Profile" />
             <div className={styles.name}> Maxwell </div>
             < div className={styles.role} > Student Board</div>
           </div>
-          < div className={styles.profile} >
+          {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
             <div className={styles.name}> Name </div>
             < div className={styles.role} > Student Board</div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="section container">
@@ -221,6 +222,10 @@ export default function Team() {
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={terry} alt="Team Member Profile" />
             <div className={styles.name}> Terry </div>
+          </div>
+          < div className={styles.profile} >
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={zach} alt="Team Member Profile" />
+            <div className={styles.name}> Zach </div>
           </div>
         </div>
       </section>
