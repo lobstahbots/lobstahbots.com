@@ -54,7 +54,7 @@ export default function Team() {
         </div>
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <div className={styles.number}>40</div>
+            <div className={styles.number}>30</div>
             <div className={styles.label}>Students</div>
           </div>
           <div className={styles.stat} >
@@ -66,11 +66,11 @@ export default function Team() {
             < div className={styles.label} > Years </div>
           </div>
           <div className={styles.stat} >
-            <div className={styles.number} > 20 </div>
+            <div className={styles.number} > 21 </div>
             < div className={styles.label} > Awards Won </div>
           </div>
           <div className={styles.stat} >
-            <div className={styles.number} > 15 </div>
+            <div className={styles.number} > 11 </div>
             < div className={styles.label} > Towns Represented </div>
           </div>
           <div className={styles.stat} >
@@ -87,11 +87,11 @@ export default function Team() {
         <div className="section container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
-            <div className={styles.profile}>
+            {/* <div className={styles.profile}>
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
               <div className={styles.name}> Name </div>
               < div className={styles.role} > Head Mentor </div>
-            </div>
+            </div> */}
             < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={veronica} alt="Team Member Profile" />
               <div className={styles.name}> Veronica </div>
@@ -116,10 +116,10 @@ export default function Team() {
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
               <div className={styles.name}> Ragu </div>
             </div>
-            < div className={styles.profile} >
+            {/* < div className={styles.profile} >
               <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
               <div className={styles.name}> Name </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

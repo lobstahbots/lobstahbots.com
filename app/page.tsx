@@ -27,7 +27,7 @@ export default function Page () {
           <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className="responsive-image"/>
         } content={
           <div className={styles.photoDimBackground}>
-            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team that aims to bring access to robotics to students in the Greater Boston area.</p>
+            <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team based out of Boston University Academy that aims to bring access to robotics to students in the Greater Boston area.</p>
           </div>
         }/>
       </header>
@@ -81,9 +81,9 @@ export default function Page () {
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
           <div className={styles.mediaIcons}>
-            <Link href="https://twitter.com/"><Twitter/></Link>
-            <Link href="https://instagram.com/"><Instagram/></Link>
-            <Link href="https://youtube.com/"><Youtube/></Link>
+            <Link href="https://twitter.com/"><Twitter className = {styles.mediaIcon} /></Link>
+            <Link href="https://www.instagram.com/burobotics246/?hl=en"><Instagram className={styles.mediaIcon} /></Link>
+            <Link href="https://www.youtube.com/@burobotics/"><Youtube className={styles.mediaIcon} /></Link>
           </div>
           <div className={styles.buttonRow}>
             {/* <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link> */}

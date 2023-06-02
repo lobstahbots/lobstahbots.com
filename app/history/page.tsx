@@ -25,11 +25,11 @@ export default function History () {
           <div className={ styles.label } > Years </div>
         </div>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 20 </div>
+          <div className={ styles.number } > 21 </div>
           < div className={ styles.label } > Total Awards Earned </div>
         </div>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 55 </div>
+          <div className={ styles.number } > 63 </div>
           < div className={ styles.label } > Events Attended  </div>
         </div>
       </section>

@@ -33,6 +33,12 @@
 .mediaIcons {
   display: flex;
   gap: 1em;
+  padding-top: 1em;
+}
+
+.mediaIcon {
+  width: 2em;
+  height: auto;
 }
 
 .gallery {
