@@ -1,7 +1,5 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/team-photo.jpg";
-import teamPhoto2 from "../../images/index/week2-team-photo.jpg";
-import teamSelfie from "../../images/index/team-selfie.jpg";
 import placeholder from "../../images/profiles/placeholder-claw.png"
 import eli from "../../images/profiles/eli.jpg";
 import ella from "../../images/profiles/ella.jpg";
@@ -26,7 +24,6 @@ import metch from "../../images/profiles/metch.jpg";
 import zach from "../../images/profiles/zach.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
-import Overlay from "../../components/overlay";
 
 export const metadata = {
   title: "Our Team",
@@ -139,17 +136,17 @@ export default function Team() {
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={kendree} alt="Team Member Profile" />
             <div className={styles.name}> Kendree </div>
-            < div className={styles.role} > Programming Lead <br/> Student Board </div>
+            < div className={styles.role} > Programming Lead <br /> Student Board </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
             <div className={styles.name}> Sonya </div>
-            < div className={styles.role} > Electrical Lead <br/> Student Board</div>
+            < div className={styles.role} > Electrical Lead <br /> Student Board</div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={george} alt="Team Member Profile" />
             <div className={styles.name}> George </div>
-            < div className={styles.role} > Outreach & Business Lead <br/> CEO </div>
+            < div className={styles.role} > Outreach & Business Lead <br /> CEO </div>
           </div>
           {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
