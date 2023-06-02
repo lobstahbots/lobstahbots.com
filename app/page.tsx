@@ -109,7 +109,7 @@ export default function Page () {
           <div>
             <h1>Support Us!</h1>
             <div className={styles.leftButtonRow}>
-              <Link href="/sponsors" className="button-white">Sponsor Package</Link>
+              <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsor Package</Link>
               <Link href="/contact" className="button-white">Contact</Link>
               <Link href="/donate" className="button-white">Donate</Link>
             </div>
