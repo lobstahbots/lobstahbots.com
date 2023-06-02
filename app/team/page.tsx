@@ -200,7 +200,8 @@ export default function Team() {
           </div>
           <div className={styles.profile}>
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={owen} alt="Team Member Profile" />
-            <div className={styles.name}> Owen <br/> Drive Team: Human Player</div>
+            <div className={styles.name}> Owen</div>
+            <div className={styles.role}>Drive Team: Human Player</div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={quinten} alt="Team Member Profile" />
