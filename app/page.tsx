@@ -2,7 +2,6 @@ import styles from "./page.module.css";
 import Overlay from "../components/overlay";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
-import teamPhoto from "../images/index/team-photo.jpg";
 import eventPhoto from "../images/index/competition.jpeg";
 import matchPhoto from "../images/index/match-photo.jpg";
 import teamSelfie from "../images/index/team-selfie.jpg";
@@ -19,17 +18,17 @@ import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
 
-export default function Page () {
+export default function Page() {
   return (
     <main>
       <header>
         <Overlay background={
-          <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className="responsive-image"/>
+          <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className="responsive-image" />
         } content={
           <div className={styles.photoDimBackground}>
             <p className={`${styles.photoText} container`}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team based out of Boston University Academy that aims to bring access to robotics to students in the Greater Boston area.</p>
           </div>
-        }/>
+        } />
       </header>
       <section className="section container">
         <h1>What is the <i>FIRST</i> Robotics Competition?</h1>
@@ -43,7 +42,7 @@ export default function Page () {
             </div>
           </div>
           <div>
-            <Image src={matchPhoto} alt="District Champs Match Photo" className="responsive-image brand-border"/>
+            <Image src={matchPhoto} alt="District Champs Match Photo" className="responsive-image brand-border" />
           </div>
         </div>
       </section>
@@ -51,7 +50,7 @@ export default function Page () {
         <h1>Explore the 2023 Season</h1>
         <div className="cols1_2">
           <div>
-            <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border"/>
+            <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border" />
           </div>
           <div className={styles.eventLinks}>
             <div className={styles.link}>
@@ -81,7 +80,7 @@ export default function Page () {
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
           <div className={styles.mediaIcons}>
-            <Link href="https://twitter.com/"><Twitter className = {styles.mediaIcon} /></Link>
+            <Link href="https://twitter.com/"><Twitter className={styles.mediaIcon} /></Link>
             <Link href="https://www.instagram.com/burobotics246/?hl=en"><Instagram className={styles.mediaIcon} /></Link>
             <Link href="https://www.youtube.com/@burobotics/"><Youtube className={styles.mediaIcon} /></Link>
           </div>
@@ -101,7 +100,7 @@ export default function Page () {
           </div>
         </div>
         <div>
-          <Image src={teamPhoto2} alt="Team Photo" className="responsive-image brand-border"/>
+          <Image src={teamPhoto2} alt="Team Photo" className="responsive-image brand-border" />
         </div>
       </section>
       <section className="bg-brand">
@@ -122,11 +121,11 @@ export default function Page () {
       <section className="section container">
         <h1>2023 Sponsors</h1>
         <div className={styles.gallery}>
-          <Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo}/>
-          <Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo}/>
-          <Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo}/>
-          <Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo}/>
-          <Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo}/>
+          <Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} />
+          <Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} />
+          <Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} />
+          <Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} />
+          <Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} />
           <Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} />
         </div>
       </section>
