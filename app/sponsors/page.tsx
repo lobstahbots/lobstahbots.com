@@ -35,7 +35,7 @@ export default function Sponsors () {
           <h1>How Can You Help?</h1>
           <p>As a FIRST Robotics team, we rely on the support of our community to fund our robot builds, travel expenses, and outreach programs. We invite you to support the Lobstah Bots by making a donation! Your donation will help us continue our mission of providing students from all of Greater Boston with the opportunity to participate in the exciting and challenging world of robotics. From material to financial, contributions of any form are a huge support to our team.</p>
           <div className={ styles.leftButtonRow } >
-            <Link href="/sponsors" className="button-white">Sponsor Package</Link>
+            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsor Package</Link>
             <Link href="/contact" className="button-white">Contact Us</Link>
             <Link href="/donate" className="button-white">Donate</Link>
           </div>
