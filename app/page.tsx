@@ -110,7 +110,7 @@ export default function Page() {
             <div className={styles.leftButtonRow}>
               <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsor Package</Link>
               <Link href="/contact" className="button-white">Contact</Link>
-              <Link href="/donate" className="button-white">Donate</Link>
+              <Link href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" className="button-white">Donate</Link>
             </div>
           </div>
           <div className={styles.textBlock}>
