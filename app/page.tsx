@@ -4,7 +4,7 @@ import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import teamPhoto from "../images/index/team-photo.jpg";
 import eventPhoto from "../images/index/competition.jpeg";
-import matchPhoto from "../images/index/match-photo.JPG";
+import matchPhoto from "../images/index/match-photo.jpg";
 import teamSelfie from "../images/index/team-selfie.jpg";
 import teamPhoto2 from "../images/index/week2-team-photo.jpg";
 import BULogo from "../images/sponsor-logos/BULogo.png";

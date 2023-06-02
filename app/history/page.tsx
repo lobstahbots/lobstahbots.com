@@ -1,6 +1,6 @@
 
 
-import llama from "../../images/history/llama.JPG";
+import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
 import burrito from "../../images/history/burrito.jpg";
 import styles from "./styles.module.css";
