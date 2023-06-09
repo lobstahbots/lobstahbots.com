@@ -135,17 +135,12 @@ export default function Team() {
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={kendree} alt="Team Member Profile" />
             <div className={styles.name}> Kendree </div>
-            < div className={styles.role} > Programming Lead <br /> Student Board <br /> Drive Team: Technician </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
-            <div className={styles.name}> Sonya </div>
-            < div className={styles.role} > Electrical Lead <br /> Student Board</div>
+            < div className={styles.role} > <br /> Student Board <br /> Drive Team: Technician </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={george} alt="Team Member Profile" />
             <div className={styles.name}> George </div>
-            < div className={styles.role} > Outreach & Business Lead <br /> CEO <br /> Drive Team: Driver </div>
+            < div className={styles.role} > CEO; Outreach & Business Lead <br /> Student Board <br /> Drive Team: Driver </div>
           </div>
           {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
@@ -156,6 +151,16 @@ export default function Team() {
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={maxwell} alt="Team Member Profile" />
             <div className={styles.name}> Maxwell </div>
             < div className={styles.role} > Student Board <br /> Drive Team: Operator </div>
+          </div>
+          <div className={styles.profile}>
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={luke} alt="Team Member Profile" />
+            <div className={styles.name}> Luke </div>
+            <div className = {styles.role}> Student Board</div>
+          </div>
+          < div className={styles.profile} >
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={fillippo} alt="Team Member Profile" />
+            <div className={styles.name}> Fillippo </div>
+            < div className={styles.role} > Imagery & Branding Lead </div>
           </div>
           {/* < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
@@ -179,17 +184,9 @@ export default function Team() {
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ella} alt="Team Member Profile" />
             <div className={styles.name}> Ella </div>
           </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={fillippo} alt="Team Member Profile" />
-            <div className={styles.name}> Fillippo </div>
-          </div>
           <div className={styles.profile}>
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ilan} alt="Team Member Profile" />
             <div className={styles.name}> Ilan </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={luke} alt="Team Member Profile" />
-            <div className={styles.name}> Luke </div>
           </div>
           <div className={styles.profile}>
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={metch} alt="Team Member Profile" />
@@ -211,6 +208,10 @@ export default function Team() {
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ryan} alt="Team Member Profile" />
             <div className={styles.name}> Ryan </div>
+          </div>
+          < div className={styles.profile} >
+            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
+            <div className={styles.name}> Sonya </div>
           </div>
           < div className={styles.profile} >
             <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sudeep} alt="Team Member Profile" />
