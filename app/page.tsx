@@ -18,7 +18,7 @@ import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
 
-export default function Page() {
+export default function Page () {
   return (
     <main>
       <header>
@@ -71,7 +71,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className={styles.buttonRow}>
+        <div className={styles.leftButtonRow}>
           <Link href="/history" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function Page() {
             <Link href="https://www.instagram.com/burobotics246/?hl=en"><Instagram className={styles.mediaIcon} /></Link>
             <Link href="https://www.youtube.com/@burobotics/"><Youtube className={styles.mediaIcon} /></Link>
           </div>
-          <div className={styles.buttonRow}>
+          <div className={styles.leftButtonRow}>
             {/* <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link> */}
           </div>
         </div>
