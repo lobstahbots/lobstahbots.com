@@ -73,8 +73,6 @@ export default function Support () {
               </ul>
             </div>
           </div>
-        </div>
-        <div className="section container">
           <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" target="_blank" className="button">Full Sponsorship Information <ExternalLink className={styles.externalLink} /></Link>
         </div>
       </div>
