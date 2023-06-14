@@ -80,9 +80,9 @@ export default function Page() {
           <h1>See The Latest</h1>
           <h4>Follow Us!</h4>
           <div className={styles.mediaIcons}>
-            <Link href="https://twitter.com/"><Twitter className={styles.mediaIcon} /></Link>
-            <Link href="https://www.instagram.com/burobotics246/?hl=en"><Instagram className={styles.mediaIcon} /></Link>
-            <Link href="https://www.youtube.com/@burobotics/"><Youtube className={styles.mediaIcon} /></Link>
+            <Link href="https://twitter.com/" target="_blank"><Twitter className={styles.mediaIcon} /></Link>
+            <Link href="https://www.instagram.com/burobotics246/?hl=en" target="_blank"><Instagram className={styles.mediaIcon} /></Link>
+            <Link href="https://www.youtube.com/@burobotics/" target="_blank"><Youtube className={styles.mediaIcon} /></Link>
           </div>
           <div className={styles.buttonRow}>
             {/* <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link> */}
@@ -107,7 +107,7 @@ export default function Page() {
         <div className="section container cols1_2">
           <div>
             <h1>Support Us!</h1>
-            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className={styles.sponsorUs}>Sponsorship Information</Link>
+            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" target="_blank" className={styles.sponsorUs}>Sponsorship Information</Link>
           </div>
           <div className={styles.textBlock}>
             <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
@@ -121,12 +121,12 @@ export default function Page() {
       <section className="section container">
         <h1>2023 Sponsors</h1>
         <div className={styles.gallery}>
-          <Link href="https://www.bayer.com/en/"><Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.boeing.com/"><Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.bu.edu/"><Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.haascnc.com/index.html"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.buacademy.org/"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://qualitygraphicsinc.com/"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.bayer.com/en/" target="_blank"><Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.boeing.com/" target="_blank"><Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.bu.edu/" target="_blank"><Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://ghaasfoundation.org/content/ghf/en/home.html" target="_blank"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.buacademy.org/" target="_blank"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://qualitygraphicsinc.com/" target="_blank"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
         </div>
       </section>
     </main>

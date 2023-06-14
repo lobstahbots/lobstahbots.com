@@ -1,0 +1,22 @@
+.donateButton {
+  display: inline-block;
+  font-size: 2rem;
+  border: 1px;
+  border-radius: 0.5em;
+  background-color: var(--color-brand);
+  color: white;
+  padding: 1rem 1rem;
+}
+
+.tiers {
+  margin-left: 1em;
+}
+
+.benefits {
+  margin-left: 2em;
+}
+
+.externalLink {
+  vertical-align: top;
+  margin-top: 0.2em;
+}

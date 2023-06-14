@@ -19,13 +19,14 @@ export default function Footer () {
         </div>
         <div className={styles.footerMenu}>
           <ul className={styles.footerLinks}>
-            <li><Link href="/history">History</Link></li>
+            <li><Link href="/history">Past Seasons</Link></li>
+            {/* <li><Link href="/awards" > Awards </Link></li > */}
             <li><Link href="/team">Our Team</Link></li>
              {/* <li><Link href="/newsletter">Newsletter</Link></li> */}
             <li><Link href="/sponsors">Sponsors</Link></li>
              {/* <li><Link href="/gallery">Gallery</Link></li> */}
             <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/donate">Donate</Link></li>
+            <li><Link href="/support" > Support Us </Link></li >
           </ul>
         </div>
       </div>

@@ -10,9 +10,10 @@ import styles from "./navbar.module.css";
 const Navbar = () => {
   let links = [
     {
-      label: "History",
+      label: "Past Seasons",
       to: "/history",
     },
+    // {label: "Awards", to: "/awards"},
     { label: "Our Team", to: "/team" },
     // { label: "Newsletter", to: "/newsletter" },
     { label: "Sponsors", to: "/sponsors" },
@@ -62,7 +63,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <Link className={styles.donateButton} target="_blank" href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA">Donate</Link>
+            <Link className={styles.donateButton} href="/support">Donate</Link>
           </ul>
           <button className={styles.mobileNavToggle} onClick={() => setOpen(!isOpen)}>
             {isOpen ? (

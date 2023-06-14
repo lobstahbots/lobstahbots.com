@@ -11,14 +11,14 @@ import { ExternalLink } from "react-feather";
 import PageTitle from "../../components/page-title";
 
 export const metadata = {
-  title: "Our History",
+  title: "Past Seasons",
 };
 
 export default function History () {
   return (
     <main>
       <PageTitle>
-        Our History
+        Past Seasons
       </PageTitle>
       <section className={`section ${styles.stats}`}>
         <div className={ styles.stat }>
