@@ -6,6 +6,7 @@
   background-color: var(--color-brand);
   color: white;
   padding: 1rem 1rem;
+  font-weight: 400;
 }
 
 .tiers {
