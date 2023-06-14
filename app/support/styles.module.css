@@ -14,9 +14,35 @@
 
 .benefits {
   margin-left: 2em;
+  padding-bottom: 2em;
 }
 
 .externalLink {
   vertical-align: top;
   margin-top: 0.2em;
+}
+
+.money {
+  font-weight: 100;
+  margin-left: 0.5em;
+}
+
+.krill {
+  color: gray;
+}
+
+.shrimp {
+  color: pink;
+}
+
+.crab {
+  color: orange;
+}
+
+.lobstah {
+  color: var(--color-brand);
+}
+
+.blue {
+  color: skyblue;
 }

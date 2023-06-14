@@ -24,26 +24,30 @@ export default function Support () {
         <div className = "section container">
           <h1>Sponsorship Tiers</h1>
           <div className = {styles.tiers}>
-            <div className={styles.krill}>
-              <h3>Krill</h3>
+            <div>
+              <h2 className={styles.krill}>Krill</h2>
+              <div className = {styles.money}>$100+</div>
               <ul className={styles.benefits}><li>Your name and logo will be on our website.</li></ul>
             </div>
-            <div className={styles.shrimp}>
-              <h3>Shrimp</h3>
+            <div>
+              <h2 className={styles.shrimp}>Shrimp</h2>
+              <div className={styles.money}>$500+</div>
               <ul className={styles.benefits}>
                 <li>All previous benefits.</li>
                 <li>Your name and logo will be on our team shirt.</li>
               </ul>
             </div>
-            <div className={styles.crab}>
-              <h3>Crab</h3>
+            <div>
+              <h2 className={styles.crab}>Crab</h2>
+              <div className={styles.money}>$1000+</div>
               <ul className = {styles.benefits}>
                 <li>All previous benefits.</li>
                 <li>Your name and logo will feature on our robot.</li>
               </ul>
             </div>
-            <div className={styles.lobstah}>
-              <h3>Lobstah</h3>
+            <div>
+              <h2 className={styles.lobstah}>Lobstah</h2>
+              <div className={styles.money}>$4000+</div>
               <ul className={styles.benefits}>
                 <li>All previous benefits.</li>
                 <li>Your company name will be included in the
@@ -57,8 +61,9 @@ export default function Support () {
                 event of your choosing.</li>
               </ul>
             </div>
-            <div className={styles.blue}>
-              <h3>Blue Lobstah</h3>
+            <div>
+              <h2 className={styles.blue}>Blue Lobstah</h2>
+              <div className={styles.money}>$8000+</div>
               <ul className={styles.benefits}>
                 <li>All previous benefits</li>
                 <li>Multiple robot demonstrations at company events.</li>
