@@ -22,12 +22,12 @@ export default function Sponsors () {
       <div className="section container">
         <h1>Thank You To Our 2023 Sponsors! </h1>
         <div className={styles.gallery}>
-          <Image src={BayerLogo} alt="Bayer Logo" className={ styles.sponsorLogo }/>
-          <Image src={BoeingLogo} alt="Boeing Logo" className={ styles.sponsorLogo }/>
-          <Image src={BULogo} alt="BU Logo" className={ styles.sponsorLogo }/>
-          <Image src={HaasLogo} alt="Haas Logo" className={ styles.sponsorLogo }/>
-          <Image src={BUALogo} alt="BUA Logo" className={ styles.sponsorLogo }/>
-          <Image src={QualityGraphicsLogo} alt = "Quality Graphics Logo" className = { styles.sponsorLogo } />
+          <Link href= "https://www.bayer.com/en/"><Image src={BayerLogo} alt="Bayer Logo" className={ styles.sponsorLogo }/></Link>
+          <Link href="https://www.boeing.com/"><Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.bu.edu/"><Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.haascnc.com/index.html"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.buacademy.org/"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://qualitygraphicsinc.com/"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
         </div>
       </div>
       <div className="bg-brand">
@@ -35,7 +35,7 @@ export default function Sponsors () {
           <h1>How Can You Help?</h1>
           <p>As a FIRST Robotics team, we rely on the support of our community to fund our robot builds, travel expenses, and outreach programs. We invite you to support the Lobstah Bots by making a donation! Your donation will help us continue our mission of providing students from all of Greater Boston with the opportunity to participate in the exciting and challenging world of robotics. From material to financial, contributions of any form are a huge support to our team.</p>
           <div className={ styles.leftButtonRow } >
-            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsor Package</Link>
+            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsorship Information</Link>
             <Link href="/contact" className="button-white">Contact Us</Link>
             < Link href ="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" className="button-white">Donate</Link>
           </div>

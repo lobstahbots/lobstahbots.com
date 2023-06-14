@@ -107,26 +107,26 @@ export default function Page() {
         <div className="section container cols1_2">
           <div>
             <h1>Support Us!</h1>
-            <div className={styles.leftButtonRow}>
-              <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className="button-white">Sponsor Package</Link>
+            <Link href="https://drive.google.com/file/d/1RZfQazIUt9vKnLXxb56axNBI7H7Gtghv/view?usp=sharing" className={styles.sponsorUs}>Sponsorship Information</Link>
+          </div>
+          <div className={styles.textBlock}>
+            <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
+            <div className={styles.rightButtonRow}>
               <Link href="/contact" className="button-white">Contact</Link>
               <Link href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" className="button-white">Donate</Link>
             </div>
           </div>
-          <div className={styles.textBlock}>
-            <p>We rely on sponsors to provide the funds we need to build robots and run the team. Donations are used to purchase tools and materials, pay for competition registration fees, subsidize travel costs for students attending competitions, promote STEM in the local community, and much more. Without our sponsors, the team could not exist. For more information, please reach out!</p>
-          </div>
-        </div>
+        </div>   
       </section>
       <section className="section container">
         <h1>2023 Sponsors</h1>
         <div className={styles.gallery}>
-          <Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} />
-          <Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} />
-          <Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} />
-          <Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} />
-          <Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} />
-          <Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} />
+          <Link href="https://www.bayer.com/en/"><Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.boeing.com/"><Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.bu.edu/"><Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.haascnc.com/index.html"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://www.buacademy.org/"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
+          <Link href="https://qualitygraphicsinc.com/"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
         </div>
       </section>
     </main>
