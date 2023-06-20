@@ -119,7 +119,7 @@ export default function History () {
         <div className="container cols2_1">
           <div>
             <h2>2019</h2>
-            <Link href="https://www.youtube.com/watch?v=LgniEjI9cCM" className={styles.number}>Rapid React <ExternalLink className={styles.externalLink} /></Link>
+            <Link href ="https://www.youtube.com/watch?v=Mew6G_og-PI" className={styles.number}>Deep Space <ExternalLink className={styles.externalLink} /></Link>
             <div className={styles.events}>
               <div className={styles.event}>
                 <h3>Event 1: </h3>
