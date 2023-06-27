@@ -1,16 +1,6 @@
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em 12em;
-  justify-content: center;
-  min-height: fit-content;
-  padding-bottom: 2em;
-}
-
 .stat {
-  width: auto;
-  height: fit-content;
-  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .number {
@@ -23,7 +13,36 @@
 }
 
 .label {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+
+.left_award {
+  align-self: center;
+  text-align: right;
+}
+
+.right_award {
+  align-self: center;
+  text-align: left;
+}
+
+.awardPhoto {
+  max-height: 30rem;
+  max-width: 30rem;
+  object-fit: cover;
+  /* width: auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.awardText {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
 }

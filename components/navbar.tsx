@@ -13,7 +13,7 @@ const Navbar = () => {
       label: "Past Seasons",
       to: "/history",
     },
-    // {label: "Awards", to: "/awards"},
+    {label: "Awards", to: "/awards"},
     { label: "Our Team", to: "/team" },
     // { label: "Newsletter", to: "/newsletter" },
     { label: "Sponsors", to: "/sponsors" },

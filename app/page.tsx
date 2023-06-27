@@ -73,6 +73,7 @@ export default function Page () {
         </div>
         <div className={styles.leftButtonRow}>
           <Link href="/history" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
+          < Link href = "/awards" className = {`${styles.seeMore} border-button`}> Check Out Our Awards< ArrowRight /> </Link>
         </div>
       </section>
       <section className="bg-gray">
