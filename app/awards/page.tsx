@@ -9,13 +9,13 @@ import quality from "../../images/index/team-photo.jpg";
 import creativity from "../../images/awards/creativity.jpg";
 import engineering from "../../images/awards/engineering.jpeg";
 import finalist from "../../images/awards/finalist_photo.jpg";
-import innovation from "../../images/awards/innovation.JPG";
+import innovation from "../../images/awards/innovation.jpg";
 import sportsmanship from "../../images/awards/sportsmanship.jpg";
 import impact from "../../images/awards/impact.jpg";
 import engineering_2 from "../../images/awards/engineering_2.jpg";
-import defense from "../../images/awards/defense.JPG";
-import this_year from "../../images/awards/2023.JPG";
-import winners from "../../images/awards/winners.JPG";
+import defense from "../../images/awards/defense.jpg";
+import this_year from "../../images/awards/2023.jpg";
+import winners from "../../images/awards/winners.jpg";
 
 export const metadata = {
   title: "Our Awards",
