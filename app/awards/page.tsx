@@ -165,7 +165,7 @@ export default function Awards() {
             <div className={styles.number} >  </div>
             <div className={styles.label} > Rookie All-Star Award </div>
           </div>
-          <div className>
+          <div>
             <Image src={competition} alt="Rookie Award Photo" className={`responsive-image brand-border ${styles.awardPhoto}`} />
             <p className={styles.awardText}>The Rookie All-Star award celebrates the rookie team exemplifying a young but strong partnership effort, as well as implementing the mission of FIRST to inspire students to learn more about science and technology.</p>
           </div>
