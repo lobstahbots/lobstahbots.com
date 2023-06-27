@@ -9,13 +9,13 @@ import quality from "../../images/index/team-photo.jpg";
 import creativity from "../../images/awards/creativity.jpg";
 import engineering from "../../images/awards/engineering.jpeg";
 import finalist from "../../images/awards/finalist_photo.jpg";
-import innovation from "../../images/awards/innovation.jpg";
+import innovation from "../../images/awards/innovation.JPG";
 import sportsmanship from "../../images/awards/sportsmanship.jpg";
 import impact from "../../images/awards/impact.jpg";
 import engineering_2 from "../../images/awards/engineering_2.jpg";
-import defense from "../../images/awards/defense.jpg";
-import this_year from "../../images/awards/2023.jpg";
-import winners from "../../images/awards/winners.jpg";
+import defense from "../../images/awards/defense.JPG";
+import this_year from "../../images/awards/2023.JPG";
+import winners from "../../images/awards/winners.JPG";
 
 export const metadata = {
   title: "Our Awards",
@@ -28,14 +28,14 @@ export default function Awards() {
         Awards
       </PageTitle>
       <section className="section">
-      <div className={`container cols1_1 ${styles.stat}`}>
-          <div className = {styles.left_award}>
+        <div className={`container cols1_1 ${styles.stat}`}>
+          <div className={styles.left_award}>
             <div className={styles.number} > 2023 </div>
             <div className={styles.label} > Quality Award </div>
             <div className={styles.label} > Event Finalist </div>
           </div>
           <div>
-            <Image src={this_year} alt="2023 Award Photo" className= {`responsive-image brand-border ${styles.awardPhoto}`}/>
+            <Image src={this_year} alt="2023 Award Photo" className={`responsive-image brand-border ${styles.awardPhoto}`} />
             <p className={styles.awardText}>In the 2023 season, our team was the proud winner of the Regional Quality Award and Event Finalist Award.</p>
           </div>
         </div>
