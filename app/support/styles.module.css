@@ -1,21 +1,17 @@
 .donateButton {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 1px;
-  border-radius: 0.5em;
+  border-radius: 1em;
   background-color: var(--color-brand);
   color: white;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
   font-weight: 400;
-}
-
-.tiers {
-  margin-left: 1em;
 }
 
 .benefits {
   margin-left: 2em;
-  padding-bottom: 2em;
+  color: black;
 }
 
 .externalLink {
@@ -26,24 +22,50 @@
 .money {
   font-weight: 100;
   margin-left: 0.5em;
+  color: black;
 }
 
 .krill {
   color: gray;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-color: gray;
+  border-width: 0.3em;
 }
 
 .shrimp {
   color: rgb(247, 148, 164);
+  border-color: rgb(247, 148, 164);
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 0.3em;
 }
 
 .crab {
   color: rgb(241, 157, 0);
+  border-color: rgb(241, 157, 0);
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 0.3em;
 }
 
 .lobstah {
   color: var(--color-brand);
+  border-color: var(--color-brand);
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 0.3em;
 }
 
 .blue {
-  color: skyblue;
+  color: #04A4ff;
+  border-color: #04A4ff;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-width: 0.3em;
 }
