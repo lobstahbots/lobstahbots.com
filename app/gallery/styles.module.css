@@ -1,15 +1,12 @@
 .gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  display:grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
-.gallery:hover {
-  border: 1px solid #777;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
+.galleryImage {
+  width: 20rem;
+  height: 20em;
+  object-fit: cover;
 }
