@@ -1,12 +1,13 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1em;
 }
 
 .galleryImage {
-  width: 20rem;
-  height: 20em;
+  width: auto;
+  height: 20rem;
   object-fit: cover;
+  flex: 1 0 auto;
 }
