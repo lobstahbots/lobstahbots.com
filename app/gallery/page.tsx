@@ -29,8 +29,8 @@ export default function Gallery () {
       Gallery
       </PageTitle>
       <section>
-        <div className="section container">
-          <h1>2023 </h1>
+        <div className="section">
+          <h1 className = "container">2023 </h1>
           <div className = {styles.gallery}>
             <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { competition } alt = "Compeitition Photo" />
             <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { quality } alt = "Quality Photo" />

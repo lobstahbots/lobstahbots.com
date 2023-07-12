@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1em;
+  padding-top: 1em;
 }
 
 .galleryImage {
