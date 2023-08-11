@@ -37,8 +37,11 @@ const Navbar = () => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = "visible";
+      document.body.style.overflowY = "";
     }
+    return () => {
+      document.body.style.overflowY = "";
+    };
   }, [isOpen]);
 
   return (
@@ -87,6 +90,7 @@ const Navbar = () => {
                   <Link
                     href={to}
                     className={styles.link}
+                    onClick={() => setOpen(false)}
                   >
                     {label}
                   </Link>
