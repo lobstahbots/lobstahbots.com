@@ -56,6 +56,10 @@ export default function History () {
                 <h3>Event 4: </h3>
                 <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
               </div>
+              < div className = { styles.event } >
+                <h3>Off-Season 1: </h3>
+                <Link href= "https://www.thebluealliance.com/event/2023nhmm" className = "link" > 2023 Mayhem in Merrimack, NH </Link>
+              </div>
             </div>
           </div>
           <div>
@@ -134,7 +138,7 @@ export default function History () {
                 <Link href="https://www.thebluealliance.com/event/2019mabos" className="link">2019 New England District Greater Boston Event</Link>
               </div>
               <div className={styles.event}>
-                <h3>Event 4: </h3>
+                <h3>Off-Season 1: </h3>
                 <Link href="https://www.thebluealliance.com/event/2019bt" className="link">2019 Beantown Blitz in Revere, MA</Link>
               </div>
             </div>
