@@ -42,18 +42,6 @@
   height: auto;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.sponsorLogo {
-  width: auto;
-  height: 6rem;
-  max-width: 100%;
-}
-
 .textBlock {
   align-self: center;
 }

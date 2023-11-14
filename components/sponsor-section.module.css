@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.sponsorLogo {
+  width: auto;
+  height: 6rem;
+  max-width: 100%;
+}
+
+.standardBots {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  justify-content: space-around;
+}
+
+.standardBots .sponsorLogo {
+  height: auto;
+}

@@ -6,17 +6,12 @@ import eventPhoto from "../images/index/competition.jpeg";
 import matchPhoto from "../images/index/match-photo.jpg";
 import teamSelfie from "../images/index/team-selfie.jpg";
 import teamPhoto2 from "../images/index/week2-team-photo.jpg";
-import BULogo from "../images/sponsor-logos/BULogo.png";
-import BayerLogo from "../images/sponsor-logos/BayerLogo.png";
-import BoeingLogo from "../images/sponsor-logos/BoeingLogo.png";
-import HaasLogo from "../images/sponsor-logos/HaasLogo.png";
-import BUALogo from "../images/sponsor-logos/BUALogo.png";
-import QualityGraphicsLogo from "../images/sponsor-logos/QualityGraphicsLogo.svg";
 
 import { Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
+import SponsorsSection from "../components/sponsors-section";
 
 export default function Page () {
   return (
@@ -117,19 +112,9 @@ export default function Page () {
               <Link href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" className="button-white">Donate</Link>
             </div>
           </div>
-        </div>   
-      </section>
-      <section className="section container">
-        <h1>2023 Sponsors</h1>
-        <div className={styles.gallery}>
-          <Link href="https://www.bayer.com/en/" target="_blank"><Image src={BayerLogo} alt="Bayer Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.boeing.com/" target="_blank"><Image src={BoeingLogo} alt="Boeing Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.bu.edu/" target="_blank"><Image src={BULogo} alt="BU Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://ghaasfoundation.org/content/ghf/en/home.html" target="_blank"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://www.buacademy.org/" target="_blank"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
-          <Link href="https://qualitygraphicsinc.com/" target="_blank"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
         </div>
       </section>
+      <SponsorsSection />
     </main>
   );
 }
