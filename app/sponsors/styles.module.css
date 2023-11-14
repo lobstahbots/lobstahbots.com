@@ -9,6 +9,17 @@
   height: 6em;
 }
 
+.standardBots {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  justify-content: space-around;
+}
+
+.standardBots .sponsorLogo {
+  height: auto;
+}
+
 .leftButtonRow {
   display: flex;
   margin-top: 2rem;
