@@ -8,6 +8,7 @@
   width: auto;
   height: 6rem;
   max-width: 100%;
+  object-fit: contain;
 }
 
 .standardBots {
