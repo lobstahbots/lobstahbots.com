@@ -1,15 +1,13 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 1em;
-  padding-top: 1em;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 
 .galleryImage {
   width: auto;
+  max-width: 100%;
   height: 20rem;
   object-fit: cover;
   flex: 1 0 auto;
