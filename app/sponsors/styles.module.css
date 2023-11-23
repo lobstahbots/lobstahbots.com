@@ -1,5 +1,6 @@
 .leftButtonRow {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
   justify-content: left;
   gap: 0.5em;
