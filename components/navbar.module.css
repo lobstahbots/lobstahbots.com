@@ -44,9 +44,10 @@
 @media (min-width: 768px) {
   .navbarLinks {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: right;
     gap: 2rem;
+    text-align: center;
   }
 }
 
