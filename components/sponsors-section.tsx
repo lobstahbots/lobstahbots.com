@@ -20,12 +20,12 @@ export default function SponsorsSection () {
         <Link href ="https://ghaasfoundation.org/content/ghf/en/home.html" target="_blank"><Image src={HaasLogo} alt="Haas Logo" className={styles.sponsorLogo} /></Link>
         <Link href="https://www.buacademy.org/" target="_blank"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
         <Link href="https://qualitygraphicsinc.com/" target="_blank"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
-        <Link href="https://standardbots.com/">
-          <div className={ `${styles.standardBots} ${styles.sponsorLogo}` }>
-            <Image src={StandardBotsLogo} alt="Standard Bots Logo" className={ styles.sponsorLogo } />
-            <Link className="link" href="https://standardbots.com/blog/how-to-launch-your-career-in-robotics-straight-out-of-high-school">Check out their article on robotics after high school!</Link>
-          </div>
-        </Link>
+        <div className={ `${styles.standardBots} ${styles.sponsorLogo}` }>
+          <Link href="https://standardbots.com/">
+            <Image src={StandardBotsLogo} alt="Standard Bots Logo"/>
+          </Link>
+          <Link className="link" href="https://standardbots.com/blog/how-to-launch-your-career-in-robotics-straight-out-of-high-school">Check out their article on robotics after high school!</Link>
+        </div>
       </div>
     </section>
   );
