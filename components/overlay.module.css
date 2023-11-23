@@ -3,12 +3,7 @@
   grid-template-areas: "area";
 }
 
-.background {
-  height: 100%;
+.overlayContainer>* {
   grid-area: area;
-}
-
-.overlay {
-  height: 100%;
-  grid-area: area;
+  object-fit: cover;
 }
