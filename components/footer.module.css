@@ -1,23 +1,37 @@
 .footer {
-  background-color: black;
-  padding: 4rem;
-  text-align: left;
+  display: flow-root;
+  background-color: var(--color-neutral-100);
   color: white;
 }
 
+.mainSection {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    grid-template-columns: 1fr;
+    place-items: center left;
+  }
+}
+
 .logo {
-  height: 7em;
-  width: auto;
+  width: 8rem;
+  margin-bottom: 1rem;
+  height: auto;
   max-width: 100%;
 }
 
 .footerLinks {
-  list-style-type: none;
-  text-decoration: underline;
-  font-size: 0.9em;
-  line-height: 1.5em;
+  list-style: none;
 }
 
-.footerMenu {
-  padding-left: 12em;
+.copyrightSection {
+  background-color: var(--color-neutral-90);
+  margin-top: 2rem;
+  padding: 2rem 0;
 }
