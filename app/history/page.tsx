@@ -60,6 +60,10 @@ export default function History () {
                 <h3>Off-Season 1: </h3>
                 <Link href= "https://www.thebluealliance.com/event/2023nhmm" className = "link" > 2023 Mayhem in Merrimack, NH </Link>
               </div>
+              <div className = {styles.event}>
+                <h3>Off-Season 2: </h3>
+                  < Link href = "https://www.thebluealliance.com/event/2023matb" className = "link"> 2023 New England Robotics Derby (N.E.R.D.)</Link>
+              </div>
             </div>
           </div>
           <div>
