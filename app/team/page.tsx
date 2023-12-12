@@ -47,7 +47,7 @@ export default function Team() {
           <Image src={teamPhoto} className={`brand-border ${styles.headerImage}`} alt="team photo" />
         </div>
       </section>
-      <section className="section container">
+{/*      <section className="section container">
         <div className={styles.centeredHeader}>
           By The Numbers
         </div>
@@ -81,7 +81,7 @@ export default function Team() {
             < div className={styles.label} > Students of Color </div>
           </div>
         </div>
-      </section>
+    </section> */}
       <section className="bg-gray">
         <div className="section container">
           <h1>Mentors</h1>
