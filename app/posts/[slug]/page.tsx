@@ -3,9 +3,8 @@ import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
-import { GetStaticPaths } from 'next';
 
-async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
 
    const getPost = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
 
@@ -36,16 +35,3 @@ async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-export async function getStaticPaths() {
-
-  var paths = getPostSlugs();
-
-  paths = paths.map((bit) => { return ("/posts/".concat(bit.replace(/\.md$/, ''))); });
-
-  return {
-    paths,
-    fallback: true,
-  }
-}
-
-export default Page;
