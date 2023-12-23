@@ -1,6 +1,6 @@
 
-import { getPostBySlug } from "../../../lib/api";
-import markdownToHtml from "../../../lib/markdownToHTML";
+import { getPostBySlug } from "../../lib/api";
+import markdownToHtml from "../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
