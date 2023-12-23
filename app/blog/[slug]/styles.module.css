@@ -58,8 +58,57 @@
   text-transform: uppercase;
 }
 
+.button {
+  margin: auto;
+  max-width: fit-content;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 2rem;
+}
+
+.donateButton {
+  background-color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  border-radius: 12px;
+  color: white;
+  padding: 12px 1.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.donateButton:hover {
+  background-color: transparent;
+  color: var(--color-brand);
+}
+
+.mediaIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  padding-top: 2rem;
+}
+
+.icon {
+  display: flex;
+  border: 0;
+  width: 50px;
+  height: auto;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
 .markdown {
   margin: auto;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 1280px) {

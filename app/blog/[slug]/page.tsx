@@ -2,6 +2,7 @@ import { getPostBySlug } from "../../../lib/posts";
 import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
+import Link from "next/link";
 
 export default async function Post ({ params }: { params: { slug: string } }) {
   if(!params.slug.includes(".md")) {
@@ -20,6 +21,19 @@ export default async function Post ({ params }: { params: { slug: string } }) {
         <h1 className = {styles.title} > {post.title} </h1>
         < div className = { styles["markdown"]} dangerouslySetInnerHTML = {{ __html: content }} />
         </div>
-      </div>
+        <div className = {styles.button}>
+        <Link href = "https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" target = "_blank" className = { styles.donateButton } > Support Us! </Link>
+        </div>
+  < div className = { styles.breakLine } > </div>
+  
+  <div className = {styles.mediaIcons}>
+  <div className = { styles.icon }> 
+  <Link href="https://instagram.com/burobotics246/" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Instagram icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/instagram-filled-dark-40.png"/></Link></div>
+  <div className = { styles.icon }> 
+  <Link href="mailto:lobstahbots@gmail.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Email icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/email-filled-dark-40.png"/> </Link> </div>
+  <div className = { styles.icon }> <Link href = "https://lobstahbots.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Website icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/website-filled-dark-40.png"/> </Link> </div>
+  </div>
+
+    </div>
   );
 }
