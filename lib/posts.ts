@@ -10,7 +10,7 @@ export function getPostSlugs() {
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
   const fullPath = join(postsDirectory, slug);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const fileContents = fs.readFileSync(fullPath);
   const { data, content } = matter(fileContents);
 
   type Items = {
