@@ -1,10 +1,9 @@
 import { getPostBySlug } from "../../../lib/posts";
 import markdownToHtml from "../../../lib/markdownToHTML";
-import markdownStyles from "./markdown-styles.module.css";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 
-export default async function Page ({ params }: { params: { slug: string } }) {
+export default async function Post ({ params }) {
   if(!params.slug.includes(".md")) {
     params.slug = params.slug.concat(".md");
   }
@@ -19,7 +18,7 @@ export default async function Page ({ params }: { params: { slug: string } }) {
       <div className = {styles.breakLine} > </div>
       <div className = {styles.content}> 
         <h1 className = {styles.title} > {post.title} </h1>
-        < div className = { markdownStyles["markdown"]} dangerouslySetInnerHTML = {{ __html: content }} />
+        < div className = { styles["markdown"]} dangerouslySetInnerHTML = {{ __html: content }} />
         </div>
       </div>
   );

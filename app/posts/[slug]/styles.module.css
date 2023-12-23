@@ -57,3 +57,67 @@
 .date {
   text-transform: uppercase;
 }
+
+.markdown {
+  margin: auto;
+}
+
+@media (min-width: 1280px) {
+  .markdown {
+    width: 1280px;
+    padding: 0 10rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .markdown {
+    max-width: 1536px;
+    padding: 0 10rem;
+  }
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.markdown img {
+  width: 1000px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.markdown h1,
+.markdown h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #c40000;
+  text-align: center;
+  line-height: 4rem;
+  margin-top: 2rem;
+}
+
+.markdown h4 {
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: gray;
+}
+
+.markdown a {
+  color: #c40000;
+}
+
+.markdown a:hover {
+  color: #c40000;
+  text-decoration: underline;
+}
