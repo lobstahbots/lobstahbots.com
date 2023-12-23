@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
@@ -9,10 +9,6 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
-  var realSlug = slug;
-  if(slug.includes(".md")) {
-    realSlug = slug.substring(0, slug.length - 3);
-  }
   const fullPath = join(postsDirectory, slug);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
@@ -21,14 +17,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     [key: string]: string;
   };
 
-  console.log(fullPath);
-
   const items: Items = {};
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === "slug") {
-      items[field] = realSlug;
+      items[field] = slug.substring(0, slug.length - 3);
     }
     if (field === "content") {
       items[field] = content;
@@ -40,8 +34,8 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   });
 
   return items;
-}
- 
+} 
+
 export function getAllPosts(fields: string[] = []) {
   fields = ["title", "content", "author", "date", "numericalDate", "slug", "type"];
   const slugs = getPostSlugs();

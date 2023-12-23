@@ -3,9 +3,11 @@ import markdownToHtml from "../../../lib/markdownToHTML";
 import markdownStyles from "./markdown-styles.module.css";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
-import { useRouter } from 'next/router';
 
 export default async function Page ({ params }: { params: { slug: string } }) {
+  if(!params.slug.includes(".md")) {
+    params.slug = params.slug.concat(".md");
+  }
   const post = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
 
   const content = await markdownToHtml(post["content"] || "");
