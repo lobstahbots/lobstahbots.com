@@ -12,7 +12,9 @@ type Items = {
 
 export default function PostPreview({ post }: { post: Items }) {
   const router = useRouter();
-  router.push(`/blog/${post.slug}`);
+  if(post.slug != null && post.slug != undefined) {
+    router.push(`/blog/${post.slug}`);
+  }
 
   return (
     <div className = {styles.preview}>
