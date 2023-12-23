@@ -1,3 +1,4 @@
+
 import { getAllPosts } from "../../lib/api";
 import  PostPreview  from "../../components/postPreview";
 import PageTitle from "../../components/page-title";

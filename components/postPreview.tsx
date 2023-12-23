@@ -1,10 +1,7 @@
-"use client";
-
 import styles from "./postPreview.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
 
 type Items = {
   [key: string]: string;
@@ -12,9 +9,6 @@ type Items = {
 
 export default function PostPreview({ post }: { post: Items }) {
   const router = useRouter();
-  if(post.slug != null && post.slug != undefined) {
-    router.push(`/blog/${post.slug}`);
-  }
 
   return (
     <div className = {styles.preview}>

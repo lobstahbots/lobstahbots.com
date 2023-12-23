@@ -8,12 +8,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nodelib/fs.scandir": "^3.0.0",
     "@types/node": "18.11.9",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "date-fns": "^3.0.6",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "13.4.3",
     "next-image-export-optimizer": "^1.7.0",

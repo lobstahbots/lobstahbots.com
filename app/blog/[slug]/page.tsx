@@ -1,3 +1,4 @@
+
 import { getPostBySlug } from "../../../lib/api";
 import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
@@ -5,6 +6,7 @@ import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
 export default async function Post ({ params }: { params: { slug: string } }) {
+
   if(!params.slug.includes(".md")) {
     params.slug = params.slug.concat(".md");
   }
