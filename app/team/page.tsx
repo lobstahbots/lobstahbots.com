@@ -1,6 +1,6 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/team-photo.jpg";
-import placeholder from "../../images/profiles/placeholder-claw.png"
+import placeholder from "../../images/profiles/placeholder-claw.png";
 import eli from "../../images/profiles/eli.jpg";
 import ella from "../../images/profiles/ella.jpg";
 import fillippo from "../../images/profiles/fillippo.jpg";
@@ -26,12 +26,65 @@ import carolyn from "../../images/profiles/carolyn.jpg";
 import sherman from "../../images/profiles/sherman.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
+import Profile, { ProfileProps } from "../../components/profile";
 
 export const metadata = {
   title: "Our Team",
 };
 
-export default function Team() {
+const mentors: ProfileProps[] = [
+  { name: "Veronica", role: "Drive Coach", image: veronica },
+  { name: "Marc", image: marc },
+  { name: "Oliver", image: oliver },
+  { name: "Carolyn", image: carolyn },
+  { name: "Sherman", image: sherman },
+];
+
+const studentLeadership: ProfileProps[] = [
+  {
+    name: "George",
+    role: [
+      "CEO; Outreach & Business Lead",
+      "Student Board",
+      "Drive Team: Driver",
+    ],
+    image: george,
+  },
+  { name: "Kendree",
+    role: ["Programming Lead",
+      "Student Board",
+      "Drive Team: Technician",
+    ],
+    image: kendree,
+  },
+  {
+    name: "Maxwell",
+    role: ["Student Board",
+      "Drive Team: Operator",
+    ],
+    image: maxwell,
+  },
+  { name: "Luke", role: "Student Board", image: luke },
+  { name: "Sonya", role: "Electrical Lead", image: sonya },
+  { name: "Fillippo", role: "Imagery & Branding Lead", image: fillippo },
+];
+
+const studentMembers: ProfileProps[] = [
+  { name: "Ajay", image: ajay },
+  { name: "Eli", image: eli },
+  { name: "Ella", image: ella },
+  { name: "Ilan", image: ilan },
+  { name: "Metch", image: metch },
+  { name: "Nathan", image: nathan },
+  { name: "Owen", role: "Drive Team: Human Player", image: owen },
+  { name: "Quinten", image: quinten },
+  { name: "Ryan", image: ryan },
+  { name: "Sudeep", image: sudeep },
+  { name: "Terry", image: terry },
+  { name: "Zach", image: zach },
+];
+
+export default function Team () {
   return (
     <main>
       {/* <Overlay background={
@@ -47,7 +100,7 @@ export default function Team() {
           <Image src={teamPhoto} className={`brand-border ${styles.headerImage}`} alt="team photo" />
         </div>
       </section>
-{/*      <section className="section container">
+      {/*      <section className="section container">
         <div className={styles.centeredHeader}>
           By The Numbers
         </div>
@@ -86,146 +139,20 @@ export default function Team() {
         <div className="section container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
-            {/* <div className={styles.profile}>
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-              <div className={styles.name}> Name </div>
-              < div className={styles.role} > Head Mentor </div>
-            </div> */}
-            < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={veronica} alt="Team Member Profile" />
-              <div className={styles.name}> Veronica </div>
-              < div className={styles.role} > Drive Coach</div>
-            </div>
-            < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={marc} alt="Team Member Profile" />
-              <div className={styles.name}> Marc </div>
-            </div>
-            < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={oliver} alt="Team Member Profile" />
-              <div className={styles.name}> Oliver </div>
-            </div>
-            < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={carolyn} alt="Team Member Profile" />
-              <div className={styles.name}> Carolyn </div>
-            </div>
-            < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sherman} alt="Team Member Profile" />
-              <div className={styles.name}> Sherman </div>
-            </div>
-            {/* < div className={styles.profile} >
-              <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-              <div className={styles.name}> Name </div>
-            </div> */}
+            {mentors.map((props, i) => <Profile key={i} {...props} />)}
           </div>
         </div>
       </section>
       <section className="section container">
         <h1 > Student Leadership </h1>
         < div className={styles.gallery} >
-          {/* <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-            <div className={styles.name}> Name </div>
-            <div className={styles.role}>Mechanical Lead</div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-            <div className={styles.name}> Name </div>
-            <div className={styles.role}>CAD Lead</div>
-          </div> */}
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={george} alt="Team Member Profile" />
-            <div className={styles.name}> George </div>
-            < div className={styles.role} > CEO; Outreach & Business Lead <br /> Student Board <br /> Drive Team: Driver </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={kendree} alt="Team Member Profile" />
-            <div className={styles.name}> Kendree </div>
-            < div className={styles.role} > Programming Lead <br/> Student Board <br /> Drive Team: Technician </div>
-          </div>
-          {/* < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-            <div className={styles.name}> Name </div>
-            < div className={styles.role} > Imagery & Branding Lead </div>
-          </div> */}
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={maxwell} alt="Team Member Profile" />
-            <div className={styles.name}> Maxwell </div>
-            < div className={styles.role} > Student Board <br /> Drive Team: Operator </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={luke} alt="Team Member Profile" />
-            <div className={styles.name}> Luke </div>
-            <div className = {styles.role}> Student Board</div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sonya} alt="Team Member Profile" />
-            <div className={styles.name}> Sonya </div>
-            < div className={styles.role} > Electrical Lead </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={fillippo} alt="Team Member Profile" />
-            <div className={styles.name}> Fillippo </div>
-            < div className={styles.role} > Imagery & Branding Lead </div>
-          </div>
-          {/* < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={placeholder} alt="Team Member Profile" />
-            <div className={styles.name}> Name </div>
-            < div className={styles.role} > Student Board</div>
-          </div> */}
+          {studentLeadership.map((props, i) => <Profile key={i} {...props} />)}
         </div>
       </section>
       <section className="section container">
         < h1 > Student Members </h1>
         < div className={styles.gallery} >
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ajay} alt="Team Member Profile" />
-            <div className={styles.name}> Ajay </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={eli} alt="Team Member Profile" />
-            <div className={styles.name}> Eli </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ella} alt="Team Member Profile" />
-            <div className={styles.name}> Ella </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ilan} alt="Team Member Profile" />
-            <div className={styles.name}> Ilan </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={metch} alt="Team Member Profile" />
-            <div className={styles.name}> Metch </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={nathan} alt="Team Member Profile" />
-            <div className={styles.name}> Nathan </div>
-          </div>
-          <div className={styles.profile}>
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={owen} alt="Team Member Profile" />
-            <div className={styles.name}> Owen</div>
-            <div className={styles.role}>Drive Team: Human Player</div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={quinten} alt="Team Member Profile" />
-            <div className={styles.name}> Quinten </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={ryan} alt="Team Member Profile" />
-            <div className={styles.name}> Ryan </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={sudeep} alt="Team Member Profile" />
-            <div className={styles.name}> Sudeep </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={terry} alt="Team Member Profile" />
-            <div className={styles.name}> Terry </div>
-          </div>
-          < div className={styles.profile} >
-            <Image className={`responsive-image brand-border ${styles.profilePhoto}`} src={zach} alt="Team Member Profile" />
-            <div className={styles.name}> Zach </div>
-          </div>
+          {studentMembers.map((props, i) => <Profile key={i} {...props} />)}
         </div>
       </section>
     </main>

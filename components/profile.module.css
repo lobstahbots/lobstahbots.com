@@ -1,0 +1,21 @@
+.profilePhoto {
+  width: 20rem;
+  height: 20em;
+  object-fit: cover;
+}
+
+.profile {
+  width: min-content;
+  display: block;
+}
+
+.name {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.role {
+  text-align: center;
+  font-weight: 200;
+}
