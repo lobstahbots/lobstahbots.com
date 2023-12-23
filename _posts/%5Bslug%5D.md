@@ -1,0 +1,37 @@
+---
+title: "Lobstah Bots Fall 2022 Update"
+date: "November 2022"
+numericalDate: "2022-11-01"
+excerpt: ""
+author: "Lobstah Bots"
+type: "newsletter"
+---
+
+The BUA Robotics Team has spent the summer and fall revamping the team in a variety of ways! We are excited for the upcoming robotics season and we are already busy with training and preparations.
+
+![Owen '25 and Brandon '23 working at the mill during a mechanical training](../images/newsletter/nov2022/nov22_1.jpg)
+#### Owen '25 and Brandon '23 working at the mill during a mechanical training.
+
+## A New Name
+
+Over the summer, the team decided to change its name and become the **Lobstah Bots**. We believe this rebrand will allow us to expand our branding (logo, t-shirts, mascot, etc.) and facilitate greater team spirit in the following years. Whilst this is a significant change, it is not the first time our team has changed its name and we believe that it will help the team greatly in the years to come!
+
+![Sophia '25, Ally '25, and Kendree '25 making a small catapult at the first Mechanical training.](../images/newsletter/nov2022/nov22_2.jpg)
+#### Sophia '25, Ally '25, and Kendree '25 making a small catapult at the first Mechanical training.
+
+## Fall Preparations
+
+As of late, the team is busy preparing for the build season ahead. We have started our hands-on training for the mechanical, electrical, CAD (Computer-Aided Design), and programming subteams. In the first mechanical training, members made mini catapults with similar materials and tools that are used on our robots. Meanwhile, the outreach and branding subteam has been hard at work recruiting, managing sponsors, and developing further Lobstah Bots branding, such as our logo and t-shirt designs. In October, some team members attended a STEM fair, hosted by Boston Public Schools, to represent FIRST® Robotics and connect with our local community. 
+
+![Students Maxwell '25, Eli '24, Sonya '24, Brandon '23, George '24, and mentors Aidan and Oliver '16 attended the Boston Public Schools STEM Fair.](../images/newsletter/nov2022/nov22_3.jpg)
+#### Students Maxwell '25, Eli '24, Sonya '24, Brandon '23, George '24, and mentors Aidan and Oliver '16 attended the Boston Public Schools STEM Fair.
+
+## The Season Ahead
+
+We can’t wait for the build season kickoff as it quickly approaches! This year’s kickoff will be on **January 7th** and will reveal to all teams the game for this season. Stay tuned, as the team plans to send more detailed newsletters before and during the build season to keep parents and alumni up to date with the team. 
+
+If you want to be more involved or have any questions, you can email us at [lobstahbots@gmail.com](lobstahbots@gmail.com) and we would be happy to respond!
+
+Sincerely,
+
+The BUA Robotics Team (The Lobstah Bots)
