@@ -13,13 +13,11 @@ type Items = {
 export default function PostPreview({ post }: { post: Items }) {
   const router = useRouter();
 
-  React.useEffect(() => {
-    router.push(`/blog/${post.slug}`);
-  });
-
   return (
     <div className = {styles.preview}>
-      <Link className = {styles.title} href={ `/blog/${post.slug}` }> {post.title}
+    <Link className = { styles.title } href = { `/blog/${post["slug"]}`} onClick = {() => {
+      router.push(`/blog/${post["slug"]}`)
+    }}> {post.title}
       </Link>
       <div> {post.date} </div>
     </div>
