@@ -16,7 +16,7 @@ export default function PostPreview({ post }: { post: Items }) {
   return (
     <div className = {styles.preview}>
     <Link className = { styles.title } href = { `/blog/${post["slug"]}`} onClick = {() => {
-      router.push(`/blog/${post["slug"]}`)
+      router.push(`/blog/${post["slug"]}`);
     }}> {post.title}
       </Link>
       <div> {post.date} </div>
