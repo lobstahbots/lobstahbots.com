@@ -3,7 +3,7 @@ import  PostPreview  from "../../components/postPreview";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
 
-export default function Posts() {
+export default function Blog() {
   const posts = getAllPosts(["title", "date", "excerpt", "slug"]);
 
   return (

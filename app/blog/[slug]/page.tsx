@@ -1,4 +1,4 @@
-import { getPostBySlug } from "../../../lib/posts";
+import { getPostBySlug } from "../../../lib/api";
 import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
