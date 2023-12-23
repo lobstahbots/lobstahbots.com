@@ -1,4 +1,3 @@
-import DateFormatter from "./dateFormatter";
 import styles from "./postPreview.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,8 +9,9 @@ type Items = {
 export default function PostPreview({ post }: { post: Items }) {
   return (
     <div className = {styles.preview}>
-      <Link href={ `/posts/${post["slug"]}` }> {post["title"]}
+      <Link className = {styles.title} href={ `/posts/${post.slug}` }> {post.title}
       </Link>
+      <div> {post.date} </div>
     </div>
   );
 }

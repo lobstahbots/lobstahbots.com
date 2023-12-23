@@ -1,6 +1,7 @@
 import { getAllPosts } from "../../lib/posts";
 import  PostPreview  from "../../components/postPreview";
 import PageTitle from "../../components/page-title";
+import styles from "./styles.module.css";
 
 export default function Blog() {
   const posts = getAllPosts(["title", "date", "excerpt", "slug"]);
@@ -10,7 +11,7 @@ export default function Blog() {
       <main>
         <div className="container">
           <PageTitle>All Posts</PageTitle>
-          <div>
+          <div className = {styles.posts}>
             {posts.map((post) => (
               <div>
                 <PostPreview post={post} />
