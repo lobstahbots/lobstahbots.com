@@ -21,7 +21,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     [key: string]: string;
   };
 
-  console.log(realSlug);
+  console.log(fullPath);
 
   const items: Items = {};
 
