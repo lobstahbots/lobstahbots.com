@@ -87,54 +87,12 @@ const studentMembers: ProfileProps[] = [
 export default function Team () {
   return (
     <main>
-      {/* <Overlay background={
-        <Image src={teamPhoto} alt="Lobstah Bots Team Photo" className="responsive-image" />
-      } content={
-        <div className={styles.photoDimBackground}>
-          <p className={`${styles.photoText} container`}>Our Team</p>
-        </div>
-      } /> */}
       <PageTitle>Our Team</PageTitle>
       <section className="section">
         <div className="container">
           <Image src={teamPhoto} className={`brand-border ${styles.headerImage}`} alt="team photo" />
         </div>
       </section>
-      {/*      <section className="section container">
-        <div className={styles.centeredHeader}>
-          By The Numbers
-        </div>
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <div className={styles.number}>30</div>
-            <div className={styles.label}>Students</div>
-          </div>
-          <div className={styles.stat} >
-            <div className={styles.number} > 7 </div>
-            <div className={styles.label}>Mentors</div>
-          </div>
-          <div className={styles.stat}>
-            <div className={styles.number} > 25 </div>
-            < div className={styles.label} > Years </div>
-          </div>
-          <div className={styles.stat} >
-            <div className={styles.number} > 21 </div>
-            < div className={styles.label} > Awards Won </div>
-          </div>
-          <div className={styles.stat} >
-            <div className={styles.number} > 11 </div>
-            < div className={styles.label} > Towns Represented </div>
-          </div>
-          <div className={styles.stat} >
-            <div className={styles.number} > 7 </div>
-            < div className={styles.label} > Languages Spoken </div>
-          </div>
-          <div className={styles.stat} >
-            <div className={styles.number}> 50 % </div>
-            < div className={styles.label} > Students of Color </div>
-          </div>
-        </div>
-    </section> */}
       <section className="bg-gray">
         <div className="section container">
           <h1>Mentors</h1>
