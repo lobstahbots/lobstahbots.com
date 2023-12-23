@@ -1,6 +1,172 @@
-.posts {
+.logoLine {
+  padding-top: 12px;
+  padding-bottom: 0;
   margin: auto;
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 640px) {
+  .logo {
+    max-width: 564px;
+  }
+}
+
+.newsletterName {
+  padding-top: 0;
+  padding-bottom: 12px;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  max-width: fit-content;
+}
+
+.vert {
+  color: #c40000;
+}
+
+.breakLine {
+  height: 7px;
+  background-color: #c40000;
+  border-radius: 5px 0px 5px 0px;
+  margin: 20px 50px;
+  margin: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .breakLine {
+    max-width: 1000px;
+  }
+}
+
+.title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+
+.date {
+  text-transform: uppercase;
+}
+
+.button {
+  margin: auto;
+  max-width: fit-content;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 2rem;
+}
+
+.donateButton {
+  background-color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  border-radius: 12px;
+  color: white;
+  padding: 12px 1.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.donateButton:hover {
+  background-color: transparent;
+  color: var(--color-brand);
+}
+
+.mediaIcons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  padding-top: 2rem;
+}
+
+.icon {
+  display: flex;
+  border: 0;
+  width: 50px;
+  height: auto;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
+.markdown {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1280px) {
+  .markdown {
+    width: 1280px;
+    padding: 0 10rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .markdown {
+    max-width: 1536px;
+    padding: 0 10rem;
+  }
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.markdown img {
+  width: 1000px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.markdown h1,
+.markdown h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #c40000;
+  text-align: center;
+  line-height: 4rem;
+  margin-top: 2rem;
+}
+
+.markdown h4 {
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: gray;
+}
+
+.markdown a {
+  color: #c40000;
+}
+
+.markdown a:hover {
+  color: #c40000;
+  text-decoration: underline;
 }

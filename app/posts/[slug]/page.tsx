@@ -1,28 +1,23 @@
-
-import { getPostBySlug } from "../../../lib/api";
+import { getAllPosts, getPostSlugs, getPostBySlug } from "../../../lib/api";
 import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
+import { InferGetStaticPropsType, GetStaticProps, GetStaticPaths } from 'next';
 
-export default async function Page ({ params }: { params: { slug: string } }) {
+async function Page({ params }: { params: { slug: string } }) {
 
-  if(params.slug.includes(".txt")) {
-    console.log(params.slug.substring(0, params.slug.length-4));
-  }
+   const getPost = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
 
-  const post = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
-
-
-  const content = await markdownToHtml(post["content"] || "");
+  const content = await markdownToHtml(getPost["content"] || "");
 
   return (
-    <div className = "section container">
-      <div className = { styles.logoLine }><Image className = {`responsive-image ${styles.logo}`} width = "564" height = "564" id="2" alt = "Logo" src = "https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png"/></div>
-      <div className = {styles.newsletterName}> <div id="17"> <p> <strong><span> NEWSLETTER </span><span className = {styles.vert}><span>|</span > </span><span className = {styles.date}> {post.date} </span> </strong></p> </div></div>    
+    <div className = "section container" >
+    <div className = { styles.logoLine }><Image className = {`responsive-image ${styles.logo}`} width = "564" height = "564" id="2" alt = "Logo" src = "https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png"/></div>
+      <div className = {styles.newsletterName}> <div id="17"> <p> <strong><span> NEWSLETTER </span><span className = {styles.vert}><span>|</span > </span><span className = {styles.date}> {getPost.date} </span> </strong></p> </div></div>    
       <div className = {styles.breakLine} > </div>
       <div className = {styles.content}> 
-        <h1 className = {styles.title} > {post.title} </h1>
+        <h1 className = {styles.title} > {getPost.title} </h1>
         < div className = { styles["markdown"]} dangerouslySetInnerHTML = {{ __html: content }} />
         </div>
         <div className = {styles.button}>
@@ -37,7 +32,32 @@ export default async function Page ({ params }: { params: { slug: string } }) {
   <Link href="mailto:lobstahbots@gmail.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Email icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/email-filled-dark-40.png"/> </Link> </div>
   <div className = { styles.icon }> <Link href = "https://lobstahbots.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Website icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/website-filled-dark-40.png"/> </Link> </div>
   </div>
-
     </div>
   );
 }
+
+export async function getStaticPaths() {
+
+  var paths = getPostSlugs();
+
+  paths = paths.map((bit) => { return ("/posts/".concat(bit.replace(/\.md$/, ''))); });
+
+  return {
+    paths,
+    fallback: true,
+  }
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  console.log(params);
+  const slug = params.slug;
+  const post = await getPostBySlug(slug);
+
+  return {
+    props: {
+      post,
+    },
+  };
+}
+
+export default Page;
