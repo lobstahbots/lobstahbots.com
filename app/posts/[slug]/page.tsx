@@ -3,7 +3,7 @@ import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 
-export default async function Post ({ params }) {
+export default async function Post ({ params }: { params: { slug: string } }) {
   if(!params.slug.includes(".md")) {
     params.slug = params.slug.concat(".md");
   }
@@ -22,4 +22,12 @@ export default async function Post ({ params }) {
         </div>
       </div>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await fetch('https://.../posts').then((res) => res.json())
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
 }
