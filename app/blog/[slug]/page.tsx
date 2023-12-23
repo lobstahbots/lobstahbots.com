@@ -7,9 +7,9 @@ import Link from "next/link";
 
 export default async function Post ({ params }: { params: { slug: string } }) {
 
-  if(!params.slug.includes(".md")) {
-    params.slug = params.slug.concat(".md");
-  }
+  // if(!params.slug.includes(".md")) {
+  //   params.slug = params.slug.concat(".md");
+  // }
   const post = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
 
   const content = await markdownToHtml(post["content"] || "");
