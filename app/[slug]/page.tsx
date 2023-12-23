@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
-export default async function Post ({ params }: { params: { slug: string } }) {
+export default async function Page ({ params }: { params: { slug: string } }) {
 
   if(params.slug.includes(".txt")) {
     console.log(params.slug.substring(0, params.slug.length-4));
