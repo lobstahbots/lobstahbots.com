@@ -5,7 +5,7 @@ import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-export default async function Page({ params }: { params: { slug: string }}) {
+export default async function Page({ params }) {
 
   const { slug } = params;
 
