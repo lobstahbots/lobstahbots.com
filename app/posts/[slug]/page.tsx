@@ -4,9 +4,18 @@ import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export async function generateStaticParams() {
+  const posts = getPostSlugs();
+  return posts.map((post) => ({
+    slug: post,
+  }));
+}
 
-   const getPost = getPostBySlug(params.slug, ["title", "author", "content", "date"]);
+export default async function Page({ params }: { params: { slug: string }}) {
+
+  const { slug } = params;
+
+  const getPost = getPostBySlug(slug, ["title", "author", "content", "date"]);
 
   const content = await markdownToHtml(getPost["content"] || "");
 

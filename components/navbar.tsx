@@ -15,7 +15,7 @@ const Navbar = () => {
     },
     {label: "Awards", to: "/awards"},
     { label: "Our Team", to: "/team" },
-    { label: "Build Blog", to: "/posts" },
+    { label: "Build Blog", to: "/blog" },
     { label: "Sponsors", to: "/sponsors" },
     { label: "Gallery", to: "/gallery" },
     { label: "Contact", to: "/contact" },
