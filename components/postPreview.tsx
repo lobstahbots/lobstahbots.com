@@ -15,7 +15,7 @@ export default function PostPreview({ post }: { post: Items }) {
 
   return (
     <div className = {styles.preview}>
-    <Link className = { styles.title } href = { `/posts/${encodeURIComponent(post.slug)}`}> {post.title}
+    <Link className = { styles.title } href = { `/posts/${post.slug}`}> {post.title}
       </Link>
       <div> {post.date} </div>
     </div>
