@@ -1,3 +1,4 @@
+import PageTitle from "../../components/page-title";
 import SponsorsSection from "../../components/sponsors-section";
 import styles from "./styles.module.css";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function Sponsors () {
   return (
     <main>
       <div className="section container">
-        <h1>Sponsors</h1>
+        <PageTitle>Sponsors</PageTitle>
         <p className = {styles.sponsors}> The contributions of sponsors are critical to the success of our team. Our sponsors are true champions of education and innovation. They provide financial and material support that enables us to build and program robots, travel to competitions, and positively impact our community. By investing in Team 246, they support the development of leaders and problem solvers who will shape the world of tomorrow, one robot at a time. </p>
       </div>
       <SponsorsSection />

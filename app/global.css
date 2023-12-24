@@ -151,6 +151,7 @@ h1 {
   background-color: var(--color-brand);
   color: white;
   padding: 0.5rem 1rem;
+  width: fit-content;
 }
 
 .border-button {
