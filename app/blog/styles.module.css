@@ -2,6 +2,12 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
+}
+
+.section {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

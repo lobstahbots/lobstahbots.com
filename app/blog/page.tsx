@@ -11,7 +11,7 @@ export default function Posts() {
   return (
     <div>
       <main>
-        <div className="container">
+        <div className={styles.section}>
           <PageTitle>All Posts</PageTitle>
           <div className = {styles.posts}>
           {posts.map((post) => (

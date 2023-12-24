@@ -1,9 +1,64 @@
 .preview {
   margin: auto;
+  width: 18rem;
+  height: 31rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
 }
 
 .title {
   color: #c40000;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+  padding: 1rem;
+  justify-self: right;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.image {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .preview {
+    width: 24rem;
+    height: 33rem;
+  }
+
+  .image {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .preview {
+    width: 26.5rem;
+    height: 37rem;
+  }
+
+  .image {
+    width: 26.5rem;
+    height: 26.5rem;
+  }
+}
+
+.date {
+  text-align: center;
+  color: gray;
+  font-weight: 200;
+  font-style: italic;
+  padding-bottom: 2rem;
 }
