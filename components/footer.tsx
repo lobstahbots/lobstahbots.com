@@ -15,17 +15,24 @@ export default function Footer () {
                 Boston, MA 02215</p>
             <p><a href="mailto:lobstahbots@gmail.com">lobstahbots@gmail.com</a></p>
           </div>
-          <nav>
+          <nav className = "cols1_1">
+            <div>
             <ul className={styles.footerLinks}>
-              <li><Link href="/history">Past Seasons</Link></li>
-              <li><Link href="/awards" > Awards </Link></li >
-              <li><Link href="/team">Our Team</Link></li>
-              {/* <li><Link href="/newsletter">Newsletter</Link></li> */}
-              <li><Link href="/sponsors">Sponsors</Link></li>
-              <li><Link href="/gallery">Gallery</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-              <li><Link href="/support" > Support Us </Link></li >
+              <li className = {styles.footerLink}><Link href="/blog" > Posts </Link></li> 
+              <li className = {styles.footerLink}><Link href="/history">Past Seasons</Link></li>
+              <li className = {styles.footerLink}><Link href="/awards" > Awards </Link></li >
+              <li className = {styles.footerLink}><Link href="/team">Our Team</Link></li>
             </ul>
+            </div>
+            <div>
+              <ul className={styles.footerLinks}>
+              <li className = {styles.footerLink}><Link href="/sponsors">Sponsors</Link></li>
+              <li className = {styles.footerLink}><Link href="/gallery">Gallery</Link></li>
+              <li className = {styles.footerLink}><Link href="/contact">Contact</Link></li>
+              <li className = {styles.footerLink}><Link href="/support" > Support Us </Link></li >
+            </ul>
+            </div>
+            
           </nav>
         </div>
       </div>

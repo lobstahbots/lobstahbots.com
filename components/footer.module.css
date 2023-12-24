@@ -30,8 +30,12 @@
   list-style: none;
 }
 
+.footerLink:hover {
+  text-decoration: underline;
+}
+
 .copyrightSection {
-  background-color: var(--color-neutral-90);
+  background-color: var(--color-neutral-100);
   margin-top: 2rem;
   padding: 2rem 0;
 }

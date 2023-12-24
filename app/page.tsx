@@ -12,8 +12,13 @@ import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
 import SponsorsSection from "../components/sponsors-section";
+import { getAllPosts, getPostSlugs, getPostBySlug } from "../lib/api";
+import PostPreview from "../components/postPreview";
 
 export default function Page () {
+  const data = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+  const posts = data.slice(0, 3);
+
   return (
     <main>
       <header>
@@ -46,6 +51,7 @@ export default function Page () {
           <div>
             <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border" />
           </div>
+          <div className = {styles.event}>
           <div className={styles.eventLinks}>
             <div className={styles.link}>
               <h3>Event 1:</h3>
@@ -64,23 +70,42 @@ export default function Page () {
               <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
             </div>
           </div>
+          <div className = {styles.buttons}>
+          <div className={styles.leftButtonRow}>
+          <Link href="/history" className="button">Past Events <ArrowRight /></Link>
+          < Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
         </div>
-        <div className={styles.leftButtonRow}>
-          <Link href="/history" className={`${styles.seeMore} border-button`}>Past Events <ArrowRight /></Link>
-          < Link href = "/awards" className = {`${styles.seeMore} border-button`}> Check Out Our Awards< ArrowRight /> </Link>
         </div>
+          </div>
+        </div>
+        
       </section>
       <section className="bg-gray">
         <div className="container section">
           <h1>See The Latest</h1>
-          <h4>Follow Us!</h4>
+          <div className = { styles.posts } >
+            {
+              posts.map((post) => (
+                <div className = {styles.postCard}>
+                <PostPreview post= { post } />
+                </div>
+              ))
+            }
+          </div>
+          
+          <div className = {styles.buttonRow}>
+          <div className = {styles.leftButtonRow}>
+           <div className = {styles.follow}>Follow Us:</div>
           <div className={styles.mediaIcons}>
             <Link href="https://twitter.com/" target="_blank"><Twitter className={styles.mediaIcon} /></Link>
             <Link href="https://www.instagram.com/burobotics246/?hl=en" target="_blank"><Instagram className={styles.mediaIcon} /></Link>
             <Link href="https://www.youtube.com/@burobotics/" target="_blank"><Youtube className={styles.mediaIcon} /></Link>
           </div>
-          <div className={styles.leftButtonRow}>
-            {/* <Link href="/gallery" className={styles.seeMore}>Gallery <ArrowRight /></Link> */}
+          </div>
+          <div className={styles.rightButtonRow}>
+            <Link href="/blog" className="button"> More Posts <ArrowRight /></Link> 
+            <Link href = "/gallery" className = "button" > Team Gallery <ArrowRight /></Link> 
+          </div>
           </div>
         </div>
       </section>
@@ -91,7 +116,7 @@ export default function Page () {
             <p>What would a team be without its dedicated members? From freshman to senior year, high school students from all over the Greater Boston area collaborate, innovate, and cultivate a variety of practical real-world skills on Team 246.</p>
           </div>
           <div className={styles.leftButtonRow}>
-            <Link href="/team" className="button">Meet The Team</Link>
+            <Link href="/team" className="button">Meet The Team <ArrowRight /></Link>
           </div>
         </div>
         <div>

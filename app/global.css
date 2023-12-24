@@ -143,7 +143,9 @@ h1 {
 }
 
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
   border: 1px;
   border-radius: 0.75em;
   background-color: var(--color-brand);
