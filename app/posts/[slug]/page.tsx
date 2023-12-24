@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
 
   const { slug } = params;
 
-  const getPost = getPostBySlug(slug, ["title", "author", "content", "date"]);
+  const getPost = getPostBySlug(`${slug}.md`, ["title", "author", "content", "date"]);
 
   const content = await markdownToHtml(getPost.content);
 
@@ -41,6 +41,6 @@ export async function generateStaticParams() {
   const posts = getPostSlugs();
   console.log(getPostSlugs());
   return posts.map((post) => ({
-    slug: post,
+    slug: post.replace(/\.md$/, ""),
   }));
 }

@@ -1,6 +1,8 @@
+"use client";
 import styles from "./postPreview.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 
