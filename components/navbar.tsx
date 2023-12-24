@@ -9,13 +9,13 @@ import styles from "./navbar.module.css";
 
 const Navbar = () => {
   let links = [
+    { label: "Posts", to: "/blog" },
     {
       label: "Past Seasons",
       to: "/history",
     },
     {label: "Awards", to: "/awards"},
-    { label: "Our Team", to: "/team" },
-    { label: "Build Blog", to: "/blog" },
+    { label: "Our Team", to: "/team" },   
     { label: "Sponsors", to: "/sponsors" },
     { label: "Gallery", to: "/gallery" },
     { label: "Contact", to: "/contact" },

@@ -14,9 +14,7 @@
   font-weight: 500;
   line-height: 2.25rem;
   padding: 1rem;
-  justify-self: right;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
+  text-align: center;
 }
 
 .link:hover {

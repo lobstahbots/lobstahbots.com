@@ -135,8 +135,8 @@
 }
 
 .markdown img {
-  width: auto;
-  height: 600px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   display: block;
   margin: auto;
@@ -154,7 +154,7 @@
 .markdown h1,
 .markdown h2 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #c40000;
   text-align: center;
   line-height: 4rem;
@@ -164,12 +164,14 @@
 
 .markdown h4 {
   background-color: transparent;
-  padding-top: 0;
-  padding-bottom: 12px;
+  padding-bottom: 2rem;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 200;
   color: gray;
+  width: 100%;
+  margin: auto;
+  margin-top: -1rem;
 }
 
 .markdown a {
