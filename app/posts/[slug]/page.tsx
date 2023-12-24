@@ -4,23 +4,16 @@ import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 
-export async function generateStaticParams() {
-  const posts = getPostSlugs();
-  return posts.map((post) => ({
-    slug: post,
-  }));
-}
-
 export default async function Page({ params }: { params: { slug: string }}) {
 
   const { slug } = params;
 
   const getPost = getPostBySlug(slug, ["title", "author", "content", "date"]);
 
-  const content = await markdownToHtml(getPost["content"] || "");
+  const content = await markdownToHtml(getPost.content);
 
   return (
-    <div className = "section container" >
+     <div className = "section container" >
     <div className = { styles.logoLine }><Image className = {`responsive-image ${styles.logo}`} width = "564" height = "564" id="2" alt = "Logo" src = "https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png"/></div>
       <div className = {styles.newsletterName}> <div id="17"> <p> <strong><span> NEWSLETTER </span><span className = {styles.vert}><span>|</span > </span><span className = {styles.date}> {getPost.date} </span> </strong></p> </div></div>    
       <div className = {styles.breakLine} > </div>
@@ -40,7 +33,14 @@ export default async function Page({ params }: { params: { slug: string }}) {
   <Link href="mailto:lobstahbots@gmail.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Email icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/email-filled-dark-40.png"/> </Link> </div>
   <div className = { styles.icon }> <Link href = "https://lobstahbots.com" target = "_blank" > <Image className = { `responsive-image ${styles.icon}` } width = "40" height = "40" alt = "Website icon" src = "https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/website-filled-dark-40.png"/> </Link> </div>
   </div>
-    </div>
+  </div>
   );
 }
 
+export async function generateStaticParams() {
+  const posts = getPostSlugs();
+  console.log(getPostSlugs());
+  return posts.map((post) => ({
+    slug: post,
+  }));
+}
