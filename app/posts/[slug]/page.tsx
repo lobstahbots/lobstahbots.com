@@ -3,6 +3,7 @@ import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 export default async function Page({ params }: { params: { slug: string }}) {
 
@@ -10,7 +11,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
 
   const getPost = getPostBySlug(`${slug}.md`, ["title", "author", "content", "date"]);
 
-  const content = await markdownToHtml(getPost.content);
+  // const content = await markdownToHtml(getPost.content);
 
   return (
      <div className = "section container" >
@@ -19,10 +20,17 @@ export default async function Page({ params }: { params: { slug: string }}) {
       <div className = {styles.breakLine} > </div>
       <div className = {styles.content}> 
         <h1 className = {styles.title} > {getPost.title} </h1>
-        < div className = { styles["markdown"]} dangerouslySetInnerHTML = {{ __html: content }} />
+  
+  <ReactMarkdown
+    className={ styles['markdown'] }
+  components = {{
+    img: (props) => (
+      <Image src= { props.src } alt = { props.alt } width = { 1200} height = { 200} />),}}>
+         {getPost.content}
+  </ReactMarkdown>
         </div>
         <div className = {styles.button}>
-        <Link href = "https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" target = "_blank" className = { styles.donateButton } > Support Us! </Link>
+        <Link href = "https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" target = "_blank" className = { styles.donateButton } > Support the Lobstah Bots! </Link>
         </div>
   < div className = { styles.breakLine } > </div>
   
