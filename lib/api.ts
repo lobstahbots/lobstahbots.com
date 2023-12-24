@@ -38,7 +38,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 } 
 
 export function getAllPosts(fields: string[] = []) {
-  fields = ["title", "content", "author", "date", "numericalDate", "slug", "type"];
+  fields = ["title", "content", "author", "date", "numericalDate", "slug", "type", "coverImage"];
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))

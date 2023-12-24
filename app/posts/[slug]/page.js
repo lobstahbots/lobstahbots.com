@@ -15,8 +15,8 @@ export default async function Page({ params }) {
 
   return (
      <div className = "section container" >
-    <div className = { styles.logoLine }><Image className = {`responsive-image ${styles.logo}`} width = "564" height = "564" id="2" alt = "Logo" src = "https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png"/></div>
-      <div className = {styles.newsletterName}> <div id="17"> <p> <strong><span> NEWSLETTER </span><span className = {styles.vert}><span>|</span > </span><span className = {styles.date}> {getPost.date} </span> </strong></p> </div></div>    
+      <div className={styles.logoLine}><Link href="/"><Image className={`responsive-image ${styles.logo}`} width="564" height="564" id="2" alt="Logo" src="https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png" /></Link></div>
+      <div className={styles.newsletterName}> <div id="17"> <p> <strong><span> <Link href = "/blog">NEWSLETTER</Link> </span><span className = {styles.vert}><span>|</span > </span><span className = {styles.date}> {getPost.date} </span> </strong></p> </div></div>    
       <div className = {styles.breakLine} > </div>
       <div className = {styles.content}> 
         <h1 className = {styles.title} > {getPost.title} </h1>
@@ -25,7 +25,7 @@ export default async function Page({ params }) {
     className={ styles['markdown'] }
   components = {{
     img: (props) => (
-      <Image src= { props.src } alt = { props.alt } width = { 1200} height = { 200} />),}}>
+      <span className={styles.imageWrapper}><Image className="responsive-image" src={props.src} alt={props.alt} width={200} height={200} /></span>),}}>
          {getPost.content}
   </ReactMarkdown>
         </div>
