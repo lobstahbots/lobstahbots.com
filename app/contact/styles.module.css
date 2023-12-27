@@ -11,6 +11,10 @@
   margin: 1em 0;
 }
 
+.input input, .input button, .input textarea {
+  font-family: inherit;
+}
+
 .submit {
   font-size: 1em;
 }
