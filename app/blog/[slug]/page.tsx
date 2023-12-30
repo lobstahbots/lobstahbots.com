@@ -97,7 +97,7 @@ export default async function Page({ params }) {
       <div className={styles.postNavBar}>
         <div>
           {previousPost ? (
-            <Link href={`/posts/${previousPost.slug}`}>
+            <Link href={`/blog/${previousPost.slug}`}>
               <ArrowLeftCircle />
               <span>Previous Post</span>
             </Link>
@@ -107,7 +107,7 @@ export default async function Page({ params }) {
         </div>
         <div>
           {nextPost ? (
-            <Link href={`/posts/${nextPost.slug}`}>
+            <Link href={`/blog/${nextPost.slug}`}>
               <span>Next Post</span>
               <ArrowRightCircle />
             </Link>
