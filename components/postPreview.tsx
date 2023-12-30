@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import Image from "next-image-export-optimizer";
 import styles from "./postPreview.module.css";
 

@@ -4,14 +4,13 @@ import {
   getPreviousPost,
   getNextPost,
 } from "../../../lib/api";
-import markdownToHtml from "../../../lib/markdownToHTML";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
 
-export default async function Page({ params }) {
+export default async function Page({ params }: { params: { slug: string }}) {
   const { slug } = params;
 
   const getPost = getPostBySlug(`${slug}.md`, [

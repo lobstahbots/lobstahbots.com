@@ -1,5 +1,5 @@
 
-import { getAllPosts, getPostSlugs, getPostBySlug } from "../../lib/api";
+import { getAllPosts } from "../../lib/api";
 import  PostPreview  from "../../components/postPreview";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
@@ -14,16 +14,16 @@ export default function Posts() {
         <div className={styles.section}>
           <PageTitle>All Posts</PageTitle>
           <div className = {styles.posts}>
-          {posts.map((post) => (
+            {posts.map((post) => (
               <div>
-              <PostPreview post= { post } />
+                <PostPreview post= { post } />
               </div>
             ))
-          }
+            }
           </div>
         </div>
-        
-        
+
+
       </main>
     </div>
   );

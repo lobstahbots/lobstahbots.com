@@ -62,14 +62,13 @@ export default function History () {
               </div>
               <div className = {styles.event}>
                 <h3>Off-Season 2: </h3>
-                  < Link href = "https://www.thebluealliance.com/event/2023matb" className = "link"> 2023 New England Robotics Derby (N.E.R.D.)</Link>
+                < Link href = "https://www.thebluealliance.com/event/2023matb" className = "link"> 2023 New England Robotics Derby (N.E.R.D.)</Link>
               </div>
             </div>
           </div>
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={llama} alt="2023 Robot (Llama)" />
             <h3 className={styles.robotName}> Robot: <i>Llama</i></h3>
-            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>
@@ -96,7 +95,6 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={lobstah} alt="2022 Robot (Lobstah)" />
             <h3 className={styles.robotName}> Robot: <i>Lobstah</i></h3>
-            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>
@@ -119,7 +117,6 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={popcorn} alt="2020 Robot (Popcorn)" />
             <h3 className={styles.robotName}> Robot: <i>Popcorn</i></h3>
-            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
       </section>
@@ -150,14 +147,13 @@ export default function History () {
           <div>
             <Image className={`responsive-image brand-border ${styles.robotPhoto}`} src={burrito} alt="2019 Robot (Burrito)" />
             <h3 className={styles.robotName}> Robot: <i>Burrito</i></h3>
-            {/* <p className={styles.blurb}> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed quis vestibulum magna, sit amet ornare justo.</p> */}
           </div>
         </div>
         <div className="container">
           <Link href="https://www.thebluealliance.com/team/246/history" className="button">View Full History</Link>
         </div>
       </section>
-      
+
     </main>
   );
 }

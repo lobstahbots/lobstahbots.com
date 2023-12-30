@@ -12,7 +12,7 @@ import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
 import SponsorsSection from "../components/sponsors-section";
-import { getAllPosts, getPostSlugs, getPostBySlug } from "../lib/api";
+import { getAllPosts } from "../lib/api";
 import PostPreview from "../components/postPreview";
 
 export default function Page () {
@@ -52,33 +52,33 @@ export default function Page () {
             <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border" />
           </div>
           <div className = {styles.event}>
-          <div className={styles.eventLinks}>
-            <div className={styles.link}>
-              <h3>Event 1:</h3>
-              <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
+            <div className={styles.eventLinks}>
+              <div className={styles.link}>
+                <h3>Event 1:</h3>
+                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
+              </div>
+              <div className={styles.link}>
+                <h3>Event 2:</h3>
+                <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">2023 New England District Rhode Island Event</Link>
+              </div>
+              <div className={styles.link}>
+                <h3>Event 3:</h3>
+                <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">2023 New England District Greater Boston Event</Link>
+              </div>
+              <div className={styles.link}>
+                <h3>Event 4:</h3>
+                <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
+              </div>
             </div>
-            <div className={styles.link}>
-              <h3>Event 2:</h3>
-              <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">2023 New England District Rhode Island Event</Link>
-            </div>
-            <div className={styles.link}>
-              <h3>Event 3:</h3>
-              <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">2023 New England District Greater Boston Event</Link>
-            </div>
-            <div className={styles.link}>
-              <h3>Event 4:</h3>
-              <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
+            <div className = {styles.buttons}>
+              <div className={styles.leftButtonRow}>
+                <Link href="/history" className="button">Past Events <ArrowRight /></Link>
+                < Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
+              </div>
             </div>
           </div>
-          <div className = {styles.buttons}>
-          <div className={styles.leftButtonRow}>
-          <Link href="/history" className="button">Past Events <ArrowRight /></Link>
-          < Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
         </div>
-        </div>
-          </div>
-        </div>
-        
+
       </section>
       <section className="bg-gray">
         <div className="container section">
@@ -87,25 +87,25 @@ export default function Page () {
             {
               posts.map((post) => (
                 <div className = {styles.postCard}>
-                <PostPreview post= { post } />
+                  <PostPreview post= { post } />
                 </div>
               ))
             }
           </div>
-          
+
           <div className = {styles.buttonRow}>
-          <div className = {styles.leftButtonRow}>
-           <div className = {styles.follow}>Follow Us:</div>
-          <div className={styles.mediaIcons}>
-            <Link href="https://twitter.com/" target="_blank"><Twitter className={styles.mediaIcon} /></Link>
-            <Link href="https://www.instagram.com/burobotics246/?hl=en" target="_blank"><Instagram className={styles.mediaIcon} /></Link>
-            <Link href="https://www.youtube.com/@burobotics/" target="_blank"><Youtube className={styles.mediaIcon} /></Link>
-          </div>
-          </div>
-          <div className={styles.rightButtonRow}>
-            <Link href="/blog" className="button"> More Posts <ArrowRight /></Link> 
-            <Link href = "/gallery" className = "button" > Team Gallery <ArrowRight /></Link> 
-          </div>
+            <div className = {styles.leftButtonRow}>
+              <div className = {styles.follow}>Follow Us:</div>
+              <div className={styles.mediaIcons}>
+                <Link href="https://twitter.com/" target="_blank"><Twitter className={styles.mediaIcon} /></Link>
+                <Link href="https://www.instagram.com/burobotics246/?hl=en" target="_blank"><Instagram className={styles.mediaIcon} /></Link>
+                <Link href="https://www.youtube.com/@burobotics/" target="_blank"><Youtube className={styles.mediaIcon} /></Link>
+              </div>
+            </div>
+            <div className={styles.rightButtonRow}>
+              <Link href="/blog" className="button"> More Posts <ArrowRight /></Link>
+              <Link href = "/gallery" className = "button" > Team Gallery <ArrowRight /></Link>
+            </div>
           </div>
         </div>
       </section>
