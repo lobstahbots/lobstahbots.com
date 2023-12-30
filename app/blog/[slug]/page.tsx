@@ -10,7 +10,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
 
-export default async function Page({ params }: { params: { slug: string }}) {
+export default async function Page ({ params }: { params: { slug: string }}) {
   const { slug } = params;
 
   const getPost = getPostBySlug(`${slug}.md`, [
@@ -69,8 +69,8 @@ export default async function Page({ params }: { params: { slug: string }}) {
               <span className={styles.imageWrapper}>
                 <Image
                   className="responsive-image"
-                  src={props.src}
-                  alt={props.alt}
+                  src={props.src as string}
+                  alt={props.alt as string}
                   width={200}
                   height={200}
                 />
@@ -159,7 +159,7 @@ export default async function Page({ params }: { params: { slug: string }}) {
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams () {
   const posts = getPostSlugs();
   console.log(getPostSlugs());
   return posts.map((post) => ({
