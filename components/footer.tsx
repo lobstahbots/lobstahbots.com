@@ -17,22 +17,22 @@ export default function Footer () {
           </div>
           <nav className = "cols1_1">
             <div>
-            <ul className={styles.footerLinks}>
-              <li className = {styles.footerLink}><Link href="/blog" > Posts </Link></li> 
-              <li className = {styles.footerLink}><Link href="/history">Past Seasons</Link></li>
-              <li className = {styles.footerLink}><Link href="/awards" > Awards </Link></li >
-              <li className = {styles.footerLink}><Link href="/team">Our Team</Link></li>
-            </ul>
+              <ul className={styles.footerLinks}>
+                <li className = {styles.footerLink}><Link href="/blog" > Posts </Link></li>
+                <li className = {styles.footerLink}><Link href="/history">Past Seasons</Link></li>
+                <li className = {styles.footerLink}><Link href="/awards" > Awards </Link></li >
+                <li className = {styles.footerLink}><Link href="/team">Our Team</Link></li>
+              </ul>
             </div>
             <div>
               <ul className={styles.footerLinks}>
-              <li className = {styles.footerLink}><Link href="/sponsors">Sponsors</Link></li>
-              <li className = {styles.footerLink}><Link href="/gallery">Gallery</Link></li>
-              <li className = {styles.footerLink}><Link href="/contact">Contact</Link></li>
-              <li className = {styles.footerLink}><Link href="/support" > Support Us </Link></li >
-            </ul>
+                <li className = {styles.footerLink}><Link href="/sponsors">Sponsors</Link></li>
+                <li className = {styles.footerLink}><Link href="/gallery">Gallery</Link></li>
+                <li className = {styles.footerLink}><Link href="/contact">Contact</Link></li>
+                <li className = {styles.footerLink}><Link href="/support" > Support Us </Link></li >
+              </ul>
             </div>
-            
+
           </nav>
         </div>
       </div>

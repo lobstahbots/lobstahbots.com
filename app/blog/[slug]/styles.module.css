@@ -182,3 +182,41 @@
   color: #c40000;
   text-decoration: underline;
 }
+
+.postNavBar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: stretch;
+  max-width: 100%;
+  font-style: italic;
+}
+
+.postNavBar a {
+  color: #c40000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.postNavBar a:hover {
+  color: #c40000;
+  text-decoration: underline;
+}
+
+@media (min-width: 1280px) {
+  .postNavBar {
+    width: 1280px;
+    padding: 0.25rem 10rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .postNavBar {
+    max-width: 1536px;
+    padding: 0.25rem 10rem;
+  }
+}

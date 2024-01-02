@@ -14,8 +14,8 @@ const Navbar = () => {
       label: "Past Seasons",
       to: "/history",
     },
-    {label: "Awards", to: "/awards"},
-    { label: "Our Team", to: "/team" },   
+    { label: "Awards", to: "/awards" },
+    { label: "Our Team", to: "/team" },
     { label: "Sponsors", to: "/sponsors" },
     { label: "Gallery", to: "/gallery" },
     { label: "Contact", to: "/contact" },
@@ -48,7 +48,7 @@ const Navbar = () => {
     <header className={styles.wrapper}>
       <nav className={`container ${styles.content}`}>
         <div className={styles.navbar}>
-          <Link href="/" className={styles.logo}>
+          <Link href="/" className={styles.logo} onClick={() => setOpen(false)}>
             <Image
               src={logo}
               alt= "Claw Logo"
