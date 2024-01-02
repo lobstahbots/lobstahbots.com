@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import "./global.css";
 import styles from "./layout.module.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   metadataBase: new URL("https://lobstahbots.com"),
@@ -28,6 +29,7 @@ export default function App ({ children }: { children: ReactNode }) {
           <Navbar />
           <div className={styles.content}>
             {children}
+            <Analytics />
           </div>
           <Footer />
         </div>
