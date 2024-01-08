@@ -56,8 +56,8 @@
 
 .date {
   text-align: center;
-  color: gray;
   font-weight: 200;
   font-style: italic;
   padding-bottom: 2rem;
+  font-size: larger;
 }
