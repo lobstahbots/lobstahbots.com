@@ -10,13 +10,12 @@ import marc from "../../images/profiles/marc.jpg";
 import maxwell from "../../images/profiles/maxwell.jpg";
 import nathan from "../../images/profiles/nathan.jpg";
 import oliver from "../../images/profiles/oliver.jpg";
-import quinten from "../../images/profiles/quinten.jpg";
 import ryan from "../../images/profiles/ryan.jpg";
 import sonya from "../../images/profiles/sonya.jpg";
 import sudeep from "../../images/profiles/sudeep.jpg";
 import terry from "../../images/profiles/terry.jpg";
 import veronica from "../../images/profiles/veronica.jpg";
-import owen from "../../images/profiles/owen.jpeg";
+import owen from "../../images/profiles/owen.jpg";
 import luke from "../../images/profiles/luke.jpg";
 import ajay from "../../images/profiles/ajay.jpg";
 import ilan from "../../images/profiles/ilan.jpg";
@@ -24,6 +23,15 @@ import metch from "../../images/profiles/metch.jpg";
 import zach from "../../images/profiles/zach.jpg";
 import carolyn from "../../images/profiles/carolyn.jpg";
 import sherman from "../../images/profiles/sherman.jpg";
+import ziyan from "../../images/profiles/ziyan.jpg";
+import sharon from "../../images/profiles/sharon.jpg";
+import teddy from "../../images/profiles/teddy.jpg";
+import eddie from "../../images/profiles/eddie.jpg";
+import dora from "../../images/profiles/dora.jpg";
+import daniel from "../../images/profiles/daniel.jpg";
+import audrey from "../../images/profiles/audrey.png";
+import cocoM from "../../images/profiles/cocoM.jpg";
+import andrew from "../../images/profiles/andrew.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -43,45 +51,45 @@ const mentors: ProfileProps[] = [
 const studentLeadership: ProfileProps[] = [
   {
     name: "George",
-    role: [
-      "CEO; Outreach & Business Lead",
-      "Student Board",
-      "Drive Team: Driver",
-    ],
+    role: [],
     image: george,
   },
   { name: "Kendree",
-    role: ["Programming Lead",
-      "Student Board",
-      "Drive Team: Technician",
-    ],
+    role: [],
     image: kendree,
   },
   {
     name: "Maxwell",
-    role: ["Student Board",
-      "Drive Team: Operator",
-    ],
+    role: [],
     image: maxwell,
   },
-  { name: "Luke", role: "Student Board", image: luke },
-  { name: "Sonya", role: "Electrical Lead", image: sonya },
-  { name: "Fillippo", role: "Imagery & Branding Lead", image: fillippo },
+  { name: "Luke", role: [], image: luke },
 ];
 
 const studentMembers: ProfileProps[] = [
+  { name: "Adam", image: placeholder },
   { name: "Ajay", image: ajay },
+  { name: "Andrew", image: andrew },
+  { name: "Audrey", image: audrey },
+  { name: "Coco M.", image: cocoM },
+  { name: "Daniel", image: daniel },
+  { name: "Dora", image: dora },
+  { name: "Eddie", image: eddie },
   { name: "Eli", image: eli },
   { name: "Ella", image: ella },
+  { name: "Fillippo", image: fillippo },
   { name: "Ilan", image: ilan },
   { name: "Metch", image: metch },
   { name: "Nathan", image: nathan },
-  { name: "Owen", role: "Drive Team: Human Player", image: owen },
-  { name: "Quinten", image: quinten },
+  { name: "Owen", image: owen },
   { name: "Ryan", image: ryan },
+  { name: "Sharon", image: sharon },
+  { name: "Sonya", image: sonya },
   { name: "Sudeep", image: sudeep },
+  { name: "Teddy", image: teddy },
   { name: "Terry", image: terry },
   { name: "Zach", image: zach },
+  { name: "Ziyan", image: ziyan },
 ];
 
 export default function Team () {
@@ -102,7 +110,7 @@ export default function Team () {
         </div>
       </section>
       <section className="section container">
-        <h1 > Student Leadership </h1>
+        <h1 > Student Board </h1>
         < div className={styles.gallery} >
           {studentLeadership.map((props, i) => <Profile key={i} {...props} />)}
         </div>
