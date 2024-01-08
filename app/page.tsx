@@ -7,7 +7,7 @@ import matchPhoto from "../images/index/match-photo.jpg";
 import teamSelfie from "../images/index/team-selfie.jpg";
 import teamPhoto2 from "../images/index/week2-team-photo.jpg";
 
-import { Twitter } from "react-feather";
+import { ExternalLink, Twitter } from "react-feather";
 import { Instagram } from "react-feather";
 import { Youtube } from "react-feather";
 import { ArrowRight } from "react-feather";
@@ -68,8 +68,9 @@ export default function Page () {
             </div>
             <div className = {styles.buttons}>
               <div className={styles.leftButtonRow}>
+                <Link href = "https://www.youtube.com/watch?v=9keeDyFxzY4&ab_channel=FIRSTRoboticsCompetition" className = "button" > 2024 Season Game Reveal < ExternalLink /> </Link>
                 <Link href="/history" className="button">Past Events <ArrowRight /></Link>
-                < Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
+                <Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
               </div>
             </div>
           </div>
