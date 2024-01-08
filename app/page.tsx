@@ -46,7 +46,7 @@ export default function Page () {
         </div>
       </section>
       <section className="section container">
-        <h1>Explore the 2023 Season</h1>
+        <h1>Explore the 2024 Season</h1>
         <div className="cols1_2">
           <div>
             <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border" />
@@ -55,19 +55,15 @@ export default function Page () {
             <div className={styles.eventLinks}>
               <div className={styles.link}>
                 <h3>Event 1:</h3>
-                <Link href="https://www.thebluealliance.com/event/2023week0" className="link">2023 Week 0 in Nashua, NH</Link>
+                <Link href="https://www.thebluealliance.com/" className="link">2024 Week 0 in Nashua, New Hampshire</Link>
               </div>
               <div className={styles.link}>
                 <h3>Event 2:</h3>
-                <Link href="https://www.thebluealliance.com/event/2023rinsc" className="link">2023 New England District Rhode Island Event</Link>
+                <Link href ="https://www.thebluealliance.com/event/2024mabri" className="link">2024 New England District Bridgewater Event</Link>
               </div>
               <div className={styles.link}>
                 <h3>Event 3:</h3>
-                <Link href="https://www.thebluealliance.com/event/2023mabos" className="link">2023 New England District Greater Boston Event</Link>
-              </div>
-              <div className={styles.link}>
-                <h3>Event 4:</h3>
-                <Link href="https://www.thebluealliance.com/event/2023necmp2" className="link">2023 New England FIRST District Championships - Wilson Division</Link>
+                <Link href ="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
               </div>
             </div>
             <div className = {styles.buttons}>
