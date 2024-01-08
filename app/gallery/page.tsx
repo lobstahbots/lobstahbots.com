@@ -26,6 +26,17 @@ import drive_selfie from "../../images/gallery/drive-selfie.jpg";
 import teamwork from "../../images/gallery/teamwork.jpg";
 import building from "../../images/gallery/building.jpg";
 import meeting from "../../images/gallery/meeting.jpg";
+import archetypes from "../../images/gallery/archetypes.jpg";
+import cad from "../../images/gallery/cad.jpg";
+import capybara from "../../images/gallery/capybara.jpg";
+import chasing from "../../images/gallery/chasing.jpg";
+import girl_power from "../../images/gallery/girl-power.jpg";
+import intake_prototyping from "../../images/gallery/intake-prototyping.jpg";
+import milling from "../../images/gallery/milling.jpg";
+import note from "../../images/gallery/note.jpg";
+import posing from "../../images/gallery/posing-with-capybara.jpg";
+import stem_week from "../../images/gallery/stem-week.jpg";
+import training from "../../images/gallery/training.jpg";
 
 export const metadata = {
   title: "Gallery",
@@ -38,20 +49,32 @@ export default function Gallery () {
       Gallery
       </PageTitle>
       <section className="section">
+        <h1 className="container">2024</h1>
+        <div className={styles.gallery}>
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { cad } alt = "Intake CAD Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { capybara } alt = "Capybara Robot Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { chasing } alt = "Demo at Girl Power Event" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { girl_power } alt = "Girl Power Event" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { archetypes } alt = "Archetypes at Kickoff Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { intake_prototyping } alt = "Cutting Wood" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { milling } alt = "Training on the Mill" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { note } alt = "Does Note Fit Under Robot?" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { posing } alt = "Posing With Capybara" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { stem_week } alt = "MA STEM Week Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { training } alt = "Fall Mechanical Training Photo" />
+        </div>
+      </section>
+      <section className="section">
         <h1 className="container">2023</h1>
         <div className={styles.gallery}>
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { competition } alt = "Compeitition Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { santa_lobstah } alt = "Santa Lobster" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { meeting } alt = "Team Meeting Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { engineering } alt = "Engineering Photo" />
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { drive_selfie } alt = "Drive Team Selfie" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { building } alt = "Fixing Robot" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { this_year } alt = "Drive Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { quality } alt = "Quality Photo" />
-
-
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { selfie } alt = "Drive Selfie" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { impact } alt = "Impact Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { llama } alt = "Robot Photo" />
@@ -60,19 +83,13 @@ export default function Gallery () {
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { stress_ball } alt = "Stress Ball Lobster" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { teamwork } alt = "Teamwork High Five" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { matchPhoto } alt = "Match Photo" />
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { teamSelfie } alt = "Team Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { finalist } alt = "Finalist Photo" />
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { engineering_2 } alt = "Engineering Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { catan } alt = "Catan" />
-
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { entrepreneurship } alt = "Entrepreneurship Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { creativity } alt = "Creativity Photo" />
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { winners } alt = "Winners Photo" />
-
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { sportsmanship } alt = "Sportsmanship Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { defense } alt = "Defense Photo" />
         </div>
