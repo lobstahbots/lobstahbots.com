@@ -38,6 +38,12 @@ import stem_week from "../../images/gallery/stem-week.jpg";
 import training from "../../images/gallery/training.jpg";
 import whiteboard from "../../images/gallery/whiteboard.jpg";
 import crochet from "../../images/gallery/crochet.jpg";
+import milling from "../../images/gallery/milling.jpg";
+import drill_press from "../../images/gallery/drill-press.jpg";
+import drive_over_intake from "../../images/gallery/drive-over-intake.jpg";
+import hybrid from "../../images/gallery/hybrid.jpg";
+import kickoff from "../../images/gallery/kickoff.jpg";
+import microphone from "../../images/gallery/microphone.jpg";
 
 export const metadata = {
   title: "Gallery",
@@ -53,17 +59,23 @@ export default function Gallery () {
         <h1 className="container">2024</h1>
         <div className={styles.gallery}>
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { crochet } alt = "Crochet Lobster Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { kickoff } alt = "Kickoff Fun" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { cad } alt = "Intake CAD Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { drill_press } alt = "Using The Drill Press" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { drive_over_intake } alt = "Watching RI3D Drive-Over-Intake Prototype" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { milling } alt = "Learning The Mill" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { capybara } alt = "Capybara Robot Photo" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { chasing } alt = "Demo at Girl Power Event" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { hybrid } alt = "Hybrid Kickoff (Snow!)" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { girl_power } alt = "Girl Power Event" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { whiteboard } alt = "Writing Archetypes Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { intake_prototyping } alt = "Cutting Wood" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { note } alt = "Does Note Fit Under Robot?" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { posing } alt = "Posing With Capybara" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { archetypes } alt = "Archetypes at Kickoff Photo" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { stem_week } alt = "MA STEM Week Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { training } alt = "Fall Mechanical Training Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { archetypes } alt = "Archetypes at Kickoff Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { note } alt = "Does Note Fit Under Robot?" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { stem_week } alt = "MA STEM Week Photo" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { microphone } alt = "Building Practice Field Elements" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { chasing } alt = "Demo at Girl Power Event" />
         </div>
       </section>
       <section className="section">
