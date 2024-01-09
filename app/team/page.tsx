@@ -32,6 +32,7 @@ import daniel from "../../images/profiles/daniel.jpg";
 import audrey from "../../images/profiles/audrey.png";
 import cocoM from "../../images/profiles/cocoM.jpg";
 import andrew from "../../images/profiles/andrew.jpg";
+import adam from "../../images/profiles/adam.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -41,7 +42,7 @@ export const metadata = {
 };
 
 const mentors: ProfileProps[] = [
-  { name: "Veronica", role: "Drive Coach", image: veronica },
+  { name: "Veronica", image: veronica },
   { name: "Marc", image: marc },
   { name: "Oliver", image: oliver },
   { name: "Carolyn", image: carolyn },
@@ -67,7 +68,7 @@ const studentLeadership: ProfileProps[] = [
 ];
 
 const studentMembers: ProfileProps[] = [
-  { name: "Adam", image: placeholder },
+  { name: "Adam", image: adam },
   { name: "Ajay", image: ajay },
   { name: "Andrew", image: andrew },
   { name: "Audrey", image: audrey },
@@ -79,13 +80,11 @@ const studentMembers: ProfileProps[] = [
   { name: "Ella", image: ella },
   { name: "Fillippo", image: fillippo },
   { name: "Ilan", image: ilan },
-  { name: "Metch", image: metch },
   { name: "Nathan", image: nathan },
   { name: "Owen", image: owen },
   { name: "Ryan", image: ryan },
   { name: "Sharon", image: sharon },
   { name: "Sonya", image: sonya },
-  { name: "Sudeep", image: sudeep },
   { name: "Teddy", image: teddy },
   { name: "Terry", image: terry },
   { name: "Zach", image: zach },
