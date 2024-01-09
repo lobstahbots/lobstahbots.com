@@ -59,7 +59,6 @@ export default function Gallery () {
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { girl_power } alt = "Girl Power Event" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { whiteboard } alt = "Writing Archetypes Photo" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { intake_prototyping } alt = "Cutting Wood" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { milling } alt = "Training on the Mill" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { note } alt = "Does Note Fit Under Robot?" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { posing } alt = "Posing With Capybara" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { archetypes } alt = "Archetypes at Kickoff Photo" />
