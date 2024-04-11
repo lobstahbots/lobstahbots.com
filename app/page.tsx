@@ -55,22 +55,22 @@ export default function Page () {
             <div className={styles.eventLinks}>
               <div className={styles.link}>
                 <h3>Event 1:</h3>
-                <Link href ="https://www.thebluealliance.com/event/2024mabri" className="link">2024 New England District Bridgewater Event</Link>
+                <Link href="https://www.thebluealliance.com/event/2024mabri" className="link">2024 New England District Bridgewater Event</Link>
               </div>
               <div className={styles.link}>
                 <h3>Event 2:</h3>
-                <Link href ="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
+                <Link href="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
               </div>
-            < div className = { styles.link } >
-                <h3>Event 3: </h3>
-              < Link href = "https://www.thebluealliance.com/event/2024necmp1" className = "link" > 2024 New England District Championships - Ganson Division < /Link>
-            < /div>
             </div>
-            <div className = {styles.buttons}>
+            < div className={styles.link} >
+              <h3>Event 3: </h3>
+              < Link href="https://www.thebluealliance.com/event/2024necmp1" className="link" > 2024 New England District Championships - Ganson Division </Link>
+            </div>
+            <div className={styles.buttons}>
               <div className={styles.leftButtonRow}>
-                <Link href = "https://www.youtube.com/watch?v=9keeDyFxzY4&ab_channel=FIRSTRoboticsCompetition" className = "button" > 2024 Season Game Reveal < ExternalLink /> </Link>
+                <Link href="https://www.youtube.com/watch?v=9keeDyFxzY4&ab_channel=FIRSTRoboticsCompetition" className="button" > 2024 Season Game Reveal < ExternalLink /> </Link>
                 <Link href="/history" className="button">Past Events <ArrowRight /></Link>
-                <Link href = "/awards" className = "button"> Check Out Our Awards< ArrowRight /> </Link>
+                <Link href="/awards" className="button"> Check Out Our Awards< ArrowRight /> </Link>
               </div>
             </div>
           </div>
