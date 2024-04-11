@@ -55,18 +55,14 @@ export default function Page () {
             <div className={styles.eventLinks}>
               <div className={styles.link}>
                 <h3>Event 1:</h3>
-                <Link href="https://www.thebluealliance.com/" className="link">2024 Week 0 in Nashua, New Hampshire</Link>
-              </div>
-              <div className={styles.link}>
-                <h3>Event 2:</h3>
                 <Link href ="https://www.thebluealliance.com/event/2024mabri" className="link">2024 New England District Bridgewater Event</Link>
               </div>
               <div className={styles.link}>
-                <h3>Event 3:</h3>
+                <h3>Event 2:</h3>
                 <Link href ="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
               </div>
             < div className = { styles.link } >
-                <h3>Event 4: </h3>
+                <h3>Event 3: </h3>
               < Link href = "https://www.thebluealliance.com/event/2024necmp1" className = "link" > 2024 New England District Championships - Ganson Division < /Link>
             < /div>
             </div>
