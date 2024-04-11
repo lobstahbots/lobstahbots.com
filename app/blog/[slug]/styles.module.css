@@ -77,8 +77,16 @@
   font-size: 1.25rem;
 }
 
+a.inlineDonateButton.donateButton {
+  color: white; /* Hack to fix this **** */
+}
+
 .donateButton:hover {
   background-color: transparent;
+  color: var(--color-brand);
+}
+
+.brandText {
   color: var(--color-brand);
 }
 

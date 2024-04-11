@@ -18,6 +18,7 @@ export default async function Page ({ params }: { params: { slug: string }}) {
     "author",
     "content",
     "date",
+    "fundraiseText",
   ]);
 
   const previousPost = getPreviousPost(slug);
@@ -76,6 +77,20 @@ export default async function Page ({ params }: { params: { slug: string }}) {
                 />
               </span>
             ),
+            h6: (props) => (
+              <div className={styles.button}>
+                <Link
+                  href="https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA"
+                  target="_blank"
+                  className={`${styles.donateButton} ${styles.inlineDonateButton}`}
+                >
+                  {" "}{props.children}{" "}
+                </Link>
+              </div>
+            ),
+            code: (props) => ( // I feel really bad for doing this but I kinda had no choice
+              <span className={styles.brandText}> {props.children} </span>
+            ),
           }}
         >
           {getPost.content}
@@ -88,7 +103,7 @@ export default async function Page ({ params }: { params: { slug: string }}) {
           className={styles.donateButton}
         >
           {" "}
-          Support the Lobstah Bots!{" "}
+          {getPost.fundraiseText || "Support the Lobstah Bots!"}{" "}
         </Link>
       </div>
       <div className={styles.breakLine}> </div>
