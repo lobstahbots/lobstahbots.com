@@ -34,6 +34,7 @@ import cocoM from "../../images/profiles/cocoM.jpg";
 import andrew from "../../images/profiles/andrew.jpg";
 import adam from "../../images/profiles/adam.jpg";
 import makeda from "../../images/profiles/makeda.jpg";
+import kayla from "../../images/profiles/kayla.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -81,6 +82,7 @@ const studentMembers: ProfileProps[] = [
   { name: "Ella", image: ella },
   { name: "Fillippo", image: fillippo },
   { name: "Ilan", image: ilan },
+  { name: "Kayla", image: kayla },
   { name: "Makeda", image: makeda },
   { name: "Nathan", image: nathan },
   { name: "Owen", image: owen },
