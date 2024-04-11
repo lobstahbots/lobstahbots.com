@@ -2,10 +2,10 @@ import styles from "./page.module.css";
 import Overlay from "../components/overlay";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
-import eventPhoto from "../images/index/competition.jpeg";
+import eventPhoto from "../images/index/rolling.jpg";
 import matchPhoto from "../images/index/match-photo.jpg";
-import teamSelfie from "../images/index/team-selfie.jpg";
-import teamPhoto2 from "../images/index/week2-team-photo.jpg";
+import teamSelfie from "../images/index/culting.jpg";
+import teamPhoto2 from "../images/index/members.jpg";
 
 import { ExternalLink, Twitter } from "react-feather";
 import { Instagram } from "react-feather";
