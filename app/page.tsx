@@ -65,6 +65,10 @@ export default function Page () {
                 <h3>Event 3:</h3>
                 <Link href ="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
               </div>
+            < div className = { styles.link } >
+                <h3>Event 4: </h3>
+              < Link href = "https://www.thebluealliance.com/event/2024necmp1" className = "link" > 2024 New England District Championships - Ganson Division < /Link>
+            < /div>
             </div>
             <div className = {styles.buttons}>
               <div className={styles.leftButtonRow}>
