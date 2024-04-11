@@ -1,5 +1,5 @@
 import PageTitle from "../../components/page-title";
-import teamPhoto from "../../images/index/team-photo.jpg";
+import teamPhoto from "../../images/index/members.jpg";
 import placeholder from "../../images/profiles/placeholder-claw.png";
 import eli from "../../images/profiles/eli.jpg";
 import ella from "../../images/profiles/ella.jpg";
