@@ -1,5 +1,5 @@
 
-
+import woodpecker from "../../images/history/woodpecker.jpg";
 import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
 import popcorn from "../../images/history/popcorn.jpg";
@@ -13,6 +13,28 @@ export const metadata = {
 };
 
 const years: YearProps[] = [
+  {
+    year: 2024,
+    link: "https://www.youtube.com/watch?v=9keeDyFxzY4",
+    title: "Crescendo",
+    robotName: "Woodpecker",
+    robotImage: woodpecker,
+    events: [
+      {
+        link: "https://www.thebluealliance.com/event/2024mabri",
+        name: "2024 New England District BSU Event",
+      },
+      {
+        link: "https://www.thebluealliance.com/event/2024mabos",
+        name: "2024 New England District Greater Boston Event",
+      },
+      {
+        link: "https://www.thebluealliance.com/event/2024necmp1",
+        name: "2024 New England FIRST District Championships - Ganson Division",
+      },
+    ],
+    offseasonEvents: [],
+  },
   {
     year: 2023,
     link: "https://www.youtube.com/watch?v=0zpflsYc4PA",
@@ -125,15 +147,15 @@ export default function History () {
       </PageTitle>
       <section className={`section ${styles.stats}`}>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 25 </div>
+          <div className={ styles.number } > 26 </div>
           <div className={ styles.label } > Years </div>
         </div>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 20 </div>
+          <div className={ styles.number } > 25 </div>
           < div className={ styles.label } > Total Awards Earned </div>
         </div>
         <div className={ styles.stat }>
-          <div className={ styles.number } > 63 </div>
+          <div className={ styles.number } > 55 </div>
           < div className={ styles.label } > Events Attended  </div>
         </div>
       </section>
