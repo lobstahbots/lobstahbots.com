@@ -10,22 +10,50 @@ import sportsmanship from "../../images/awards/sportsmanship.jpg";
 import impact from "../../images/awards/impact.jpg";
 import engineering_2 from "../../images/awards/engineering_2.jpg";
 import defense from "../../images/awards/defense.jpg";
-import this_year from "../../images/awards/2023.jpg";
+import awards2023 from "../../images/awards/2023.jpg";
 import winners from "../../images/awards/winners.jpg";
+import team from "../../images/index/members.jpg";
+import quality2024 from "../../images/awards/quality2024.jpg";
+import judges2024 from "../../images/awards/judges2024.jpg";
 import { Award, AwardProps } from "../../components/award";
+import styles from "./styles.module.css"
 
 export const metadata = {
   title: "Our Awards",
 };
 
-const awardData: AwardProps[] = [
+const recentAwards: AwardProps[] = [
+  {
+    number: "2024",
+    labels: ["Innovation in Control Award"],
+    description: "We won the Innovation in Control Award in the Ganson Division of the New England District Championship in the 2024 season. The Innovation in Control Award celebrates an innovative control system or application of control components – electrical, mechanical or software – to provide unique machine functions.",
+    image: team,
+    alt: "2024 Award Photo",
+  },
+  {
+    number: "2024",
+    labels: ["Judges' Award"],
+    description: "We won the Judges' Award at the Greater Boston District Event in the 2024 season. During the course of the competition, the judging panel may decide a team’s unique efforts, performance, or dynamics merit recognition.",
+    image: judges2024,
+    alt: "2024 Award Photo",
+  },
+  {
+    number: "2024",
+    labels: ["Quality Award"],
+    description: "We won the Quality Award at the BSU District Event in the 2024 season. This award celebrates machine robustness in concept and fabrication. The entire machine demonstrates quality: workmanship, welds, attachment systems, wiring, paint, etc, that allow it to withstand the rigors of competition – maintaining functionality, including the use of designed-in redundancy and risk mitigation measures.",
+    image: quality2024,
+    alt: "2024 Quality Award Photo",
+  },
   {
     number: "2023",
     labels: ["Quality Award", "Event Finalist"],
     description: "In the 2023 season, our team was the proud winner of the Regional Quality Award and Event Finalist Award.",
-    image: this_year,
+    image: awards2023,
     alt: "2023 Award Photo",
   },
+];
+
+const pastAwardData: AwardProps[] = [
   {
     number: "x2",
     labels: ["Event Winners"],
@@ -69,11 +97,18 @@ const awardData: AwardProps[] = [
     alt: "Engineering Inspiration Award Photo",
   },
   {
-    number: "x2",
+    number: "x3",
     labels: ["Quality Award"],
     description: "The Quality Award celebrates machine robustness in concept and fabrication. The entire machine demonstrates quality: workmanship, welds, attachment systems, wiring, paint, etc, that allow it to withstand the rigors of competition – maintaining functionality, including the use of designed-in redundancy and risk mitigation measures.",
     image: quality,
     alt: "Quality Award Photo",
+  },
+  {
+    number: "x2",
+    labels: ["Innovation in Control Award"],
+    description: "The Innovation in Control Award celebrates an innovative control system or application of control components – electrical, mechanical or software – to provide unique machine functions. The control system is innovative and unique. It is integrated with the machine, human players, strategy, etc. in concept and execution. The innovation is practical; it addresses the game’s challenge and is reliable under the stress of competition.",
+    image: innovation,
+    alt: "Innovation Award Photo",
   },
   {
     number: "",
@@ -81,13 +116,6 @@ const awardData: AwardProps[] = [
     description: "The Excellence in Engineering Award celebrates the team that demonstrates a professional approach to the design process. The designs reflect an engineering solution to a specific problem and are elegant and advantageous on the field of play.",
     image: engineering_2,
     alt: "Excellence in Engineering Award Photo",
-  },
-  {
-    number: "",
-    labels: ["Innovation in Control Award"],
-    description: "The Innovation in Control Award celebrates an innovative control system or application of control components – electrical, mechanical or software – to provide unique machine functions. The control system is innovative and unique. It is integrated with the machine, human players, strategy, etc. in concept and execution. The innovation is practical; it addresses the game’s challenge and is reliable under the stress of competition.",
-    image: innovation,
-    alt: "Innovation Award Photo",
   },
   {
     number: "",
@@ -118,8 +146,14 @@ export default function Awards() {
       <PageTitle>
         Awards
       </PageTitle>
-      <section className="section">
-        {awardData.map((award, index) => <Award {...award} key={index} imageLeft={(index % 2) === 1} />)}
+      <section className="section bg-gray">
+        <h1 className={styles.sectionHeader}>Recent Awards</h1>
+        {recentAwards.map((award, index) => <Award {...award} key={index} imageLeft={(index % 2) === 1} />)}
       </section>
-    </main>);
+      <section className="section">
+        <h1 className={styles.sectionHeader}>All Awards</h1>
+        {pastAwardData.map((award, index) => <Award {...award} key={index} imageLeft={(index % 2) === 1} />)}
+      </section>
+    </main>
+  );
 }

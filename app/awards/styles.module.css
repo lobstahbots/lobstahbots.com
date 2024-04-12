@@ -1,0 +1,4 @@
+.sectionHeader {
+  margin-inline-start: max(1.5rem, calc(100vw / 2 - 30rem));
+  margin-block-start: 0.5rem;
+}
