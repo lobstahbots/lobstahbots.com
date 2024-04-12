@@ -12,7 +12,7 @@ export const metadata = {
   title: "Past Seasons",
 };
 
-const years: YearProps[] = [
+export const years: YearProps[] = [
   {
     year: 2024,
     link: "https://www.youtube.com/watch?v=9keeDyFxzY4",
@@ -139,7 +139,7 @@ const years: YearProps[] = [
   },
 ];
 
-export default function History () {
+export default function History() {
   return (
     <main>
       <PageTitle>

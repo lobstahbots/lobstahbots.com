@@ -14,10 +14,12 @@ import { ArrowRight } from "react-feather";
 import SponsorsSection from "../components/sponsors-section";
 import { getAllPosts } from "../lib/api";
 import PostPreview from "../components/postPreview";
+import { years } from "./history/page";
 
 export default function Page () {
   const data = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const posts = data.slice(0, 3);
+  const thisYear = [...years].sort((a, b) => b.year - a.year)[0];
 
   return (
     <main>
@@ -46,29 +48,25 @@ export default function Page () {
         </div>
       </section>
       <section className="section container">
-        <h1>Explore the 2024 Season</h1>
+        <h1>Explore the {thisYear.year} Season</h1>
         <div className="cols1_2">
           <div>
-            <Image src={eventPhoto} alt="2023 Event Photo" className="responsive-image brand-border" />
+            <Image src={eventPhoto} alt={`${thisYear.year} Event Photo`} className="responsive-image brand-border" />
           </div>
           <div className = {styles.event}>
             <div className={styles.eventLinks}>
-              <div className={styles.link}>
-                <h3>Event 1:</h3>
-                <Link href="https://www.thebluealliance.com/event/2024mabri" className="link">2024 New England District Bridgewater Event</Link>
-              </div>
-              <div className={styles.link}>
-                <h3>Event 2:</h3>
-                <Link href="https://www.thebluealliance.com/event/2024mabos" className="link">2024 New England District Greater Boston Event</Link>
-              </div>
-            </div>
-            < div className={styles.link} >
-              <h3>Event 3: </h3>
-              < Link href="https://www.thebluealliance.com/event/2024necmp1" className="link" > 2024 New England District Championships - Ganson Division </Link>
+              {
+                thisYear.events.map((event, index) => (
+                  <div className={styles.link} key={event.link}>
+                    <h3>Event {index + 1}:</h3>
+                    <Link href={event.link} className="link">{event.name}</Link>
+                  </div>
+                ))
+              }
             </div>
             <div className={styles.buttons}>
               <div className={styles.leftButtonRow}>
-                <Link href="https://www.youtube.com/watch?v=9keeDyFxzY4&ab_channel=FIRSTRoboticsCompetition" className="button" > 2024 Season Game Reveal < ExternalLink /> </Link>
+                <Link href={thisYear.link} className="button" > {thisYear.year} Season Game Reveal < ExternalLink /> </Link>
                 <Link href="/history" className="button">Past Events <ArrowRight /></Link>
                 <Link href="/awards" className="button"> Check Out Our Awards< ArrowRight /> </Link>
               </div>
@@ -83,7 +81,7 @@ export default function Page () {
           <div className = { styles.posts } >
             {
               posts.map((post) => (
-                <div className = {styles.postCard}>
+                <div className = {styles.postCard} key={post.slug}>
                   <PostPreview post= { post } />
                 </div>
               ))

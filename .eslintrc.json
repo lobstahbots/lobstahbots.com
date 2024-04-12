@@ -21,7 +21,7 @@
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "space-before-blocks": "warn",
-    "space-before-function-paren": "warn",
+    "space-before-function-paren": "off",
     "space-in-parens": "warn"
   }
 }
