@@ -16,7 +16,7 @@ import team from "../../images/index/members.jpg";
 import quality2024 from "../../images/awards/quality2024.jpg";
 import judges2024 from "../../images/awards/judges2024.jpg";
 import { Award, AwardProps } from "../../components/award";
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
 export const metadata = {
   title: "Our Awards",

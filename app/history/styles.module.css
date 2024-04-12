@@ -28,43 +28,76 @@
   line-height: 1.5rem;
 }
 
-.robotPhoto {
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-}
+@media not (prefers-reduced-motion: reduce) {
+  @property --years-competed {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+  }
 
-.name {
-  text-align: center;
-  font-weight: 600;
-}
+  @property --awards-earned {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+  }
 
-.blurb {
-  font-size: 0.9em;
-  line-height: 1em;
-  max-width: 20rem;
-}
+  @property --events-attended {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+  }
 
-.event {
-  display: flex;
-  padding-bottom: 0.3em;
-  gap: 0.5em;
-}
+  #yearsCompeted span, #eventsAttended span, #awardsEarned span {
+    color: rgba(0, 0, 0, 0);
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
 
-.events {
-  margin-top: 1em;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-}
+  #yearsCompeted {
+    transition: --years-competed 1s;
+    counter-reset: years-competed var(--years-competed);
+    display: inline-grid;
+  }
 
-.externalLink {
-  vertical-align: top;
-  margin-top: 0.2em;
-}
+  #eventsAttended {
+    transition: --events-attended 1s;
+    counter-reset: events-attended var(--events-attended);
+    display: inline-grid;
+  }
 
-.robotName {
-  text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  max-width: 20rem;
+  #awardsEarned {
+    transition: --awards-earned 1s;
+    counter-reset: awards-earned var(--awards-earned);
+    display: inline-grid;
+  }
+
+  #yearsCompeted.loaded {
+    --years-competed: 26;
+  }
+
+  #eventsAttended.loaded {
+    --events-attended: 55;
+  }
+
+  #awardsEarned.loaded {
+    --awards-earned: 25;
+  }
+
+  #yearsCompeted::after {
+    content: counter(years-competed);
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  #eventsAttended::after {
+    content: counter(events-attended);
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  #awardsEarned::after {
+    content: counter(awards-earned);
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
 }

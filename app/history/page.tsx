@@ -4,9 +4,9 @@ import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
 import popcorn from "../../images/history/popcorn.jpg";
 import burrito from "../../images/history/burrito.jpg";
-import styles from "./styles.module.css";
 import PageTitle from "../../components/page-title";
 import Year, { YearProps } from "../../components/historyYear";
+import { Numbers } from "./numbers";
 
 export const metadata = {
   title: "Past Seasons",
@@ -145,20 +145,7 @@ export default function History() {
       <PageTitle>
         Past Seasons
       </PageTitle>
-      <section className={`section ${styles.stats}`}>
-        <div className={ styles.stat }>
-          <div className={ styles.number } > 26 </div>
-          <div className={ styles.label } > Years </div>
-        </div>
-        <div className={ styles.stat }>
-          <div className={ styles.number } > 25 </div>
-          < div className={ styles.label } > Total Awards Earned </div>
-        </div>
-        <div className={ styles.stat }>
-          <div className={ styles.number } > 55 </div>
-          < div className={ styles.label } > Events Attended  </div>
-        </div>
-      </section>
+      <Numbers />
       {years.map((year, index) => <Year {...year} key={year.year} className={index % 2 === 0 ? "bg-gray" : undefined} />)}
     </main>
   );
