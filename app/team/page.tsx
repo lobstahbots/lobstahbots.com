@@ -31,10 +31,11 @@ import dora from "../../images/profiles/dora.jpg";
 import daniel from "../../images/profiles/daniel.jpg";
 import audrey from "../../images/profiles/audrey.png";
 import cocoM from "../../images/profiles/cocoM.jpg";
-import andrew from "../../images/profiles/andrew.jpg";
+import amber from "../../images/profiles/andrew.jpg";
 import adam from "../../images/profiles/adam.jpg";
 import makeda from "../../images/profiles/makeda.jpg";
 import kayla from "../../images/profiles/kayla.jpg";
+import cocoS from "../../images/profiles/cocoS.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -72,9 +73,10 @@ const studentLeadership: ProfileProps[] = [
 const studentMembers: ProfileProps[] = [
   { name: "Adam", image: adam },
   { name: "Ajay", image: ajay },
-  { name: "Andrew", image: andrew },
+  { name: "Amber", image: amber },
   { name: "Audrey", image: audrey },
   { name: "Coco M.", image: cocoM },
+  { name: "Coco S.", image: cocoS },
   { name: "Daniel", image: daniel },
   { name: "Dora", image: dora },
   { name: "Eddie", image: eddie },
