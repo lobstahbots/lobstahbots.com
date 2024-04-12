@@ -1,0 +1,79 @@
+.stat {
+  border-top: 5rem;
+  border-bottom: 5rem;
+  gap: 0rem;
+}
+
+.number {
+  font-family: var(--font-primary);
+  color: var(--color-brand);
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-bottom: 0.1em;
+}
+
+.label {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+
+.left_award {
+  align-self: center;
+  text-align: right;
+  padding-right: 5rem;
+}
+
+.right_award {
+  align-self: center;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+.left_side_border {
+  align-self: center;
+  border: 0;
+}
+
+.right_side_border {
+  align-self: center;
+  border: 0;
+}
+
+@media (min-width: 1300px) {
+  .left_side_border {
+    align-self: center;
+    border-left-width: 1rem;
+    border-left-style: solid;
+    border-left-color: gainsboro;
+    margin-left: -0.5rem;
+  }
+
+  .right_side_border {
+    align-self: center;
+    border-right-width: 1rem;
+    border-right-style: solid;
+    border-right-color: gainsboro;
+    margin-right: -0.5rem;
+  }
+}
+
+.awardPhoto {
+  max-height: 30rem;
+  max-width: 30rem;
+  object-fit: cover;
+  /* width: auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.awardText {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 200;
+}
