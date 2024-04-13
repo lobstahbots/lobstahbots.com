@@ -10,7 +10,8 @@ import sportsmanship from "../../images/awards/sportsmanship.jpg";
 import impact from "../../images/awards/impact.jpg";
 import engineering_2 from "../../images/awards/engineering_2.jpg";
 import defense from "../../images/awards/defense.jpg";
-import awards2023 from "../../images/awards/2023.jpg";
+import quality2023 from "../../images/awards/quality2023.jpg";
+import finalists2023 from "../../images/awards/finalists2023.jpg";
 import winners from "../../images/awards/winners.jpg";
 import team from "../../images/index/members.jpg";
 import quality2024 from "../../images/awards/quality2024.jpg";
@@ -46,10 +47,17 @@ const recentAwards: AwardProps[] = [
   },
   {
     number: "2023",
-    labels: ["Quality Award", "Event Finalist"],
-    description: "In the 2023 season, our team was the proud winner of the Regional Quality Award and Event Finalist Award.",
-    image: awards2023,
-    alt: "2023 Award Photo",
+    labels: ["Event Finalist"],
+    description: "In the 2023 season, our team was proud Event Finalists at the Greater Boston District Event.",
+    image: finalists2023,
+    alt: "2023 Finalists Photo",
+  },
+  {
+    number: "2023",
+    labels: ["Quality Award"],
+    description: "Our team won the Quality Award at the Greater Boston District Event in the 2023 season.",
+    image: quality2023,
+    alt: "2023 Quality Photo",
   },
 ];
 
@@ -147,8 +155,10 @@ export default function Awards() {
         Awards
       </PageTitle>
       <section className="section bg-gray">
+        <div className = {styles.spacerGray} />
         <h1 className={styles.sectionHeader}>Recent Awards</h1>
         {recentAwards.map((award, index) => <Award {...award} key={index} imageLeft={(index % 2) === 1} />)}
+        <div className = {styles.spacerGray} />
       </section>
       <section className="section">
         <h1 className={styles.sectionHeader}>All Awards</h1>
