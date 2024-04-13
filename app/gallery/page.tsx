@@ -105,7 +105,6 @@ export default function Gallery () {
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { pitcrew } alt = "Pit Crew At District Champs" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { aiming5 } alt = "Aiming At Speaker" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { queue } alt = "Waiting In Queue" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { kickoff } alt = "Kickoff" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { aiming2 } alt = "Aiming At Speaker" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { innovation24 } alt = "Innovation And Control Award At District Champs" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { lobster } alt = "Shoulder Lobster And Larry" />
