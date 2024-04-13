@@ -1,7 +1,7 @@
 ---
 title: "We’re on a roll. Asking for your help!"
-date: "April 2024"
-numericalDate: "2024-04-01"
+date: "March 2024"
+numericalDate: "2024-03-30"
 excerpt: ""
 author: "Lobstah Bots"
 type: "newsletter"
