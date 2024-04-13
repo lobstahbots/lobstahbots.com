@@ -19,7 +19,6 @@ import owen from "../../images/profiles/owen.jpg";
 import luke from "../../images/profiles/luke.jpg";
 import ajay from "../../images/profiles/ajay.jpg";
 import ilan from "../../images/profiles/ilan.jpg";
-import metch from "../../images/profiles/metch.jpg";
 import zach from "../../images/profiles/zach.jpg";
 import carolyn from "../../images/profiles/carolyn.jpg";
 import sherman from "../../images/profiles/sherman.jpg";
@@ -36,6 +35,7 @@ import adam from "../../images/profiles/adam.jpg";
 import makeda from "../../images/profiles/makeda.jpg";
 import kayla from "../../images/profiles/kayla.jpg";
 import cocoS from "../../images/profiles/cocoS.jpg";
+import tynan from "../../images/profiles/tynan.jpg";
 import styles from "./styles.module.css";
 import Image from "next-image-export-optimizer";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -49,6 +49,7 @@ const mentors: ProfileProps[] = [
   { name: "Marc", image: marc },
   { name: "Oliver", image: oliver },
   { name: "Carolyn", image: carolyn },
+  { name: "Tynan", image: tynan},
   { name: "Sherman", image: sherman },
 ];
 
@@ -88,11 +89,9 @@ const studentMembers: ProfileProps[] = [
   { name: "Makeda", image: makeda },
   { name: "Nathan", image: nathan },
   { name: "Owen", image: owen },
-  { name: "Ryan", image: ryan },
   { name: "Sharon", image: sharon },
-  { name: "Sonya", image: sonya },
+  { name: "Sudeep", image: sudeep },
   { name: "Teddy", image: teddy },
-  { name: "Terry", image: terry },
   { name: "Zach", image: zach },
   { name: "Ziyan", image: ziyan },
 ];
