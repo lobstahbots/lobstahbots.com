@@ -73,7 +73,7 @@ import queue from "../../images/gallery/queue.jpg";
 import scouting from "../../images/gallery/scouting.jpg";
 import screwdriver from "../../images/gallery/screwdriver.jpg";
 import strat from "../../images/gallery/strat.jpg";
-import watchingmatches from "../../images/gallery/watching-matches.jpg";
+import watchingmatches from "../../images/gallery/watching-matches.jpeg";
 import woodpecker1 from "../../images/gallery/woodpecker-portrait.jpg";
 import woodpecker2 from "../../images/gallery/woodpecker-portrait-2.jpg";
 import slas1 from "../../images/gallery/slas-1.jpg";
@@ -143,13 +143,14 @@ export default function Gallery () {
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { archetypes2 } alt = "Writing Archetypes With Lobster" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { pickingup } alt = "Picking Up From Source" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { aiming } alt = "Aiming At Speaker" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { hybrid } alt = "Hybrid Kickoff (Snow!)" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { culting2 } alt = "Culting At District Champs" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { driveteam4 } alt = "Drive Team At District Champs" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { slas4 } alt = "SLAS Photo With A Dino" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { intake_prototyping } alt = "Cutting Wood" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { pitcrew4 } alt = "Rolling To Queue At Greater Boston" />
           <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { kickoff2 } alt = "Robot Archetypes Discussion At Kickoff" />
-          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { culting2 } alt = "Culting At District Champs" />
+          <Image className={ `responsive-image brand-border ${styles.galleryImage}` } src = { hybrid } alt = "Hybrid Kickoff (Snow!)" />
+
         </div>
       </section>
       <section className="section">
