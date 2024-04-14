@@ -54,19 +54,19 @@
   }
 
   #yearsCompeted {
-    transition: --years-competed 1s;
+    transition: --years-competed 1.5s cubic-bezier(0.3, 0.1, 0, 1);
     counter-reset: years-competed var(--years-competed);
     display: inline-grid;
   }
 
   #eventsAttended {
-    transition: --events-attended 1s;
+    transition: --events-attended 1.5s cubic-bezier(0.3, 0.1, 0, 1);
     counter-reset: events-attended var(--events-attended);
     display: inline-grid;
   }
 
   #awardsEarned {
-    transition: --awards-earned 1s;
+    transition: --awards-earned 1.5s cubic-bezier(0.3, 0.1, 0, 1);
     counter-reset: awards-earned var(--awards-earned);
     display: inline-grid;
   }
