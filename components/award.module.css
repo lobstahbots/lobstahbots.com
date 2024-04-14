@@ -41,6 +41,24 @@
   border: 0;
 }
 
+@media (max-width: 767px) {
+  .stat:has(.right_award):has(.right_side_border) .right_award {
+    order: -1;
+  }
+  .label {
+    margin-bottom: 1rem;
+  }
+  .left_award {
+    text-align: left;
+    margin-left: max(0pt, calc(50% - 15rem));
+    padding-right: 0;
+  }
+  .right_award {
+    padding-left: 0;
+    margin-left: max(0pt, calc(50% - 15rem));
+  }
+}
+
 @media (min-width: 1300px) {
   .left_side_border {
     align-self: center;
