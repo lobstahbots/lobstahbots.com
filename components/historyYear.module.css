@@ -32,7 +32,13 @@
 }
 
 .robotPhoto {
-  width: 20rem;
-  height: 20rem;
+  width: min(100%, 20rem);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+@media (max-width: 26.625rem) {
+  .number {
+    overflow-wrap: anywhere;
+  }
 }
