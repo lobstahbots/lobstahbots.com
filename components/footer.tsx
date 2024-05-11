@@ -15,7 +15,7 @@ export default function Footer() {
                 Boston, MA 02215</p>
             <p><a href="mailto:lobstahbots@gmail.com">lobstahbots@gmail.com</a></p>
           </div>
-          <nav className="cols1_1">
+          <nav className={styles.linksContainer}>
             <div>
               <ul className={styles.footerLinks}>
                 <li className={styles.footerLink}><Link href="/blog">Posts</Link></li>

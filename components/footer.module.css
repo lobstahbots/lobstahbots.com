@@ -12,10 +12,22 @@
   gap: 2rem;
 }
 
+.linksContainer {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  place-items: center left;
+}
+
 @media (max-width: 768px) {
   .mainSection {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     place-items: center left;
+  }
+  .linksContainer {
+    grid-column: 1 / -1;
+    width: 100%;
+    gap: 2rem;
   }
 }
 
