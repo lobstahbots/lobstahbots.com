@@ -7,10 +7,7 @@ import matchPhoto from "../images/index/match-photo.jpg";
 import teamSelfie from "../images/index/culting.jpg";
 import teamPhoto2 from "../images/index/members.jpg";
 
-import { ExternalLink, Twitter } from "react-feather";
-import { Instagram } from "react-feather";
-import { Youtube } from "react-feather";
-import { ArrowRight } from "react-feather";
+import { ExternalLink, Instagram, Youtube, ArrowRight, GitHub } from "react-feather";
 import SponsorsSection from "../components/sponsors-section";
 import { getAllPosts } from "../lib/api";
 import PostPreview from "../components/postPreview";
@@ -92,9 +89,9 @@ export default function Page () {
             <div className = {styles.leftButtonRow}>
               <div className = {styles.follow}>Follow Us:</div>
               <div className={styles.mediaIcons}>
-                <Link href="https://twitter.com/" target="_blank"><Twitter className={styles.mediaIcon} /></Link>
                 <Link href="https://www.instagram.com/burobotics246/?hl=en" target="_blank"><Instagram className={styles.mediaIcon} /></Link>
                 <Link href="https://www.youtube.com/@burobotics/" target="_blank"><Youtube className={styles.mediaIcon} /></Link>
+                <Link href="https://www.github.com/lobstahbots/" target="_blank"><GitHub className={styles.mediaIcon} /></Link>
               </div>
             </div>
             <div className={styles.rightButtonRow}>
