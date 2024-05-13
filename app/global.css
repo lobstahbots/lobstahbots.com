@@ -6,12 +6,14 @@
 
 body {
   --color-brand: #c40000;
-  --color-neutral-10: #F2F4F6;
+  --color-neutral-10: #f2f4f6;
   --color-neutral-60: #424446;
   --color-neutral-80: #222426;
   --color-neutral-90: #121416;
   --color-neutral-100: #020406;
-  --font-primary: "Mundial", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-primary: "Mundial", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
   font-family: var(--font-primary);
   color: var(--color-neutral-100);
   font-weight: 300;
@@ -124,7 +126,6 @@ img {
   }
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
@@ -146,7 +147,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  border: 1px;
+  border: 2px solid var(--color-brand);
   border-radius: 0.75em;
   background-color: var(--color-brand);
   color: white;
@@ -173,12 +174,30 @@ h1 {
   border-style: solid;
 }
 
-.button-white:hover {
-  opacity: 80%;
+@media (prefers-reduced-motion: reduce) {
+  .button-white:hover {
+    opacity: 80%;
+  }
+
+  .button:hover {
+    opacity: 80%;
+  }
 }
 
-.button:hover {
-  opacity: 80%;
+@media not (prefers-reduced-motion: reduce) {
+  .button, .button-white {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .button-white:hover {
+    color: var(--color-brand);
+    background-color: white;
+  }
+
+  .button:hover {
+    background-color: transparent;
+    color: var(--color-brand);
+  }
 }
 
 .link {
