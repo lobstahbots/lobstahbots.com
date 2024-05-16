@@ -48,7 +48,7 @@
 }
 
 .copyrightSection {
-  background-color: #c40000;
+  background-color: var(--color-brand);
   margin-top: 0.75rem;
   padding: 1rem 0;
 }
