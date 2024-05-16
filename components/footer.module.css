@@ -24,6 +24,7 @@
     grid-template-columns: 1fr 1fr;
     place-items: center left;
   }
+
   .linksContainer {
     grid-column: 1 / -1;
     width: 100%;
@@ -47,7 +48,7 @@
 }
 
 .copyrightSection {
-  background-color: var(--color-neutral-100);
-  margin-top: 2rem;
-  padding: 2rem 0;
+  background-color: #c40000;
+  margin-top: 0.75rem;
+  padding: 1rem 0;
 }
