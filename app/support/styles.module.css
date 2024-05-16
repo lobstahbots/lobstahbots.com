@@ -2,10 +2,9 @@
   display: inline-block;
   font-size: 1.5rem;
   border: 2px solid var(--color-brand);
-  border-radius: 0.75rem;
-  background-color: var(--color-brand);
-  border-width: 1px;
+  border-radius: 1rem;
   color: white;
+  background-color: var(--color-brand);
   padding: 1rem 1.5rem;
   font-weight: 400;
   margin-top: 1rem;
