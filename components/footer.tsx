@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.mainSection}>
           <Image className={styles.logo} src={logo} alt="Claw Logo"/>
-          <div className={styles.contactInfo}>
+          <div>
             <p>110 Cummington Mall <br></br>
                 Boston, MA 02215</p>
             <p><a href="mailto:lobstahbots@gmail.com">lobstahbots@gmail.com</a></p>
