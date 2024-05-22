@@ -60,6 +60,10 @@
   height: auto;
 }
 
+.mediaIcon:hover {
+  color: var(--color-brand);
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;
