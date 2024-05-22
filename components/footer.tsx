@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.mainSection}>
-          <Image className={styles.logo} src={logo} alt="Claw Logo"/>
+          <Link href="/" className={styles.logo}><Image src={logo} alt="Claw Logo"/></Link>
           <div>
             <p>110 Cummington Mall <br></br>
                 Boston, MA 02215</p>

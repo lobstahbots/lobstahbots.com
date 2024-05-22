@@ -39,6 +39,10 @@
   max-width: 100%;
 }
 
+.logo:hover {
+  filter: brightness(40%) sepia(100%) saturate(10000%);
+}
+
 .footerLinks {
   list-style: none;
 }
