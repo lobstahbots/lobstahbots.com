@@ -40,11 +40,15 @@
 }
 
 .logo:hover {
-  filter: brightness(40%) sepia(100%) saturate(10000%);
+  filter: brightness(40%) sepia(100%) saturate(100000%) brightness(75%);
 }
 
 .footerLinks {
   list-style: none;
+}
+
+.email:hover {
+  color: var(--color-brand);
 }
 
 .footerLink:hover {

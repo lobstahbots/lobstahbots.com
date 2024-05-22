@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <p>110 Cummington Mall <br></br>
                 Boston, MA 02215</p>
-            <p><a href="mailto:lobstahbots@gmail.com">lobstahbots@gmail.com</a></p>
+            <p><a className={styles.email} href="mailto:lobstahbots@gmail.com">lobstahbots@gmail.com</a></p>
           </div>
           <nav className={styles.linksContainer}>
             <div>
