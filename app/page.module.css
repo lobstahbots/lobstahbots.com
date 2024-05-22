@@ -49,6 +49,10 @@
   text-decoration: underline;
 }
 
+.sponsorUs:hover {
+  opacity: 0.5;
+}
+
 .mediaIcons {
   display: flex;
   gap: 1em;
