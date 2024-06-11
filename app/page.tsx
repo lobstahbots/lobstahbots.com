@@ -96,7 +96,7 @@ export default function Page () {
             </div>
             <div className={styles.rightButtonRow}>
               <Link href="/blog" className="button"> More Posts <ArrowRight /></Link>
-              <Link href = "/gallery" className = "button" > Team Gallery <ArrowRight /></Link>
+              <Link href="/gallery" className="button"> Team Gallery <ArrowRight /></Link>
             </div>
           </div>
         </div>
@@ -126,6 +126,7 @@ export default function Page () {
             <div className={styles.rightButtonRow}>
               <Link href="/contact" className="button-white">Contact</Link>
               <Link href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA" className="button-white">Donate</Link>
+              <Link href="/store" className="button-white">Shop Our Store</Link>
             </div>
           </div>
         </div>
