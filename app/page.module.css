@@ -86,10 +86,9 @@
 .eventLinks {
   font-weight: 500;
   display: grid;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  height: 80%;
 }
 
 .event {
