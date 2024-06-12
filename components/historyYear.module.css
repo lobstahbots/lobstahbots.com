@@ -24,6 +24,25 @@
   padding-bottom: 0.75em;
 }
 
+@media (min-width: 340px) {
+  .event h3 {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .event {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+  }
+  .events {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-auto-rows: auto;
+  }
+}
+
 .robotName {
   text-align: center;
   margin-top: 0.5em;
