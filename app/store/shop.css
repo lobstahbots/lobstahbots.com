@@ -73,6 +73,6 @@
   border: 0.5rem solid var(--color-brand);
 }
 
-.sprd-bg-m1.sprd-c-s3 {
+.sprd-bg-m1.sprd-c-s3, .sprd-bc-m2.sprd-c-s3 {
   color: white;
 }
