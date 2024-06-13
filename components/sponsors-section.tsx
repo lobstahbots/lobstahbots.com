@@ -6,7 +6,7 @@ import BUALogo from "../images/sponsor-logos/BUALogo.png";
 import QualityGraphicsLogo from "../images/sponsor-logos/QualityGraphicsLogo.svg";
 import StandardBotsLogo from "../images/sponsor-logos/StandardBotsLogo.svg";
 import styles from "./sponsors-section.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SponsorsSection () {

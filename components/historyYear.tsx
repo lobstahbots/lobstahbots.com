@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ExternalLink } from "react-feather";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import { StaticImageData } from "next/image";
 import styles from "./historyYear.module.css";
 

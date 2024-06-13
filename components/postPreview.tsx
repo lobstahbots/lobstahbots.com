@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import styles from "./postPreview.module.css";
 
 type Items = {

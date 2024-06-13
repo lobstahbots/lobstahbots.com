@@ -37,7 +37,7 @@ import kayla from "../../images/profiles/kayla.jpg";
 import cocoS from "../../images/profiles/cocoS.jpg";
 import tynan from "../../images/profiles/tynan.jpg";
 import styles from "./styles.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Profile, { ProfileProps } from "../../components/profile";
 
 export const metadata = {

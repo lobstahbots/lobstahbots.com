@@ -5,7 +5,7 @@ import {
   getNextPost,
 } from "../../../lib/api";
 import styles from "./styles.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
