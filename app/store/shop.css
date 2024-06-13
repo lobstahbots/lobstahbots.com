@@ -80,3 +80,7 @@
 .SprdMain .sprd-bg-m1 .sprd-c-m2.sprd-department-filter__entry {
   color: black;
 }
+
+.SprdMain .sprd-basket-indicator__button--open, .SprdMain .sprd-bc-m2, .SprdMain .sprd-bg-m1 {
+  border-color: white;
+}
