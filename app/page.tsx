@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Overlay from "../components/overlay";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from "next/link";
 import eventPhoto from "../images/index/rolling.jpg";
 import matchPhoto from "../images/index/match-photo.jpg";

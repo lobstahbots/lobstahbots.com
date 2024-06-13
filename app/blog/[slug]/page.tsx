@@ -5,7 +5,8 @@ import {
   getNextPost,
 } from "../../../lib/api";
 import styles from "./styles.module.css";
-import Image from "next-image-export-optimizer";
+import longWordmark from "../../../images/logos/long-wordmark.png";
+import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
@@ -32,11 +33,9 @@ export default async function Page ({ params }: { params: { slug: string }}) {
         <Link href="/">
           <Image
             className={`responsive-image ${styles.logo}`}
-            width="564"
-            height="564"
             id="2"
-            alt="Logo"
-            src="https://mcusercontent.com/b62ff52e31b232a8696b02d06/images/5d14253b-cfaf-9ad4-6bb2-c09779fc9abd.png"
+            alt="Long Wordmark"
+            src={longWordmark}
           />
         </Link>
       </div>
@@ -72,8 +71,6 @@ export default async function Page ({ params }: { params: { slug: string }}) {
                   className="responsive-image"
                   src={props.src as string}
                   alt={props.alt as string}
-                  width={200}
-                  height={200}
                 />
               </span>
             ),

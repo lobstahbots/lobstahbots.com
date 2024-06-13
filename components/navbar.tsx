@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import { Menu, X } from "react-feather";
 import logo from "../images/logos/wordmark-dark-bg.svg";
 import styles from "./navbar.module.css";

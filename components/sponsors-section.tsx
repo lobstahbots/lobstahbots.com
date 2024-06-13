@@ -6,7 +6,7 @@ import BUALogo from "../images/sponsor-logos/BUALogo.png";
 import QualityGraphicsLogo from "../images/sponsor-logos/QualityGraphicsLogo.svg";
 import StandardBotsLogo from "../images/sponsor-logos/StandardBotsLogo.svg";
 import styles from "./sponsors-section.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SponsorsSection () {
@@ -20,7 +20,7 @@ export default function SponsorsSection () {
         <Link href ="https://www.bostonscientific.com/en-US/Home.html" target="_blank"><Image src={BostonScientificlogo} alt="Boston Scientific Logo" className={styles.sponsorLogo} /></Link>
         <Link href="https://www.buacademy.org/" target="_blank"><Image src={BUALogo} alt="BUA Logo" className={styles.sponsorLogo} /></Link>
         <Link href="https://qualitygraphicsinc.com/" target="_blank"><Image src={QualityGraphicsLogo} alt="Quality Graphics Logo" className={styles.sponsorLogo} /></Link>
-        <div className={ `${styles.standardBots} ${styles.sponsorLogo}` }>
+        <div className={styles.sponsorLogo} id={styles.standardBots}>
           <Link href="https://standardbots.com/">
             <Image src={StandardBotsLogo} alt="Standard Bots Logo"/>
           </Link>

@@ -14,7 +14,7 @@ import this_year from "../../images/awards/2023.jpg";
 import winners from "../../images/awards/winners.jpg";
 import matchPhoto from "../../images/index/match-photo.jpg";
 import teamSelfie from "../../images/index/team-selfie.jpg";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import PageTitle from "../../components/page-title";
 import llama from "../../images/history/llama.jpg";
 import win from "../../images/gallery/102-101.jpg";

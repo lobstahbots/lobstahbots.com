@@ -1,5 +1,5 @@
 import styles from "./footer.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from "next/link";
 import logo from "../images/logos/claw-logo-white.svg";
 

@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import styles from "./award.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 
 export interface AwardProps {
   number: string;

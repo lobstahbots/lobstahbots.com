@@ -4,6 +4,12 @@
   gap: 2em;
 }
 
+@media (max-width: 560px) {
+  .gallery {
+    justify-content: center;
+  }
+}
+
 .sponsorLogo {
   width: auto;
   height: 6rem;
@@ -11,14 +17,14 @@
   object-fit: contain;
 }
 
-.standardBots {
+#standardBots {
   display: flex;
   flex-direction: column;
   font-style: italic;
   justify-content: space-around;
 }
 
-.standardBots img {
+#standardBots img {
   width: 100%;
   height: auto;
 }

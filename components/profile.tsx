@@ -1,5 +1,5 @@
 import styles from "./profile.module.css";
-import Image from "next-image-export-optimizer";
+import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 export interface ProfileProps {
