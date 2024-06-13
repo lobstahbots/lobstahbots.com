@@ -71,8 +71,6 @@ export default async function Page ({ params }: { params: { slug: string }}) {
                   className="responsive-image"
                   src={props.src as string}
                   alt={props.alt as string}
-                  width={200}
-                  height={200}
                 />
               </span>
             ),
