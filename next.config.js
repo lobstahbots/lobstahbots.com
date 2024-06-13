@@ -4,6 +4,14 @@ const nextConfig = {
   swcMinify: true,
   images: {
     minimumCacheTTL: 31536000,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn-images.mailchimp.com",
+        port: "",
+        pathname: "/icons/social-block-v3/block-icons-v3/*.png",
+      },
+    ],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
