@@ -5,7 +5,7 @@ import {
   getNextPost,
 } from "../../../lib/api";
 import styles from "./styles.module.css";
-import longWordmark from "../../../images/long-wordmark.png";
+import longWordmark from "../../../images/logos/long-wordmark.png";
 import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
