@@ -9,6 +9,7 @@ import styles from "./navbar.module.css";
 
 const Navbar = () => {
   let links = [
+    { label: "Store", to: "/store" },
     { label: "Posts", to: "/blog" },
     {
       label: "Past Seasons",

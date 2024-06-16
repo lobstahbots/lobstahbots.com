@@ -1,0 +1,86 @@
+#sprd-main {
+  width: 100%;
+}
+.sprd-button,
+.sprd-btn-primary,
+.sprd-button-secondary-cta-ghost {
+  border-radius: 0.75em;
+}
+.SprdMain .sprd-btn-primary.sprd-button {
+  background-color: var(--color-brand);
+  color: white;
+  border: 2px solid var(--color-brand);
+}
+@media (prefers-reduced-motion: reduce) {
+  .SprdMain .sprd-btn-primary.sprd-button:hover {
+    opacity: 80%;
+  }
+}
+
+@media not (prefers-reduced-motion: reduce) {
+  .SprdMain .sprd-btn-primary.sprd-button {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .SprdMain .sprd-btn-primary.sprd-button:hover {
+    background-color: transparent;
+    color: var(--color-brand);
+  }
+}
+
+.SprdMain .sprd-button-secondary-cta-ghost {
+  border: 2px solid var(--sprd-sub2-shifted) !important;
+  color: var(--sprd-sub2-shifted) !important;
+  background-color: white !important;
+}
+.SprdMain .sprd-button-secondary-cta-ghost.sprd-c-m2.sprd-bc-m2 {
+  border-color: var(--color-brand) !important;
+  color: var(--color-brand) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .SprdMain .sprd-button-secondary-cta-ghost:hover {
+    opacity: 80%;
+  }
+}
+
+@media not (prefers-reduced-motion: reduce) {
+  .SprdMain .sprd-button-secondary-cta-ghost:hover {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .SprdMain .sprd-button-secondary-cta-ghost:hover {
+    background-color: var(--sprd-sub2-shifted) !important;
+    color: white !important;
+    border-width: 2px !important;
+  }
+  .SprdMain .sprd-button-secondary-cta-ghost.sprd-c-m2:hover {
+    background-color: var(--color-brand) !important;
+    color: white !important;
+  }
+}
+
+.SprdMain
+  div.sprd-product-list-item__badge-container
+  div.sprd-product-list-item__badge.sprd-bg-s2,
+.SprdMain
+  div.sprd-detail-images__badge-container
+  div.sprd-detail-images__badge.sprd-bg-s2 {
+  background-color: var(--color-brand);
+}
+
+.SprdMain .sprd-product-list-item.sprd-product-list-item--hover {
+  box-shadow: none !important;
+  border-radius: 2rem 0 2rem 0;
+  border: 0.5rem solid var(--color-brand);
+}
+
+.sprd-bg-m1.sprd-c-s3, .sprd-bc-m2.sprd-c-s3, .sprd-bg-m1 .sprd-c-s3 {
+  color: white;
+}
+
+.SprdMain .sprd-bg-m1 .sprd-c-m2.sprd-department-filter__entry {
+  color: black;
+}
+
+.SprdMain .sprd-basket-indicator__button--open, .SprdMain .sprd-bc-m2, .SprdMain .sprd-bg-m1 {
+  border-color: white;
+}
