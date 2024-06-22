@@ -1,19 +1,12 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/members.jpg";
 import placeholder from "../../images/profiles/placeholder-claw.png";
-import eli from "../../images/profiles/eli.jpg";
 import ella from "../../images/profiles/ella.jpg";
-import fillippo from "../../images/profiles/fillippo.jpg";
-import george from "../../images/profiles/george.jpg";
 import kendree from "../../images/profiles/kendree.jpeg";
 import marc from "../../images/profiles/marc.jpg";
 import maxwell from "../../images/profiles/maxwell.jpg";
 import nathan from "../../images/profiles/nathan.jpg";
 import oliver from "../../images/profiles/oliver.jpg";
-import ryan from "../../images/profiles/ryan.jpg";
-import sonya from "../../images/profiles/sonya.jpg";
-import sudeep from "../../images/profiles/sudeep.jpg";
-import terry from "../../images/profiles/terry.jpg";
 import veronica from "../../images/profiles/veronica.jpg";
 import owen from "../../images/profiles/owen.jpg";
 import luke from "../../images/profiles/luke.jpg";
@@ -49,26 +42,20 @@ const mentors: ProfileProps[] = [
   { name: "Marc", image: marc },
   { name: "Oliver", image: oliver },
   { name: "Carolyn", image: carolyn },
-  { name: "Tynan", image: tynan},
+  { name: "Tynan", image: tynan },
   { name: "Sherman", image: sherman },
 ];
 
 const studentLeadership: ProfileProps[] = [
-  {
-    name: "George",
-    role: [],
-    image: george,
-  },
+  { name: "Coco M.", image: cocoM },
   { name: "Kendree",
-    role: [],
     image: kendree,
   },
   {
     name: "Maxwell",
-    role: [],
     image: maxwell,
   },
-  { name: "Luke", role: [], image: luke },
+  { name: "Nathan", image: nathan },
 ];
 
 const studentMembers: ProfileProps[] = [
@@ -76,21 +63,17 @@ const studentMembers: ProfileProps[] = [
   { name: "Ajay", image: ajay },
   { name: "Amber", image: amber },
   { name: "Audrey", image: audrey },
-  { name: "Coco M.", image: cocoM },
   { name: "Coco S.", image: cocoS },
   { name: "Daniel", image: daniel },
   { name: "Dora", image: dora },
   { name: "Eddie", image: eddie },
-  { name: "Eli", image: eli },
   { name: "Ella", image: ella },
-  { name: "Fillippo", image: fillippo },
   { name: "Ilan", image: ilan },
   { name: "Kayla", image: kayla },
+  { name: "Luke", role: [], image: luke },
   { name: "Makeda", image: makeda },
-  { name: "Nathan", image: nathan },
   { name: "Owen", image: owen },
   { name: "Sharon", image: sharon },
-  { name: "Sudeep", image: sudeep },
   { name: "Teddy", image: teddy },
   { name: "Zach", image: zach },
   { name: "Ziyan", image: ziyan },
