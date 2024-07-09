@@ -24,7 +24,7 @@ export default function Page () {
         <Overlay>
           <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className={styles.heroBackground} />
           <div className="container">
-            <p className={styles.heroText}>We are <strong>Lobstah Bots</strong>, a <i>FIRST</i>® Robotics team based out of Boston University Academy and the Match Charter School that aims to bring access to robotics to students in the Greater Boston area.</p>
+            <p className={styles.heroText}>We are <strong>Lobstah Bots</strong>, A Boston-based <i>FIRST</i>® Robotics team developing skills and creating memories in a collaborative environment.</p>
           </div>
         </Overlay>
       </header>
