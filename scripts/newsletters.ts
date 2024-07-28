@@ -1,6 +1,6 @@
 "use module";
 import { Client, isFullPage } from "@notionhq/client";
-import { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { CalloutBlockObjectResponse, ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "notion-to-md";
 import path from "path";
 import fs from "fs/promises";
@@ -75,7 +75,14 @@ toMarkdown.setCustomTransformer("image", async (block) => {
 });
 
 toMarkdown.setCustomTransformer("callout", async (block) => {
-  return "\n###### " + (await toMarkdown.blockToMarkdown(block));
+  const callout = (block as CalloutBlockObjectResponse).callout;
+  return (
+    "\n###### " +
+    (await toMarkdown.blockToMarkdown({
+      type: "paragraph",
+      paragraph: callout,
+    } as any as ListBlockChildrenResponseResult))
+  );
 });
 
 const newslettersPage = await notion.databases.query({
@@ -116,7 +123,12 @@ for (const pageResult of newslettersPage.results) {
   const fundraiseText =
     fundraiseTextProp.rich_text
       .map((rich_text) => rich_text.plain_text)
-      .join("") || undefined;
+      .join("");
+  let fundraiseTextObject = {};
+  if (fundraiseText) {
+    fundraiseTextObject = { fundraiseText };
+  }
+
   const cover = pageResult.cover;
   const coverUrl =
     cover && (cover.type === "external" ? cover.external.url : cover.file.url);
@@ -128,7 +140,7 @@ for (const pageResult of newslettersPage.results) {
     numericalDate: dateProp.date!.start,
     date: `${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`,
     coverImage: coverUrl ?? "/newsletter/default.png",
-    fundraiseText,
+    ...fundraiseTextObject,
   };
   const output = matter.stringify(
     toMarkdown.toMarkdownString(await toMarkdown.pageToMarkdown(pageResult.id))
