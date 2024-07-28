@@ -1,6 +1,9 @@
 "use module";
 import { Client, isFullPage } from "@notionhq/client";
-import { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import {
+  CalloutBlockObjectResponse,
+  ImageBlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "notion-to-md";
 import path from "path";
 import fs from "fs/promises";
@@ -72,6 +75,10 @@ toMarkdown.setCustomTransformer("image", async (block) => {
       },
     } as ListBlockChildrenResponseResult))
   );
+});
+
+toMarkdown.setCustomTransformer("callout", async (block) => {
+  return "\n###### " + (await toMarkdown.blockToMarkdown(block));
 });
 
 const newslettersPage = await notion.databases.query({
