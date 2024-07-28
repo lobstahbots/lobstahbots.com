@@ -1,9 +1,6 @@
 "use module";
 import { Client, isFullPage } from "@notionhq/client";
-import {
-  CalloutBlockObjectResponse,
-  ImageBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "notion-to-md";
 import path from "path";
 import fs from "fs/promises";
@@ -112,6 +109,14 @@ for (const pageResult of newslettersPage.results) {
     continue;
   }
   const date = new Date(dateProp.date!.start);
+  const fundraiseTextProp = pageResult.properties["Fundraise Text"];
+  if (fundraiseTextProp.type !== "rich_text") {
+    continue;
+  }
+  const fundraiseText =
+    fundraiseTextProp.rich_text
+      .map((rich_text) => rich_text.plain_text)
+      .join("") || undefined;
   const cover = pageResult.cover;
   const coverUrl =
     cover && (cover.type === "external" ? cover.external.url : cover.file.url);
@@ -123,6 +128,7 @@ for (const pageResult of newslettersPage.results) {
     numericalDate: dateProp.date!.start,
     date: `${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`,
     coverImage: coverUrl ?? "/newsletter/default.png",
+    fundraiseText,
   };
   const output = matter.stringify(
     toMarkdown.toMarkdownString(await toMarkdown.pageToMarkdown(pageResult.id))
