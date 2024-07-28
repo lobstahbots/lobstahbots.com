@@ -146,7 +146,7 @@ for (const pageResult of newslettersPage.results) {
     toMarkdown.toMarkdownString(await toMarkdown.pageToMarkdown(pageResult.id))
       .parent,
     properties
-  );
+  ).replace(/\n{3,}/g, "\n\n");
   currSlug = "default";
   await fs.writeFile(path.resolve(baseDir, `_posts/${slug}.md`), output);
 }
