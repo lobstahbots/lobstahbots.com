@@ -1,6 +1,9 @@
 "use module";
 import { Client, isFullPage } from "@notionhq/client";
-import { CalloutBlockObjectResponse, ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import {
+  CalloutBlockObjectResponse,
+  ImageBlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "notion-to-md";
 import path from "path";
 import fs from "fs/promises";
@@ -38,6 +41,8 @@ const toMarkdown = new NotionToMarkdown({
 
 let currSlug = "default";
 
+const coverImgMap = new Map<string, string>();
+
 const getImageUrl = async (unparsedUrl: string): Promise<string> => {
   const url = new URL(unparsedUrl);
   const fileUrl = `/newsletter/${currSlug}/${createHash("md5")
@@ -51,6 +56,7 @@ const getImageUrl = async (unparsedUrl: string): Promise<string> => {
     await fs.mkdir(path.dirname(filePath), { recursive: true });
     await fs.writeFile(filePath, Buffer.from(await response.arrayBuffer()));
   }
+  if (!coverImgMap.has(currSlug)) coverImgMap.set(currSlug, fileUrl);
   return fileUrl;
 };
 
@@ -120,18 +126,13 @@ for (const pageResult of newslettersPage.results) {
   if (fundraiseTextProp.type !== "rich_text") {
     continue;
   }
-  const fundraiseText =
-    fundraiseTextProp.rich_text
-      .map((rich_text) => rich_text.plain_text)
-      .join("");
+  const fundraiseText = fundraiseTextProp.rich_text
+    .map((rich_text) => rich_text.plain_text)
+    .join("");
   let fundraiseTextObject = {};
   if (fundraiseText) {
     fundraiseTextObject = { fundraiseText };
   }
-
-  const cover = pageResult.cover;
-  const coverUrl =
-    cover && (cover.type === "external" ? cover.external.url : cover.file.url);
   const properties = {
     excerpt: "",
     author: "Lobstah Bots",
@@ -139,14 +140,18 @@ for (const pageResult of newslettersPage.results) {
     title: titleProp.title.map((rich_text) => rich_text.plain_text).join(""),
     numericalDate: dateProp.date!.start,
     date: `${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`,
-    coverImage: coverUrl ?? "/newsletter/default.png",
     ...fundraiseTextObject,
+    coverImage: "/newsletter/default.png",
   };
-  const output = matter.stringify(
-    toMarkdown.toMarkdownString(await toMarkdown.pageToMarkdown(pageResult.id))
-      .parent,
-    properties
-  ).replace(/\n{3,}/g, "\n\n");
+  const markdown = toMarkdown.toMarkdownString(
+    await toMarkdown.pageToMarkdown(pageResult.id)
+  ).parent;
+  if (coverImgMap.has(currSlug)) {
+    properties.coverImage = coverImgMap.get(currSlug)!;
+  }
+  const output = matter
+    .stringify(markdown, properties)
+    .replace(/\n{3,}/g, "\n\n");
   currSlug = "default";
   await fs.writeFile(path.resolve(baseDir, `_posts/${slug}.md`), output);
 }
