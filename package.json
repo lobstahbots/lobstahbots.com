@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:scripts": "tsc -p tsconfig-scripts.json",
+    "newsletters": "node --env-file=.env ./scripts/newsletters.js"
   },
   "dependencies": {
     "@next/mdx": "^14.0.4",
     "@nodelib/fs.scandir": "^3.0.0",
-    "@types/node": "18.11.9",
+    "@notionhq/client": "^2.2.15",
+    "@types/node": "^22.0.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@vercel/analytics": "^1.1.1",
@@ -21,6 +24,7 @@
     "gray-matter": "^4.0.3",
     "mdx": "^0.3.1",
     "next": "13.4.3",
+    "notion-to-md": "^3.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
