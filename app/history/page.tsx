@@ -1,4 +1,3 @@
-
 import woodpecker from "../../images/gallery/woodpecker-portrait-2.jpg";
 import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
@@ -142,11 +141,11 @@ export const years: YearProps[] = [
 export default function History() {
   return (
     <main>
-      <PageTitle>
-        Past Seasons
-      </PageTitle>
-      <Numbers />
-      {years.map((year, index) => <Year {...year} key={year.year} className={index % 2 === 0 ? "bg-gray" : undefined} />)}
+      <PageTitle>Past Seasons</PageTitle>
+      <Numbers yearsCompeted={26} awardsEarned={25} eventsAttended={55} />
+      {years.map((year, index) => (
+        <Year {...year} key={year.year} className={index % 2 === 0 ? "bg-gray" : undefined} />
+      ))}
     </main>
   );
 }

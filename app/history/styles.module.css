@@ -71,18 +71,6 @@
     display: inline-grid;
   }
 
-  #yearsCompeted.loaded {
-    --years-competed: 26;
-  }
-
-  #eventsAttended.loaded {
-    --events-attended: 55;
-  }
-
-  #awardsEarned.loaded {
-    --awards-earned: 25;
-  }
-
   #yearsCompeted::after {
     content: counter(years-competed);
     grid-row-start: 1;
