@@ -6,6 +6,8 @@ import burrito from "../../images/history/burrito.jpg";
 import PageTitle from "../../components/page-title";
 import Year, { YearProps } from "../../components/historyYear";
 import { Numbers } from "./numbers";
+import Link from "next/link";
+import styles from "./styles.module.css";
 
 export const metadata = {
   title: "Past Seasons",
@@ -126,6 +128,11 @@ export default async function History() {
         .map((year, index) => (
           <Year {...year} key={year.year} className={index % 2 === 0 ? "bg-gray" : undefined} />
         ))}
+      <section className="section container">
+        <div>
+          Powered by <Link id={styles.tbaLink} target="_blank" href="https://www.thebluealliance.com">The Blue Alliance</Link>.
+        </div>
+      </section>
     </main>
   );
 }
