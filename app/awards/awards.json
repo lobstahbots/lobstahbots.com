@@ -1,0 +1,97 @@
+[
+  {
+    "award_type": 0,
+    "name": "Impact (Chairman's) Award",
+    "description": "The FIRST Impact Award honors the team that best represents a model for other teams to emulate and best embodies the mission of FIRST. It focuses on the ultimate goal of transforming the world in ways that will inspire greater levels of respect and honor for science and technology, as well as encouraging more of today’s youth to become science and technology leaders."
+  },
+  {
+    "award_type": 1,
+    "name": "Event Winner",
+    "description": "This award is presented to the alliance that wins the event."
+  },
+  {
+    "award_type": 2,
+    "name": "Event Finalists",
+    "description": "The Finalist Award celebrates the alliance that makes it to the final match of the competition."
+  },
+  {
+    "award_type": 9,
+    "name": "Engineering Inspiration Award",
+    "description": "The Engineering Inspiration Award celebrates outstanding success in advancing respect and appreciation for engineering within a team’s school or organization and community. The team demonstrates a commitment to science and technology education among the team, school, and community, and achievement of the FIRST mission and ability to communicate that at the competition and away from it."
+  },
+  {
+    "award_type": 10,
+    "name": "Rookie All-Star Award",
+    "description": "The Rookie All-Star award celebrates the rookie team exemplifying a young but strong partnership effort, as well as implementing the mission of FIRST to inspire students to learn more about science and technology."
+  },
+  {
+    "award_type": 11,
+    "name": "Gracious Professionalism® Award",
+    "description": "The Gracious Professionalism® Award outstanding demonstration of FIRST Core Values such as continuous Gracious Professionalism and working together both on and off the playing field."
+  },
+  {
+    "award_type": 13,
+    "name": "Judes' Award",
+    "description": "During the course of the competition, the judging panel may decide a team’s unique efforts, performance, or dynamics merit recognition. This award celebrates that team."
+  },
+  {
+    "award_type": 16,
+    "name": "Industrial Design Award",
+    "description": "The Industrial Design Award celebrates the team that demonstrates industrial design principles, striking a balance between form, function, and aesthetics. A team must be able to describe how their robot is elegant, efficient (simple/executable), and practical. The entire machine design, or the detailed process used to develop the design, is worthy of this recognition, and not just a single component, while the robot distinguishes itself from others by its aesthetic and functional design. "
+  },
+  {
+    "award_type": 17,
+    "name": "Quality Award",
+    "description": "This award celebrates machine robustness in concept and fabrication. The entire machine demonstrates quality: workmanship, welds, attachment systems, wiring, paint, etc, that allow it to withstand the rigors of competition – maintaining functionality, including the use of designed-in redundancy and risk mitigation measures."
+  },
+  {
+    "award_type": 19,
+    "name": "Sportsmanship Award",
+    "description": "The Sportsmanship Award celebrates the team that exemplifies Coopertition and Gracious Professionalism in competition."
+  },
+  {
+    "award_type": 20,
+    "name": "Creativity Award",
+    "description": "The Creativity Award celebrates creativity that enhances strategy of play and was intentionally designed and not discovered. The creative element’s uniqueness has a practical application and contributes to the objectives of the competition."
+  },
+  {
+    "award_type": 21,
+    "name": "Excellence in Engineering Award",
+    "description": "The Excellence in Engineering Award celebrates the team that demonstrates a professional approach to the design process. The designs reflect an engineering solution to a specific problem and are elegant and advantageous on the field of play."
+  },
+  {
+    "award_type": 22,
+    "name": "Entrepreneurship Award",
+    "description": "The Entrepreneurship Award celebrates a team that integrates sustainable, professional design into the structure and management of the team."
+  },
+  {
+    "award_type": 27,
+    "name": "Imagery Award",
+    "description": "This award celebrates attractiveness in engineering and outstanding visual aesthetic integration of machine and team appearance. The team theme is supportive of the FIRST Core Values and original, can be explained by a team spokesperson, and is fitting to the objectives, character, and/or history of the team."
+  },
+  {
+    "award_type": 29,
+    "name": "Innovation in Control Award",
+    "description": "The Innovation in Control Award celebrates an innovative control system or application of control components – electrical, mechanical or software – to provide unique machine functions. The control system is innovative and unique. It is integrated with the machine, human players, strategy, etc. in concept and execution. The innovation is practical; it addresses the game’s challenge and is reliable under the stress of competition."
+  },
+  {
+    "award_type": 30,
+    "name": "Team Spirit Award",
+    "description": "The Team Spirit Award elebrates extraordinary enthusiasm and spirit through exceptional partnership and teamwork furthering the objectives of FIRST. Spirit is consistent both throughout the team and also throughout the contest in attitude, appearance, originality, and depth."
+  },
+  {
+    "award_type": 47,
+    "name": "Outstanding Defense Award",
+    "description": "The Defense Award celebrates a member of an alliance that provides invaluable and strong defense."
+  },
+  {
+    "award_type": 71,
+    "name": "Autonomous Award",
+    "description": "The Autonomous Award celebrates the team that has demonstrated consistent, reliable, high-performance robot operation during autonomously managed actions. Evaluation is based on the robot’s ability to sense its surroundings, position itself or onboard mechanisms appropriately, and execute tasks."
+  },
+  {
+    "award_type": 82,
+    "name": "Team Sustainability Award",
+    "description": "The Team Sustainability Award celebrates and recognizes a team which has developed sustainable practices to have a positive environmental impact and achieve long-term continuity."
+  }
+]

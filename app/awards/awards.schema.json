@@ -1,0 +1,32 @@
+{
+  "type": "array",
+  "title": "List of awards",
+  "items": {
+    "type": "object",
+    "required": ["award_type", "name", "description"],
+    "defaultSnippets": [
+      {
+        "label": "Award",
+        "description": "Describes an award.",
+        "body": { "award_type": "$1", "name": "$2", "description": "$3" }
+      }
+    ],
+    "properties": {
+      "award_type": {
+        "type": "integer",
+        "title": "Type of award",
+        "description": "The type of award, as defined by The Blue Alliance"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name of award",
+        "description": "The full name of the award"
+      },
+      "description": {
+        "type": "string",
+        "title": "Description of award",
+        "description": "A brief description of the award"
+      }
+    }
+  }
+}

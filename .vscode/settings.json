@@ -12,5 +12,11 @@
   "eslint.format.enable": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["**/awards.json"],
+      "url": "./app/awards/awards.schema.json"
+    }
+  ]
 }
