@@ -8,6 +8,7 @@ import Year, { YearProps } from "../../components/historyYear";
 import { Numbers } from "./numbers";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import { Award, SimpleEvent } from "../../lib/types";
 
 export const metadata = {
   title: "Past Seasons",
@@ -64,14 +65,6 @@ export const headers = new Headers();
 headers.append("X-TBA-Auth-Key", process.env.TBA_AUTH_KEY!);
 headers.append("Accept", "application/json");
 
-export interface SimpleEvent {
-  key: string;
-  name: string;
-  event_type: number;
-  year: number;
-  start_date: string;
-}
-
 export const toEventsList = (events: SimpleEvent[]) => {
   return events
     .filter((event) => !event.name.toLowerCase().includes("cancelled"))
@@ -87,7 +80,7 @@ export default async function History() {
     fetch(AWARDS_URL, { headers, cache: "force-cache" }),
     fetch(EVENTS_URL, { headers, cache: "force-cache" }),
   ]);
-  const [awards, events]: [any[], SimpleEvent[]] = await Promise.all([
+  const [awards, events]: [Award[], SimpleEvent[]] = await Promise.all([
     awardsResponse.json(),
     eventsResponse.json(),
   ]);
@@ -130,7 +123,11 @@ export default async function History() {
         ))}
       <section className="section container">
         <div>
-          Powered by <Link id={styles.tbaLink} target="_blank" href="https://www.thebluealliance.com">The Blue Alliance</Link>.
+          Powered by{" "}
+          <Link id={styles.tbaLink} target="_blank" href="https://www.thebluealliance.com">
+            The Blue Alliance
+          </Link>
+          .
         </div>
       </section>
     </main>
