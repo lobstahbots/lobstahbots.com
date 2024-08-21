@@ -11,7 +11,8 @@ import { ExternalLink, Instagram, Youtube, ArrowRight, GitHub } from "react-feat
 import SponsorsSection from "../components/sponsors-section";
 import { getAllPosts } from "../lib/api";
 import PostPreview from "../components/postPreview";
-import { yearPropOverrides as years, headers, TEAM_KEY, toEventsList } from "./history/page";
+import { yearPropOverrides as years } from "./history/page";
+import { headers, TEAM_KEY, toEventsList } from "../lib/tbaStuff";
 import { SimpleEvent } from "../lib/types";
 
 export default async function Page() {

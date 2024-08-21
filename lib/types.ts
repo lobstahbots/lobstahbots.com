@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 /**
  * Represents a recipient of an award as returned by the TBA API.
  * @see {@link Award}
@@ -117,3 +119,5 @@ export interface SimpleEvent {
    */
   year: number;
 }
+
+export type ImageMap = Map<string, StaticImageData>;

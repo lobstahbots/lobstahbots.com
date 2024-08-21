@@ -5,10 +5,18 @@ import popcorn from "../../images/history/popcorn.jpg";
 import burrito from "../../images/history/burrito.jpg";
 import PageTitle from "../../components/page-title";
 import Year, { YearProps } from "../../components/historyYear";
+import PoweredByTba from "../../components/poweredByTba";
 import { Numbers } from "./numbers";
-import Link from "next/link";
-import styles from "./styles.module.css";
 import { Award, SimpleEvent } from "../../lib/types";
+import {
+  AWARDS_URL,
+  EVENTS_URL,
+  HISTORY_START_YEAR,
+  HISTORY_EXCLUDE_YEARS,
+  toEventsList,
+  FIRST_YEAR,
+  headers,
+} from "../../lib/tbaStuff";
 
 export const metadata = {
   title: "Past Seasons",
@@ -55,26 +63,6 @@ export const yearPropOverrides: Pick<
   },
 ];
 
-const FIRST_YEAR = 1999;
-const START_YEAR = 2019;
-const EXCLUDE_YEARS = [2021];
-export const TEAM_KEY = "frc246";
-const AWARDS_URL = `https://www.thebluealliance.com/api/v3/team/${TEAM_KEY}/awards`;
-const EVENTS_URL = `https://www.thebluealliance.com/api/v3/team/${TEAM_KEY}/events/simple`;
-export const headers = new Headers();
-headers.append("X-TBA-Auth-Key", process.env.TBA_AUTH_KEY!);
-headers.append("Accept", "application/json");
-
-export const toEventsList = (events: SimpleEvent[]) => {
-  return events
-    .filter((event) => !event.name.toLowerCase().includes("cancelled"))
-    .sort((eventA, eventB) => eventA.start_date.localeCompare(eventB.start_date))
-    .map((event) => ({
-      name: event.year + " " + event.name.replace("NE", "New England"),
-      link: `https://www.thebluealliance.com/event/${event.key}`,
-    }));
-};
-
 export default async function History() {
   const [awardsResponse, eventsResponse] = await Promise.all([
     fetch(AWARDS_URL, { headers, cache: "force-cache" }),
@@ -85,8 +73,8 @@ export default async function History() {
     eventsResponse.json(),
   ]);
   const years: YearProps[] = [];
-  for (let year = new Date().getFullYear(); year >= START_YEAR; year--) {
-    if (EXCLUDE_YEARS.includes(year)) {
+  for (let year = new Date().getFullYear(); year >= HISTORY_START_YEAR; year--) {
+    if (HISTORY_EXCLUDE_YEARS.includes(year)) {
       continue;
     }
     years.push({
@@ -121,15 +109,7 @@ export default async function History() {
         .map((year, index) => (
           <Year {...year} key={year.year} className={index % 2 === 0 ? "bg-gray" : undefined} />
         ))}
-      <section className="section container">
-        <div>
-          Powered by{" "}
-          <Link id={styles.tbaLink} target="_blank" href="https://www.thebluealliance.com">
-            The Blue Alliance
-          </Link>
-          .
-        </div>
-      </section>
+      <PoweredByTba />
     </main>
   );
 }

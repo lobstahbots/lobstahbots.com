@@ -89,11 +89,3 @@
     grid-column-start: 1;
   }
 }
-
-#tbaLink {
-  color: #3F51B5;
-}
-
-#tbaLink:hover {
-  text-decoration: underline;
-}

@@ -6,7 +6,7 @@
   },
   {
     "award_type": 1,
-    "name": "Event Winner",
+    "name": "Event Winners",
     "description": "This award is presented to the alliance that wins the event."
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "award_type": 13,
-    "name": "Judes' Award",
+    "name": "Judges' Award",
     "description": "During the course of the competition, the judging panel may decide a team’s unique efforts, performance, or dynamics merit recognition. This award celebrates that team."
   },
   {
