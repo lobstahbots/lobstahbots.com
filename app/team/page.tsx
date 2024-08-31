@@ -14,7 +14,6 @@ import ajay from "../../images/profiles/ajay.jpg";
 import ilan from "../../images/profiles/ilan.jpg";
 import zach from "../../images/profiles/zach.jpg";
 import carolyn from "../../images/profiles/carolyn.jpg";
-import sherman from "../../images/profiles/sherman.jpg";
 import ziyan from "../../images/profiles/ziyan.jpg";
 import sharon from "../../images/profiles/sharon.jpg";
 import teddy from "../../images/profiles/teddy.jpg";
@@ -29,6 +28,8 @@ import makeda from "../../images/profiles/makeda.jpg";
 import kayla from "../../images/profiles/kayla.jpg";
 import cocoS from "../../images/profiles/cocoS.jpg";
 import tynan from "../../images/profiles/tynan.jpg";
+import ryo from "../../images/profiles/ryo.png";
+
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Profile, { ProfileProps } from "../../components/profile";
@@ -43,40 +44,35 @@ const mentors: ProfileProps[] = [
   { name: "Oliver", image: oliver },
   { name: "Carolyn", image: carolyn },
   { name: "Tynan", image: tynan },
-  { name: "Sherman", image: sherman },
+  { name: "Ryo", image: ryo },
 ];
 
 const studentLeadership: ProfileProps[] = [
-  { name: "Coco M.", image: cocoM },
-  { name: "Kendree",
-    image: kendree,
-  },
-  {
-    name: "Maxwell",
-    image: maxwell,
-  },
-  { name: "Nathan", image: nathan },
+  { name: "Kendree", role:"Team Captain", image: kendree,},
+  { name: "Coco M.", role:"Outreach and Business Lead", image: cocoM,},
+  { name: "Maxwell", role: "CAD Co-Lead", image: maxwell,},
+  { name: "Nathan", role: "CAD Co-Lead", image: nathan,},
 ];
 
 const studentMembers: ProfileProps[] = [
   { name: "Adam", image: adam },
   { name: "Ajay", image: ajay },
   { name: "Amber", image: amber },
-  { name: "Audrey", image: audrey },
-  { name: "Coco S.", image: cocoS },
-  { name: "Daniel", image: daniel },
+  { name: "Audrey", role:"Scouting and Strategy Lead", image: audrey },
+  { name: "Coco S.", role:"Electrical Lead", image: cocoS },
+  { name: "Daniel", role:"Programming Co-Lead", image: daniel },
   { name: "Dora", image: dora },
   { name: "Eddie", image: eddie },
   { name: "Ella", image: ella },
   { name: "Ilan", image: ilan },
   { name: "Kayla", image: kayla },
-  { name: "Luke", role: [], image: luke },
+  { name: "Luke", role:"Pit Lead", image: luke },
   { name: "Makeda", image: makeda },
   { name: "Owen", image: owen },
-  { name: "Sharon", image: sharon },
-  { name: "Teddy", image: teddy },
+  { name: "Sharon", role:"Mechanical Lead", image: sharon },
+  { name: "Teddy", role:"Programming Co-Lead", image: teddy },
   { name: "Zach", image: zach },
-  { name: "Ziyan", image: ziyan },
+  { name: "Ziyan", role:"Imagery and Branding Lead", image: ziyan },
 ];
 
 export default function Team () {
