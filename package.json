@@ -7,7 +7,7 @@
     "build": "next build",
     "lint": "next lint",
     "build:scripts": "tsc -p tsconfig-scripts.json",
-    "newsletters": "node --env-file=.env ./scripts/newsletters.js"
+    "newsletters": "node ./scripts/newsletters.js"
   },
   "dependencies": {
     "@next/mdx": "^14.0.4",
