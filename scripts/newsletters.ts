@@ -91,6 +91,8 @@ toMarkdown.setCustomTransformer("callout", async (block) => {
   );
 });
 
+console.log(notion.oauth.token, database_id);
+
 const newslettersPage = await notion.databases.query({
   database_id,
   filter: {
