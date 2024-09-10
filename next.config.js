@@ -21,7 +21,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/mm2024f1', // Merrimack 2024 Flyer #1
+        source: '/mm24f1', // Merrimack 2024 Flyer #1
         destination: '/',
         permanent: false,
       }
