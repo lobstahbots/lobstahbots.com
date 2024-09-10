@@ -18,6 +18,15 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/mm2024f1', // Merrimack 2024 Flyer #1
+        destination: '/',
+        permanent: false,
+      }
+    ]
+  }
 };
 
 module.exports = nextConfig;
