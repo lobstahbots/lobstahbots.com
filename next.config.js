@@ -22,7 +22,12 @@ const nextConfig = {
     return [
       {
         source: '/mm24f1', // Merrimack 2024 Flyer #1
-        destination: '/',
+        destination: '/mm24',
+        permanent: false,
+      },
+      {
+        source: '/mm24',
+        destination: 'https://www.buacademy.org/stuco/9-14-mayhem-in-merrimack/',
         permanent: false,
       }
     ]
