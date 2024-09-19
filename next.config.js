@@ -21,17 +21,23 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/mm24f1', // Merrimack 2024 Flyer #1
-        destination: '/mm24',
+        source: "/mm24f1", // Merrimack 2024 Flyer #1
+        destination: "/mm24",
         permanent: false,
       },
       {
-        source: '/mm24',
-        destination: 'https://www.buacademy.org/stuco/9-14-mayhem-in-merrimack/',
+        source: "/mm24",
+        destination: "https://www.buacademy.org/stuco/9-14-mayhem-in-merrimack/",
         permanent: false,
-      }
-    ]
-  }
+      },
+      {
+        source: "/qr/2",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfeiw1gEi50dhyFuxfNosJI_SDrOAF-ez6BP9hnxDnIEyg7ig/viewform?usp=sf_link",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
