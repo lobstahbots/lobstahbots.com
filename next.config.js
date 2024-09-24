@@ -36,6 +36,10 @@ const nextConfig = {
           "https://docs.google.com/forms/d/e/1FAIpQLSfeiw1gEi50dhyFuxfNosJI_SDrOAF-ez6BP9hnxDnIEyg7ig/viewform?usp=sf_link",
         permanent: false,
       },
+      {
+        source: "/join-2024",
+        
+      }
     ];
   },
 };
