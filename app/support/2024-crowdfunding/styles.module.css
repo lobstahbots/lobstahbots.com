@@ -1,0 +1,10 @@
+.countdown {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.value {
+  font-size: 0.1vw;
+  color: var(--color-brand);
+}
