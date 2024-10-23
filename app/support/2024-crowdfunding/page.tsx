@@ -1,11 +1,18 @@
-"use client"
+"use client";
 
 import styles from "./styles.module.css";
 import useCountdown from "../../../lib/useCountdown";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Page() {
   const countdown = useCountdown(new Date(1730174400000));
+  const router = useRouter();
+
+  if (!countdown) {
+    router.push("https://crowdfunding.bu.edu/campaigns/lobstah-bots-2024-robotics-fund");
+    return;
+  }
 
   return (
     <main>
@@ -33,10 +40,10 @@ export default function Page() {
       </div>
       <div className="container">
         <p className={styles.tagline}>...before the start of the campaign!</p>
-        <div className={`section ${styles.right}`}>
-          <Link className="button" href="/">Learn More About Our Team</Link>
-        </div>
+      </div>
+      <div className={`container section ${styles.right}`}>
+        <Link className="button" href="/">Learn More About Our Team</Link>
       </div>
     </main>
-  )
+  );
 }
