@@ -18,7 +18,7 @@ export default function Page() {
     <main>
       <div className="section container">
         <h1>Get ready for the 2024 crowdfunding campaign!</h1>
-        <p>2…4…6… and we’re a go! The Lobstah Bots are back at it! Our crowdfunding campaign is kicking on October 27. Spread the word, stay tuned for some furious fundraising, and check back at this page.</p>
+        <p>2…4…6… and we’re a go! The Lobstah Bots are back at it! Our crowdfunding campaign is off kicking on October 27. Spread the word, stay tuned for some furious fundraising, and check back at this page for updates.</p>
       </div>
       <div className="bg-brand">
         <div className="section container">
@@ -39,7 +39,7 @@ export default function Page() {
         </div>
       </div>
       <div className="container">
-        <p className={styles.tagline}>...before the start of the campaign!</p>
+        <p className={styles.tagline}>...until the start of the campaign!</p>
       </div>
       <div className={`container section ${styles.right}`}>
         <Link className="button" href="/">Learn More About Our Team</Link>
