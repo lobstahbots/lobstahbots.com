@@ -1,10 +1,23 @@
 .countdown {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   text-align: center;
 }
 
 .value {
-  font-size: 0.1vw;
+  font-size: 5vw;
+  padding-bottom: 1.5rem;
+}
+
+.tagline {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
   color: var(--color-brand);
+}
+
+.right {
+  display: flex;
+  justify-content: right;
 }
