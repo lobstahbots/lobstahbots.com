@@ -10,7 +10,7 @@ export default function Page() {
   const router = useRouter();
 
   if (!countdown) {
-    router.push("https://crowdfunding.bu.edu/campaigns/lobstah-bots-2024-robotics-fund");
+    router.push("https://crowdfunding.bu.edu/campaigns/lobstah-bots");
     return;
   }
 
