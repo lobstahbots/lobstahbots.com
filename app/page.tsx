@@ -34,7 +34,7 @@ export default async function Page() {
           <Image src={teamSelfie} alt="Lobstah Bots Team Photo" className={styles.heroBackground} />
           <div className="container">
             <p className={styles.heroText}>
-              We are <strong>Lobstah Bots</strong>, A Boston-based <i>FIRST</i>® Robotics team
+              We are <strong>Lobstah Bots</strong>, a Boston-based <i>FIRST</i>® Robotics team
               developing skills and creating memories in a collaborative environment.
             </p>
           </div>
