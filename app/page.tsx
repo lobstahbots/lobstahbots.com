@@ -198,7 +198,8 @@ export default async function Page() {
                 Contact
               </Link>
               <Link
-                href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA"
+                // href="https://trusted.bu.edu/s/1759/2-bu/giving/interior.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA"
+                href="https://crowdfunding.bu.edu/campaigns/lobstah-bots"
                 className="button-white"
               >
                 Donate
