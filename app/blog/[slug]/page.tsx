@@ -77,8 +77,7 @@ export default async function Page ({ params }: { params: { slug: string }}) {
             h6: (props) => (
               <div className={styles.button}>
                 <Link
-                  // href="https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA"
-                  href="https://crowdfunding.bu.edu/campaigns/lobstah-bots"
+                  href="/donate"
                   target="_blank"
                   className={`${styles.donateButton} ${styles.inlineDonateButton}`}
                 >
@@ -96,8 +95,7 @@ export default async function Page ({ params }: { params: { slug: string }}) {
       </div>
       <div className={styles.button}>
         <Link
-          // href="https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA"
-          href="https://crowdfunding.bu.edu/campaigns/lobstah-bots"
+          href="/donate"
           target="_blank"
           className={styles.donateButton}
         >
