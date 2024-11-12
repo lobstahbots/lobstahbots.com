@@ -44,9 +44,14 @@ const nextConfig = {
       },
       {
         source: "/crowdfunding",
-        destination: "/support/2024-crowdfunding",
+        destination: "https://crowdfunding.bu.edu/campaigns/lobstah-bots",
         permanent: false,
-      }
+      },
+      {
+        source: "/donate",
+        destination: "https://crowdfunding.bu.edu/campaigns/lobstah-bots",
+        permanent: false,
+      },
     ];
   },
 };
