@@ -1,9 +1,4 @@
-import {
-  getPostSlugs,
-  getPostBySlug,
-  getPreviousPost,
-  getNextPost,
-} from "../../../lib/api";
+import { getPostSlugs, getPostBySlug, getPreviousPost, getNextPost } from "../../../lib/api";
 import styles from "./styles.module.css";
 import longWordmark from "../../../images/logos/long-wordmark.png";
 import Image from "next/image";
@@ -11,7 +6,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
 
-export default async function Page ({ params }: { params: { slug: string }}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   const getPost = getPostBySlug(`${slug}.md`, [
@@ -74,6 +69,26 @@ export default async function Page ({ params }: { params: { slug: string }}) {
                 />
               </span>
             ),
+            a: (props) => {
+              let { href, children } = props;
+              if (!href) href = "";
+              if (href.startsWith("https://www.youtube.com/")) {
+                return (
+                  <iframe
+                    className={styles.video}
+                    src={
+                      "https://www.youtube.com/embed/" +
+                      href.replace("https://www.youtube.com/watch?v=", "")
+                    }
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                );
+              }
+              return <Link href={href}>{children}</Link>;
+            },
             h6: (props) => (
               <div className={styles.button}>
                 <Link
@@ -81,24 +96,21 @@ export default async function Page ({ params }: { params: { slug: string }}) {
                   target="_blank"
                   className={`${styles.donateButton} ${styles.inlineDonateButton}`}
                 >
-                  {" "}{props.children}{" "}
+                  {" "}
+                  {props.children}{" "}
                 </Link>
               </div>
             ),
-            code: (props) => ( // I feel really bad for doing this but I kinda had no choice
-              <span className={styles.brandText}> {props.children} </span>
-            ),
+            code: (
+              props, // I feel really bad for doing this but I kinda had no choice
+            ) => <span className={styles.brandText}> {props.children} </span>,
           }}
         >
           {getPost.content}
         </ReactMarkdown>
       </div>
       <div className={styles.button}>
-        <Link
-          href="/donate"
-          target="_blank"
-          className={styles.donateButton}
-        >
+        <Link href="/donate" target="_blank" className={styles.donateButton}>
           {" "}
           {getPost.fundraiseText || "Support the Lobstah Bots!"}{" "}
         </Link>
@@ -171,9 +183,8 @@ export default async function Page ({ params }: { params: { slug: string }}) {
   );
 }
 
-export async function generateStaticParams () {
+export async function generateStaticParams() {
   const posts = getPostSlugs();
-  console.log(getPostSlugs());
   return posts.map((post) => ({
     slug: post.replace(/\.md$/, ""),
   }));

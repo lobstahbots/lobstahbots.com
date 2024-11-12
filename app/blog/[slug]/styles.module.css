@@ -140,6 +140,8 @@ a.inlineDonateButton.donateButton {
   font-size: 1.25rem;
   font-weight: 200;
   text-align: justify;
+  list-style-position: inside;
+  margin-bottom: 1rem;
 }
 
 .markdown img {
@@ -149,6 +151,13 @@ a.inlineDonateButton.donateButton {
   display: block;
   margin: auto;
   object-fit: contain;
+}
+
+.markdown .video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0px solid #000000;
+  border-radius: 1em;
 }
 
 .imageWrapper {
