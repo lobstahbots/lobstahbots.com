@@ -101,6 +101,8 @@ const newslettersPage = await notion.databases.query({
   },
 });
 
+const slugs: string[] = [];
+
 for (const pageResult of newslettersPage.results) {
   if (!isFullPage(pageResult)) {
     continue;
@@ -154,4 +156,11 @@ for (const pageResult of newslettersPage.results) {
     .replace(/\n{3,}/g, "\n\n");
   currSlug = "default";
   await fs.writeFile(path.resolve(baseDir, `_posts/${slug}.md`), output);
+  slugs.push(slug);
+}
+
+for (const file of await fs.readdir(path.resolve(baseDir, "_posts"))) {
+  if (!slugs.includes(file.replace(/\.md$/, ""))) {
+    await fs.rm(path.resolve(baseDir, "_posts", file));
+  }
 }
