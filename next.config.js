@@ -49,7 +49,8 @@ const nextConfig = {
       },
       {
         source: "/donate",
-        destination: "https://crowdfunding.bu.edu/campaigns/lobstah-bots",
+        destination:
+          "https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA",
         permanent: false,
       },
     ];
