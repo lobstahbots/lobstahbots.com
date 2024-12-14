@@ -33,8 +33,9 @@
   width: fit-content;
   height: auto;
   font-size: 3rem;
-  line-height: auto;
+  line-height: 1em;
   font-weight: 600;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   align-self: center;
+  text-align: center;
 }
