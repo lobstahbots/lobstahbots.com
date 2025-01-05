@@ -24,8 +24,16 @@ export const metadata = {
 
 export const yearPropOverrides: Pick<
   YearProps,
-  "year" | "link" | "title" | "robotName" | "robotImage"
+  "year" | "link" | "title" | "robotName" | "robotImage" | "showRobot"
 >[] = [
+  {
+    year: 2025,
+    link: "https://www.youtube.com/watch?v=YWbxcjlY9JY",
+    title: "Reefscape",
+    robotName: "",
+    robotImage: woodpecker,
+    showRobot: false,
+  },
   {
     year: 2024,
     link: "https://www.youtube.com/watch?v=9keeDyFxzY4",
@@ -90,6 +98,7 @@ export default async function History() {
         robotName: "Robot",
         robotImage: lobstah,
         year,
+        showRobot: false,
       }),
     });
   }
