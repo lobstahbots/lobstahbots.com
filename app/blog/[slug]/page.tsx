@@ -72,7 +72,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             a: (props) => {
               let { href, children } = props;
               if (!href) href = "";
-              if (href.startsWith("https://www.youtube.com/")) {
+              if (href.startsWith("https://www.youtube.com/") && (children === "video")) {
                 return (
                   <iframe
                     className={styles.video}
