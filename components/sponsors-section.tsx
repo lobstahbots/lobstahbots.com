@@ -62,9 +62,6 @@ export default function SponsorsSection() {
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Donald Baltus</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>George Baltus</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Jackie Hilt</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Jie Lu</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Julie Saidenberg</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Laura Huang</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Laura Quinn</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Linda Burmeister</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Maggie Wu</div>
@@ -80,15 +77,9 @@ export default function SponsorsSection() {
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Janet Kraus</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>William Hickey</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Eve Brunts</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Fay Chang</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Gary Mueller</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Guy Shechter</div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Jodi Masdea</div>
+        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Laura & Guy Shechter</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>
           Marek Herrmann-Nowosielski
-        </div>
-        <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>
-          Steve + Lauren Magoun
         </div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Marc de Lecea</div>
         <div className={`${styles.individualDonor} ${styles.sponsorLogo}`}>Yi Yu</div>
