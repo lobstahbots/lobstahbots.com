@@ -3,6 +3,7 @@ import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
 import popcorn from "../../images/history/popcorn.jpg";
 import burrito from "../../images/history/burrito.jpg";
+import beluga from "../../images/history/beluga.jpg";
 import PageTitle from "../../components/page-title";
 import Year, { YearProps } from "../../components/historyYear";
 import PoweredByTba from "../../components/poweredByTba";
@@ -30,9 +31,9 @@ export const yearPropOverrides: Pick<
     year: 2025,
     link: "https://www.youtube.com/watch?v=YWbxcjlY9JY",
     title: "Reefscape",
-    robotName: "",
-    robotImage: woodpecker,
-    showRobot: false,
+    robotName: "Beluga",
+    robotImage: beluga,
+    showRobot: true,
   },
   {
     year: 2024,
