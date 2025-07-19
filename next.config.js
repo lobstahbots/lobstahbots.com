@@ -49,8 +49,7 @@ const nextConfig = {
       },
       {
         source: "/donate",
-        destination:
-          "https://trusted.bu.edu/s/1759/22/form.aspx?sid=1759&gid=2&pgid=3962&cid=7331&dids=359&bledit=1&appealcode=WEBBUA",
+        destination: "https://give.bu.edu/campaigns/56409/donations/new?designation_id=9300010620",
         permanent: false,
       },
     ];
