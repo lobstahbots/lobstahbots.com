@@ -54,60 +54,61 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
       </div>
       <div className={styles.breakLine}> </div>
-      <div className={styles.content}>
+      <div>
         <h1 className={styles.title}> {getPost.title} </h1>
-
-        <ReactMarkdown
-          className={styles["markdown"]}
-          components={{
-            img: (props) => (
-              <span className={styles.imageWrapper}>
-                <Image
-                  className="responsive-image"
-                  src={props.src as string}
-                  alt={props.alt as string}
-                />
-              </span>
-            ),
-            a: (props) => {
-              let { href, children } = props;
-              if (!href) href = "";
-              if (href.startsWith("https://www.youtube.com/") && (children === "video")) {
-                return (
-                  <iframe
-                    className={styles.video}
-                    src={
-                      "https://www.youtube.com/embed/" +
-                      href.replace("https://www.youtube.com/watch?v=", "")
-                    }
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
+        <div className={styles.markdown}>
+          <ReactMarkdown
+            className={styles["markdown"]}
+            components={{
+              img: (props) => (
+                <span className={styles.imageWrapper}>
+                  <Image
+                    className="responsive-image"
+                    src={props.src as string}
+                    alt={props.alt as string}
                   />
-                );
-              }
-              return <Link href={href}>{children}</Link>;
-            },
-            h6: (props) => (
-              <div className={styles.button}>
-                <Link
-                  href="/donate"
-                  target="_blank"
-                  className={`${styles.donateButton} ${styles.inlineDonateButton}`}
-                >
-                  {" "}
-                  {props.children}{" "}
-                </Link>
-              </div>
-            ),
-            code: (
-              props, // I feel really bad for doing this but I kinda had no choice
-            ) => <span className={styles.brandText}> {props.children} </span>,
-          }}
-        >
-          {getPost.content}
-        </ReactMarkdown>
+                </span>
+              ),
+              a: (props) => {
+                let { href, children } = props;
+                if (!href) href = "";
+                if (href.startsWith("https://www.youtube.com/") && children === "video") {
+                  return (
+                    <iframe
+                      className={styles.video}
+                      src={
+                        "https://www.youtube.com/embed/" +
+                        href.replace("https://www.youtube.com/watch?v=", "")
+                      }
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  );
+                }
+                return <Link href={href}>{children}</Link>;
+              },
+              h6: (props) => (
+                <div className={styles.button}>
+                  <Link
+                    href="/donate"
+                    target="_blank"
+                    className={`${styles.donateButton} ${styles.inlineDonateButton}`}
+                  >
+                    {" "}
+                    {props.children}{" "}
+                  </Link>
+                </div>
+              ),
+              code: (
+                props, // I feel really bad for doing this but I kinda had no choice
+              ) => <span className={styles.brandText}> {props.children} </span>,
+            }}
+          >
+            {getPost.content}
+          </ReactMarkdown>
+        </div>
       </div>
       <div className={styles.button}>
         <Link href="/donate" target="_blank" className={styles.donateButton}>
