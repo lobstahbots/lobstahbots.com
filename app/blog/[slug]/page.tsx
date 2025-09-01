@@ -58,7 +58,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <h1 className={styles.title}> {getPost.title} </h1>
         <div className={styles.markdown}>
           <ReactMarkdown
-            className={styles["markdown"]}
             components={{
               img: (props) => (
                 <span className={styles.imageWrapper}>
