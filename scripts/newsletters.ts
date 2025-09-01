@@ -67,7 +67,7 @@ toMarkdown.setCustomTransformer("image", async (block) => {
     (await md.image(
       image.caption.map((rich_text) => rich_text.plain_text).join(""),
       await getImageUrl(url),
-      false
+      false,
     )) +
     "\n#### " +
     (await toMarkdown.blockToMarkdown({
@@ -111,9 +111,7 @@ for (const pageResult of newslettersPage.results) {
   if (slugProp.type !== "rich_text") {
     continue;
   }
-  const slug = slugProp.rich_text
-    .map((rich_text) => rich_text.plain_text)
-    .join("");
+  const slug = slugProp.rich_text.map((rich_text) => rich_text.plain_text).join("");
   currSlug = slug;
   const titleProp = pageResult.properties.Title;
   if (titleProp.type !== "title") {
@@ -146,14 +144,12 @@ for (const pageResult of newslettersPage.results) {
     coverImage: "/newsletter/default.png",
   };
   const markdown = toMarkdown.toMarkdownString(
-    await toMarkdown.pageToMarkdown(pageResult.id)
+    await toMarkdown.pageToMarkdown(pageResult.id),
   ).parent;
   if (coverImgMap.has(currSlug)) {
     properties.coverImage = coverImgMap.get(currSlug)!;
   }
-  const output = matter
-    .stringify(markdown, properties)
-    .replace(/\n{3,}/g, "\n\n");
+  const output = matter.stringify(markdown, properties).replace(/\n{3,}/g, "\n\n");
   currSlug = "default";
   await fs.writeFile(path.resolve(baseDir, `_posts/${slug}.md`), output);
   slugs.push(slug);

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const useCountdown = (targetDate: Date) => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = useCallback(() => {
     const difference = +targetDate - +new Date();
     let timeLeft = null;
 
@@ -15,7 +15,7 @@ const useCountdown = (targetDate: Date) => {
     }
 
     return timeLeft;
-  };
+  }, [targetDate]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
