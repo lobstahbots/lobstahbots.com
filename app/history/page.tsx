@@ -1,4 +1,4 @@
-import woodpecker from "../../images/gallery/woodpecker-portrait-2.jpg";
+import woodpecker from "../../images/gallery/2024/woodpecker-portrait-2.jpg";
 import llama from "../../images/history/llama.jpg";
 import lobstah from "../../images/history/lobstah.jpeg";
 import popcorn from "../../images/history/popcorn.jpg";
