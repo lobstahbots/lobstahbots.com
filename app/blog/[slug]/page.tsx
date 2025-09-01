@@ -6,7 +6,8 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeftCircle, ArrowRightCircle } from "react-feather";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props0: { params: Promise<{ slug: string }> }) {
+  const params = await props0.params;
   const { slug } = params;
 
   const getPost = getPostBySlug(`${slug}.md`, [

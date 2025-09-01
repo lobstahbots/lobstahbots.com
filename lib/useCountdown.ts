@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useCountdown = (targetDate: Date) => {
   const calculateTimeLeft = () => {
@@ -25,7 +25,7 @@ const useCountdown = (targetDate: Date) => {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [timeLeft]);
+  }, [timeLeft, calculateTimeLeft]);
 
   return timeLeft;
 };

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   try {
     body = await req.json();
   } catch (e) {
-    return setCorsHeaders(NextResponse.json({ message: "Invalid JSON" }, { status: 400 }));
+    return setCorsHeaders(NextResponse.json({ message: "Invalid JSON: " + e }, { status: 400 }));
   }
   if (body.message_type === "verification") {
     await fetch("https://griffon-crack-piranha.ngrok-free.app", {
