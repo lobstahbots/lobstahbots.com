@@ -22,7 +22,7 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "15.5.2",
-    "notion-to-md": "^3.1.1",
+    "notion-to-md": "^3.1.9",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "react-feather": "^2.0.10",
