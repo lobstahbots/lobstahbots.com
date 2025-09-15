@@ -16,7 +16,7 @@ import { headers, TEAM_KEY, toEventsList } from "../lib/tbaStuff";
 import { SimpleEvent } from "../lib/types";
 
 export default async function Page() {
-  const data = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+  const data = await getAllPosts();
   const posts = data.slice(0, 3);
   const thisYear = [...years].sort((a, b) => b.year - a.year)[0];
 

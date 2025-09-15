@@ -10,6 +10,7 @@ const nextConfig = {
         port: "",
         pathname: "/icons/social-block-v3/block-icons-v3/*.png",
       },
+      new URL("https://njju133mvndv7an0.public.blob.vercel-storage.com/**"),
     ],
   },
   eslint: {

@@ -13,6 +13,7 @@ import { list, put, del } from "@vercel/blob";
 import Newsletter from "../../../../models/newsletter";
 import dbConnect from "../../../../lib/dbConnect";
 import { NextResponse } from "next/server";
+import { revalidateTag } from "next/cache";
 
 export const POST = async () => {
   await dbConnect();
@@ -166,7 +167,7 @@ export const POST = async () => {
       ...fundraiseTextObject,
       coverImage: "/newsletter/default.png",
       slug,
-      markdown,
+      content: markdown,
       images: imgMap.get(currSlug) ?? [],
     };
     if (coverImgMap.has(currSlug)) {
@@ -180,6 +181,8 @@ export const POST = async () => {
     await del(newsletter.images);
     await Newsletter.deleteOne({ _id: newsletter._id });
   }
+
+  revalidateTag("newsletters");
 
   return NextResponse.json({ message: "Newsletter sync complete", slugs }, { status: 200 });
 };

@@ -10,16 +10,10 @@ export default async function Page(props0: { params: Promise<{ slug: string }> }
   const params = await props0.params;
   const { slug } = params;
 
-  const getPost = getPostBySlug(`${slug}.md`, [
-    "title",
-    "author",
-    "content",
-    "date",
-    "fundraiseText",
-  ]);
+  const post = await getPostBySlug(slug);
 
-  const previousPost = getPreviousPost(slug);
-  const nextPost = getNextPost(slug);
+  const previousPost = await getPreviousPost(slug);
+  const nextPost = await getNextPost(slug);
 
   // const content = await markdownToHtml(getPost.content);
 
@@ -49,20 +43,20 @@ export default async function Page(props0: { params: Promise<{ slug: string }> }
               <span className={styles.vert}>
                 <span>|</span>{" "}
               </span>
-              <span className={styles.date}> {getPost.date} </span>{" "}
+              <span className={styles.date}> {post.date} </span>{" "}
             </strong>
           </p>{" "}
         </div>
       </div>
       <div className={styles.breakLine}> </div>
       <div>
-        <h1 className={styles.title}> {getPost.title} </h1>
+        <h1 className={styles.title}> {post.title} </h1>
         <div className={styles.markdown}>
           <ReactMarkdown
             components={{
               img: (props) => (
                 <span className={styles.imageWrapper}>
-                  <Image
+                  <img
                     className="responsive-image"
                     src={props.src as string}
                     alt={props.alt as string}
@@ -106,14 +100,14 @@ export default async function Page(props0: { params: Promise<{ slug: string }> }
               ) => <span className={styles.brandText}> {props.children} </span>,
             }}
           >
-            {getPost.content}
+            {post.content}
           </ReactMarkdown>
         </div>
       </div>
       <div className={styles.button}>
         <Link href="/donate" target="_blank" className={styles.donateButton}>
           {" "}
-          {getPost.fundraiseText || "Support the Lobstah Bots!"}{" "}
+          {post.fundraiseText || "Support the Lobstah Bots!"}{" "}
         </Link>
       </div>
       <div className={styles.breakLine}> </div>
@@ -185,7 +179,7 @@ export default async function Page(props0: { params: Promise<{ slug: string }> }
 }
 
 export async function generateStaticParams() {
-  const posts = getPostSlugs();
+  const posts = await getPostSlugs();
   return posts.map((post) => ({
     slug: post.replace(/\.md$/, ""),
   }));

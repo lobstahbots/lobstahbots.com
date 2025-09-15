@@ -3,8 +3,8 @@ import PostPreview from "../../components/postPreview";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
 
-export default function Posts() {
-  const posts = getAllPosts(["title", "date", "excerpt", "slug"]);
+export default async function Posts() {
+  const posts = await getAllPosts();
 
   return (
     <div>

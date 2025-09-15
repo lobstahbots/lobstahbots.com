@@ -13,7 +13,7 @@ export async function GET() {
     "<image><url>https://lobstahbots.com/icon.png</url>" +
     "<title>FRC 246 | Lobstah Bots Newsletter</title>" +
     "<link>https://lobstahbots.org/blog</link></image>";
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   for (const post of posts) {
     content +=
       "<item><title>" +

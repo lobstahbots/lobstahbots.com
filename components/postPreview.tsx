@@ -3,12 +3,9 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import styles from "./postPreview.module.css";
+import { INewsletter } from "../models/newsletter";
 
-type Items = {
-  [key: string]: string;
-};
-
-export default function PostPreview({ post }: { post: Items }) {
+export default function PostPreview({ post }: { post: INewsletter }) {
   var coverImage;
   if (post.coverImage !== null && post.coverImage !== undefined) {
     coverImage = post.coverImage;

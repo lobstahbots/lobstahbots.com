@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "lint": "eslint .",
-    "build:scripts": "tsc -p tsconfig-scripts.json",
-    "newsletters": "node ./scripts/newsletters.js"
+    "build:scripts": "tsc -p tsconfig-scripts.json"
   },
   "dependencies": {
     "@nodelib/fs.scandir": "^3.0.0",

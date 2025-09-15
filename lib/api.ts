@@ -1,65 +1,50 @@
-import * as fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import dbConnect from "./dbConnect";
+import Newsletter, { INewsletter } from "../models/newsletter";
+import { unstable_cache } from "next/cache";
 
-type Items = {
-  [key: string]: string;
-};
+export const getPostSlugs = unstable_cache(async () => {
+  await dbConnect();
+  const newsletters = await Newsletter.find({}).select("slug").sort({ numericalDate: -1 });
+  return newsletters.map((newsletter) => newsletter.slug);
+}, [], {
+  tags: ["newsletters"],
+})
 
-const postsDirectory = path.join(process.cwd(), "_posts");
+export const getPostBySlug = unstable_cache(async (slug: string): Promise<INewsletter> => {
+  await dbConnect();
+  const newsletter = await Newsletter.findOne({ slug });
+  if (!newsletter) {
+    throw new Error(`Newsletter with slug ${slug} not found`);
+  }
+  return newsletter.toObject();
+}, [], {
+  tags: ["newsletters"],
+})
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
+export const getAllPosts = unstable_cache(async (): Promise<INewsletter[]> => {
+  await dbConnect();
+  const newsletters = await Newsletter.find({}).sort({ numericalDate: -1 });
+  return newsletters.map((newsletter) => newsletter.toObject());
+}, [], {
+  tags: ["newsletters"],
+});
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = path.join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
-}
-
-export function getAllPosts(fields: string[] = []) {
-  fields = ["title", "content", "author", "date", "numericalDate", "slug", "type", "coverImage"];
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.numericalDate > post2.numericalDate ? -1 : 1));
-
-  return posts;
-}
-
-export function getPreviousPost(slug: string): Items | undefined {
-  const posts = getAllPosts();
+export const getPreviousPost = unstable_cache(async (slug: string): Promise<INewsletter | undefined> => {
+  const posts = await getAllPosts();
   const currentPostIndex = posts.findIndex((post) => post.slug === slug);
   if (0 <= currentPostIndex && currentPostIndex < posts.length) {
     return posts[currentPostIndex + 1];
   }
-}
+}, [], {
+  tags: ["newsletters"],
+});
 
-export function getNextPost(slug: string): Items | undefined {
-  const posts = getAllPosts();
+export const getNextPost = unstable_cache(async (slug: string): Promise<INewsletter | undefined> => {
+  const posts = await getAllPosts();
   const currentPostIndex = posts.findIndex((post) => post.slug === slug);
-  if (0 < currentPostIndex && currentPostIndex <= posts.length) {
+  if (0 <= currentPostIndex && currentPostIndex <= posts.length) {
     return posts[currentPostIndex - 1];
   }
-}
+}, [], {
+  tags: ["newsletters"],
+});
