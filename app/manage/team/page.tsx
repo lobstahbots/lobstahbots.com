@@ -15,7 +15,7 @@ const getAllMembers = unstable_cache(
   async (): Promise<IMember[]> => {
     await dbConnect();
     return (await Member.find({}).sort({ type: 1, name: 1 })).map((member) =>
-      JSON.parse(JSON.stringify(member.toJSON())),
+      JSON.parse(JSON.stringify(member.toObject())),
     );
   },
   [],
