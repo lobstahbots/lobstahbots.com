@@ -4,7 +4,6 @@ import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
 
 export default async function Posts() {
-  console.log(process.env);
   const posts = await getAllPosts();
 
   return (
