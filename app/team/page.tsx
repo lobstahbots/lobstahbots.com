@@ -1,78 +1,48 @@
 import PageTitle from "../../components/page-title";
 import teamPhoto from "../../images/index/members.jpg";
-import ella from "../../images/profiles/ella.jpg";
-import kendree from "../../images/profiles/kendree.jpeg";
-import marc from "../../images/profiles/marc.jpg";
-import maxwell from "../../images/profiles/maxwell.jpg";
-import nathan from "../../images/profiles/nathan.jpg";
-import oliver from "../../images/profiles/oliver.jpg";
-import veronica from "../../images/profiles/veronica.jpg";
-import owen from "../../images/profiles/owen.jpg";
-import luke from "../../images/profiles/luke.jpg";
-import ajay from "../../images/profiles/ajay.jpg";
-import ilan from "../../images/profiles/ilan.jpg";
-import zach from "../../images/profiles/zach.jpg";
-import carolyn from "../../images/profiles/carolyn.jpg";
-import ziyan from "../../images/profiles/ziyan.jpg";
-import sharon from "../../images/profiles/sharon.jpg";
-import teddy from "../../images/profiles/teddy.jpg";
-import eddie from "../../images/profiles/eddie.jpg";
-import dora from "../../images/profiles/dora.jpg";
-import daniel from "../../images/profiles/daniel.jpg";
-import cocoM from "../../images/profiles/cocoM.jpg";
-import amber from "../../images/profiles/andrew.jpg";
-import adam from "../../images/profiles/adam.jpg";
-import makeda from "../../images/profiles/makeda.jpg";
-import kayla from "../../images/profiles/kayla.jpg";
-import cocoS from "../../images/profiles/cocoS.jpg";
-import tynan from "../../images/profiles/tynan.jpg";
-import ryo from "../../images/profiles/ryo.png";
 
 import styles from "./styles.module.css";
 import Image from "next/image";
-import Profile, { ProfileProps } from "../../components/profile";
+import Profile from "../../components/profile";
+import { unstable_cache } from "next/cache";
+import dbConnect from "../../lib/dbConnect";
+import Member, { IMember } from "../../models/member";
 
 export const metadata = {
   title: "Our Team",
 };
 
-const mentors: ProfileProps[] = [
-  { name: "Veronica", image: veronica },
-  { name: "Marc", image: marc },
-  { name: "Oliver", image: oliver },
-  { name: "Carolyn", image: carolyn },
-  { name: "Tynan", image: tynan },
-  { name: "Ryo", image: ryo },
-];
+const getMentors = unstable_cache(
+  async (): Promise<IMember[]> => {
+    await dbConnect();
+    return await Member.find({ type: "mentor" }).sort({ name: 1 });
+  },
+  [],
+  { tags: ["members"] },
+);
 
-const studentLeadership: ProfileProps[] = [
-  { name: "Kendree", role: "Team Captain", image: kendree },
-  { name: "Coco M.", role: "Outreach and Business Lead", image: cocoM },
-  { name: "Maxwell", role: "CAD Co-Lead", image: maxwell },
-  { name: "Nathan", role: "CAD Co-Lead", image: nathan },
-];
+const getStudentLeadership = unstable_cache(
+  async (): Promise<IMember[]> => {
+    await dbConnect();
+    return await Member.find({ type: "studentleader" }).sort({ name: 1 });
+  },
+  [],
+  { tags: ["members"] },
+);
 
-const studentMembers: ProfileProps[] = [
-  { name: "Adam", image: adam },
-  { name: "Ajay", image: ajay },
-  { name: "Amber", image: amber },
-  { name: "Coco S.", role: "Electrical Lead", image: cocoS },
-  { name: "Daniel", role: "Programming Co-Lead", image: daniel },
-  { name: "Dora", image: dora },
-  { name: "Eddie", role: "Scouting and Strategy Lead", image: eddie },
-  { name: "Ella", image: ella },
-  { name: "Ilan", image: ilan },
-  { name: "Kayla", image: kayla },
-  { name: "Luke", image: luke },
-  { name: "Makeda", image: makeda },
-  { name: "Owen", image: owen },
-  { name: "Sharon", role: "Mechanical Lead", image: sharon },
-  { name: "Teddy", role: "Programming Co-Lead", image: teddy },
-  { name: "Zach", image: zach },
-  { name: "Ziyan", role: "Imagery and Branding Lead", image: ziyan },
-];
+const getStudentMembers = unstable_cache(
+  async (): Promise<IMember[]> => {
+    await dbConnect();
+    return await Member.find({ type: "student" }).sort({ name: 1 });
+  },
+  [],
+  { tags: ["members"] },
+);
 
-export default function Team() {
+export default async function Team() {
+  const mentors = await getMentors();
+  const studentLeadership = await getStudentLeadership();
+  const studentMembers = await getStudentMembers();
   return (
     <main>
       <PageTitle>Our Team</PageTitle>
@@ -89,25 +59,25 @@ export default function Team() {
         <div className="section container">
           <h1>Mentors</h1>
           <div className={styles.gallery}>
-            {mentors.map((props, i) => (
-              <Profile key={i} {...props} />
+            {mentors.map((member, i) => (
+              <Profile key={i} member={member} />
             ))}
           </div>
         </div>
       </section>
       <section className="section container">
-        <h1> Student Board </h1>
+        <h1> Student Leadership </h1>
         <div className={styles.gallery}>
-          {studentLeadership.map((props, i) => (
-            <Profile key={i} {...props} />
+          {studentLeadership.map((member, i) => (
+            <Profile key={i} member={member} />
           ))}
         </div>
       </section>
       <section className="section container">
         <h1> Student Members </h1>
         <div className={styles.gallery}>
-          {studentMembers.map((props, i) => (
-            <Profile key={i} {...props} />
+          {studentMembers.map((member, i) => (
+            <Profile key={i} member={member} />
           ))}
         </div>
       </section>

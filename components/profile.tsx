@@ -2,29 +2,23 @@ import styles from "./profile.module.css";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { Fragment } from "react";
+import { IMember } from "../models/member";
+import placeholder from "../images/profiles/placeholder-claw.png";
 
-export interface ProfileProps {
-  name: string;
-  role?: string | string[];
-  image: StaticImageData;
-}
-
-export default function Profile({ name, role, image }: ProfileProps) {
+export default function Profile({ member }: { member: IMember }) {
   return (
     <div className={styles.profile}>
-      <Image
+      <img
         className={`responsive-image brand-border ${styles.profilePhoto}`}
-        src={image}
+        src={member.image || placeholder.src}
         alt="Team Member Profile"
       />
-      <div className={styles.name}>{name}</div>
-      {role && (
+      <div className={styles.name}>{member.name}</div>
+      {member.roles && (
         <div className={styles.role}>
-          {Array.isArray(role)
-            ? role
-                .flatMap((str) => [<Fragment key={str}>{str}</Fragment>, <br key={str + "-br"} />])
-                .slice(0, -1)
-            : role}
+          {member.roles
+            .flatMap((role) => [<Fragment key={role}>{role}</Fragment>, <br key={role + "-br"} />])
+            .slice(0, -1)}
         </div>
       )}
     </div>

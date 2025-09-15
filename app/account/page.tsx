@@ -1,6 +1,8 @@
 import { signIn, auth, signOut } from "../../auth";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
+import Link from "next/link";
+import { Users, Settings } from "react-feather";
 
 export const metadata = {
   title: "Account",
@@ -56,6 +58,21 @@ export default async function Page() {
             <div className={styles.userDetail}>
               <span className={styles.userDetailLabel}>Email:</span>
               <span className={styles.userDetailValue}>{session.user.email}</span>
+            </div>
+          </div>
+
+          <div className={styles.managementSection}>
+            <h3 className={styles.userInfoTitle}>Management Tools</h3>
+            <div className={styles.managementGrid}>
+              <Link href="/manage/team" className={styles.managementCard}>
+                <Users className={styles.managementIcon} />
+                <div>
+                  <h4 className={styles.managementTitle}>Team Members</h4>
+                  <p className={styles.managementDescription}>
+                    Add, edit, and manage team member profiles
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
 

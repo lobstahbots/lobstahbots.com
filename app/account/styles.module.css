@@ -135,6 +135,58 @@
   transform: translateY(0);
 }
 
+.managementSection {
+  background: var(--color-neutral-10);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.managementGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.managementCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.managementCard:hover {
+  border-color: var(--color-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(196, 0, 0, 0.1);
+}
+
+.managementIcon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.managementTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-neutral-100);
+  margin: 0 0 0.25rem 0;
+}
+
+.managementDescription {
+  font-size: 0.875rem;
+  color: var(--color-neutral-60);
+  margin: 0;
+}
+
 @media (max-width: 640px) {
   .container {
     padding: 1rem;
