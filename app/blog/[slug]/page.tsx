@@ -178,9 +178,9 @@ export default async function Page(props0: { params: Promise<{ slug: string }> }
   );
 }
 
-export async function generateStaticParams() {
-  const posts = await getPostSlugs();
-  return posts.map((post) => ({
-    slug: post.replace(/\.md$/, ""),
-  }));
-}
+// export async function generateStaticParams() {
+//   const posts = await getPostSlugs();
+//   return posts.map((post) => ({
+//     slug: post.replace(/\.md$/, ""),
+//   }));
+// }
