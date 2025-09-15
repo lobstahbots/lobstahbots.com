@@ -2,7 +2,7 @@ import { signIn, auth, signOut } from "../../auth";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
 import Link from "next/link";
-import { Users, Settings } from "react-feather";
+import { Users, Image } from "react-feather";
 
 export const metadata = {
   title: "Account",
@@ -70,6 +70,15 @@ export default async function Page() {
                   <h4 className={styles.managementTitle}>Team Members</h4>
                   <p className={styles.managementDescription}>
                     Add, edit, and manage team member profiles
+                  </p>
+                </div>
+              </Link>
+              <Link href="/manage/gallery" className={styles.managementCard}>
+                <Image className={styles.managementIcon} />
+                <div>
+                  <h4 className={styles.managementTitle}>Gallery Management</h4>
+                  <p className={styles.managementDescription}>
+                    Manage images across all gallery sections
                   </p>
                 </div>
               </Link>
