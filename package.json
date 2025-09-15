@@ -12,7 +12,7 @@
   "dependencies": {
     "@nodelib/fs.scandir": "^3.0.0",
     "@notionhq/client": "^2.2.15",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.4.0",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
     "@vercel/analytics": "^1.5.0",
