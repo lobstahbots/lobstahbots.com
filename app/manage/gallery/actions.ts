@@ -14,7 +14,7 @@ export const addImage = async (formData: FormData) => {
     return null;
   }
   const processed = await sharp(await image.arrayBuffer())
-    .rotate(0)
+    .rotate()
     .toFormat("webp", {
       quality: 80,
     })
