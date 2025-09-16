@@ -13,13 +13,7 @@ export const addImage = async (formData: FormData) => {
   if (!image || image.size === 0) {
     return null;
   }
-  const processed = await sharp(await image.arrayBuffer())
-    .rotate()
-    .toFormat("webp", {
-      quality: 80,
-    })
-    .toBuffer();
-  const result = await put(`gallery/${image.name}`, processed, {
+  const result = await put(`gallery/${image.name}`, image, {
     access: "public",
     addRandomSuffix: true,
   });

@@ -7,6 +7,29 @@ import { addImage } from "./actions";
 import GalleryImageCard from "./GalleryImageCard";
 import styles from "./styles.module.css";
 
+const addImgToWebp = async (file: File, _id: any) => {
+  const image = new Image();
+  image.src = URL.createObjectURL(file);
+  await new Promise<void>((resolve) => {
+    if (image.complete) resolve();
+    image.onload = (_) => resolve();
+  });
+  const canvas = document.createElement("canvas");
+  canvas.style.display = "none";
+  canvas.width = image.naturalWidth;
+  canvas.height = image.naturalHeight;
+  canvas.getContext("2d")?.drawImage(image, 0, 0);
+  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/webp", 0.8));
+  URL.revokeObjectURL(image.src);
+  canvas.remove();
+  if (!blob) throw new Error("Could not convert image to WebP");
+  const webp = new File([blob], file.name.replace(/\.[^/.]+$/, ".webp"), { type: "image/webp" });
+  const formData = new FormData();
+  formData.append("_id", _id);
+  formData.append("image", webp);
+  await addImage(formData);
+}
+
 export default function GalleryPart({ section }: { section: IGallerySection }) {
   const [isPending, startTransition] = useTransition();
   const [dragOver, setDragOver] = useState(false);
@@ -17,10 +40,7 @@ export default function GalleryPart({ section }: { section: IGallerySection }) {
       startTransition(async () => {
         await Promise.all(
           Array.from(files).map((file) => {
-            const formData = new FormData();
-            formData.append("_id", section._id as string);
-            formData.append("image", file);
-            return addImage(formData);
+            return addImgToWebp(file, section._id);
           }),
         );
       });
