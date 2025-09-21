@@ -62,7 +62,7 @@ export const POST = async () => {
           throw new Error(`Failed to fetch image: ${res.status} ${res.statusText}`);
         }
         const buffer = await res.arrayBuffer();
-        const webp = await sharp(Buffer.from(buffer)).webp({ quality: 80 }).toBuffer();
+        const webp = await sharp(Buffer.from(buffer)).rotate().webp({ quality: 80 }).toBuffer();
         const uploaded = await put(fileUrlName, webp, {
           access: "public",
         });
