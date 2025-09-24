@@ -50,24 +50,22 @@ const Navbar = () => {
       <nav className={`container ${styles.content}`}>
         <div className={styles.navbar}>
           <Link href="/" className={styles.logo} onClick={() => setOpen(false)}>
-            <Image
-              src={logo}
-              alt= "Claw Logo"
-            />
+            <Image src={logo} alt="Claw Logo" />
             <span className="visually-hidden">Home</span>
           </Link>
           <ul className={styles.navbarLinks}>
             {links.map(({ label, to }) => (
               <li key={to}>
-                <Link
-                  href={to}
-                  className={styles.link}
-                >
+                <Link href={to} className={styles.link}>
                   {label}
                 </Link>
               </li>
             ))}
-            <Link className={styles.donateButton} href="/support">Donate</Link>
+            <li>
+              <Link className={styles.donateButton} href="/support">
+                Donate
+              </Link>
+            </li>
           </ul>
           <button className={styles.mobileNavToggle} onClick={() => setOpen(!isOpen)}>
             {isOpen ? (
@@ -87,12 +85,8 @@ const Navbar = () => {
           <div className={styles.mobileNav}>
             <ul>
               {links.map(({ label, to }) => (
-                <li key={to} className={styles.mobileLinks}>
-                  <Link
-                    href={to}
-                    className={styles.link}
-                    onClick={() => setOpen(false)}
-                  >
+                <li key={to}>
+                  <Link href={to} className={styles.link} onClick={() => setOpen(false)}>
                     {label}
                   </Link>
                 </li>
