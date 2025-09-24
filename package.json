@@ -10,7 +10,7 @@
     "newsletters": "node ./scripts/newsletters.js"
   },
   "dependencies": {
-    "@nodelib/fs.scandir": "^3.0.0",
+    "@nodelib/fs.scandir": "^4.0.1",
     "@notionhq/client": "^2.2.15",
     "@types/node": "^24.5.2",
     "@types/react": "19.1.12",
