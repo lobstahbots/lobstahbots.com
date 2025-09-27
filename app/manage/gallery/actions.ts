@@ -18,9 +18,12 @@ export const addImage = async (formData: FormData) => {
     addRandomSuffix: true,
   });
   await GallerySection.findByIdAndUpdate(_id, { $push: { images: result.url } });
-  revalidateTag("gallery");
   return result.url;
 };
+
+export const refresh = async (formData: FormData) => {
+  revalidateTag("gallery");
+}
 
 export const removeImage = async (formData: FormData) => {
   await dbConnect();

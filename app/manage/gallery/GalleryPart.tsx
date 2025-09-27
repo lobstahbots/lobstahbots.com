@@ -1,9 +1,9 @@
 "use client";
 
-import { useTransition, useState, useRef } from "react";
+import { useTransition, useState, useRef, RefObject } from "react";
 import { Upload, Image as ImageIcon, Trash2 } from "react-feather";
 import { IGallerySection } from "../../../models/gallerySection";
-import { addImage } from "./actions";
+import { addImage, refresh } from "./actions";
 import GalleryImageCard from "./GalleryImageCard";
 import styles from "./styles.module.css";
 
@@ -43,6 +43,7 @@ export default function GalleryPart({ section }: { section: IGallerySection }) {
             return addImgToWebp(file, section._id);
           }),
         );
+      await refresh(new FormData());
       });
     }
   };
