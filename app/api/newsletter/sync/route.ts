@@ -108,8 +108,12 @@ export const POST = async () => {
     );
   });
 
-  const newslettersPage = await notion.databases.query({
+  const newslettersDatabase = await notion.databases.retrieve({
     database_id,
+  });
+
+  const newslettersPage = await notion.dataSources.query({
+    data_source_id: (newslettersDatabase as any).data_sources[0].id,
     filter: {
       property: "Published",
       checkbox: {
