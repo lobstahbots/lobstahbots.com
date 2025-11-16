@@ -186,7 +186,7 @@ export const POST = async () => {
     await Newsletter.deleteOne({ _id: newsletter._id });
   }
 
-  revalidateTag("newsletters");
+  revalidateTag("newsletters", "max");
 
   return NextResponse.json({ message: "Newsletter sync complete", slugs }, { status: 200 });
 };

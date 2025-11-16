@@ -16,7 +16,7 @@ export const deleteMember = async (formData: FormData) => {
   if (member.image) {
     await del(member.image);
   }
-  revalidateTag("members");
+  revalidateTag("members", "max");
   return true;
 };
 
@@ -47,7 +47,7 @@ export const updateMember = async (formData: FormData) => {
     },
     { new: true },
   );
-  revalidateTag("members");
+  revalidateTag("members", "max");
   return result?.toObject?.() ?? null;
 };
 
@@ -74,6 +74,6 @@ export const createMember = async (formData: FormData) => {
     ...(imageResult ? { image: imageResult.url } : {}),
   });
   await member.save();
-  revalidateTag("members");
+  revalidateTag("members", "max");
   return member.toObject();
 };

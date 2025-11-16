@@ -22,7 +22,7 @@ export const addImage = async (formData: FormData) => {
 };
 
 export const refresh = async (formData: FormData) => {
-  revalidateTag("gallery");
+  revalidateTag("gallery", "max");
 }
 
 export const removeImage = async (formData: FormData) => {
@@ -34,5 +34,5 @@ export const removeImage = async (formData: FormData) => {
   }
   await GallerySection.findByIdAndUpdate(_id, { $pull: { images: imageUrl } });
   await del(imageUrl);
-  revalidateTag("gallery");
+  revalidateTag("gallery", "max");
 };
