@@ -17,7 +17,7 @@
     "@vercel/blob": "^2.0.0",
     "@vercel/edge-config": "^1.4.0",
     "eslint": "^9.38.0",
-    "eslint-config-next": "15.5.2",
+    "eslint-config-next": "16.0.3",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "mongoose": "^8.18.0",
