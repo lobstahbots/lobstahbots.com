@@ -13,11 +13,6 @@ const nextConfig = {
       new URL("https://njju133mvndv7an0.public.blob.vercel-storage.com/**"),
     ],
   },
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
   experimental: {
     serverActions: {
       bodySizeLimit: "10mb",
