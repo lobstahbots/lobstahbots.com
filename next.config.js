@@ -34,8 +34,6 @@ const nextConfig = {
         source: "/mm24",
         destination: "https://www.buacademy.org/stuco/9-14-mayhem-in-merrimack/",
         permanent: false,
-      },
-      {
         source: "/qr/2",
         destination:
           "https://docs.google.com/forms/d/e/1FAIpQLSfeiw1gEi50dhyFuxfNosJI_SDrOAF-ez6BP9hnxDnIEyg7ig/viewform?usp=sf_link",
@@ -49,12 +47,12 @@ const nextConfig = {
       },
       {
         source: "/crowdfunding",
-        destination: "https://crowdfunding.bu.edu/campaigns/lobstah-bots",
+        destination: "https://give.bu.edu/lobstah-bots/",
         permanent: false,
       },
       {
         source: "/donate",
-        destination: "https://give.bu.edu/campaigns/56409/donations/new?designation_id=9300010620",
+        destination: "https://give.bu.edu/lobstah-bots/",
         permanent: false,
       },
     ];
