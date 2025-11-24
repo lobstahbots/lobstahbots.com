@@ -13,8 +13,8 @@ importers:
   .:
     dependencies:
       '@notionhq/client':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.4.0
+        version: 5.4.0
       '@types/node':
         specifier: ^24.5.2
         version: 24.5.2
@@ -479,8 +479,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@notionhq/client@5.1.0':
-    resolution: {integrity: sha512-YYVjXYk1XwKQ4XIh+iGjaaXOGHxaDgB3UaGnDMyrZ3X9UiYQsZpzPIvTuhvp97os8a5W5kTQFsyq77+I+COOVQ==}
+  '@notionhq/client@5.4.0':
+    resolution: {integrity: sha512-SJsprS26S0Wi9CoTQp4vC8/nPpAIo1gMB4H7aJ2E/k0fWnNGIEAg984KwtzK6h9ZGaPcEaryVRSz1VVClJcVUw==}
     engines: {node: '>=18'}
 
   '@panva/hkdf@1.2.1':
@@ -2914,7 +2914,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@notionhq/client@5.1.0': {}
+  '@notionhq/client@5.4.0': {}
 
   '@panva/hkdf@1.2.1': {}
 
