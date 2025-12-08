@@ -9,7 +9,7 @@
     "build:scripts": "tsc -p tsconfig-scripts.json"
   },
   "dependencies": {
-    "@notionhq/client": "^5.1.0",
+    "@notionhq/client": "^5.4.0",
     "@types/node": "^24.10.1",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",

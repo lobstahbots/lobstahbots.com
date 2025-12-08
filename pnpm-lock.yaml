@@ -13,8 +13,8 @@ importers:
   .:
     dependencies:
       '@notionhq/client':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.4.0
+        version: 5.4.0
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.1
@@ -32,7 +32,7 @@ importers:
         version: 2.0.0
       '@vercel/edge-config':
         specifier: ^1.4.3
-        version: 1.4.3(next@16.0.1(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2))
+        version: 1.4.3(next@16.0.7(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2))
       eslint:
         specifier: ^9.38.0
         version: 9.38.0
@@ -479,8 +479,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@notionhq/client@5.1.0':
-    resolution: {integrity: sha512-YYVjXYk1XwKQ4XIh+iGjaaXOGHxaDgB3UaGnDMyrZ3X9UiYQsZpzPIvTuhvp97os8a5W5kTQFsyq77+I+COOVQ==}
+  '@notionhq/client@5.4.0':
+    resolution: {integrity: sha512-SJsprS26S0Wi9CoTQp4vC8/nPpAIo1gMB4H7aJ2E/k0fWnNGIEAg984KwtzK6h9ZGaPcEaryVRSz1VVClJcVUw==}
     engines: {node: '>=18'}
 
   '@panva/hkdf@1.2.1':
@@ -2914,7 +2914,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@notionhq/client@5.1.0': {}
+  '@notionhq/client@5.4.0': {}
 
   '@panva/hkdf@1.2.1': {}
 
@@ -3152,11 +3152,11 @@ snapshots:
 
   '@vercel/edge-config-fs@0.1.0': {}
 
-  '@vercel/edge-config@1.4.3(next@16.0.1(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2))':
+  '@vercel/edge-config@1.4.3(next@16.0.7(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2))':
     dependencies:
       '@vercel/edge-config-fs': 0.1.0
     optionalDependencies:
-      next: 16.0.1(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2)
+      next: 16.0.7(@babel/core@7.28.5)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.77.2)
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
