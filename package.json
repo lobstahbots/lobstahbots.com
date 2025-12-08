@@ -9,13 +9,13 @@
     "build:scripts": "tsc -p tsconfig-scripts.json"
   },
   "dependencies": {
-    "@notionhq/client": "^5.1.0",
-    "@types/node": "^24.5.2",
+    "@notionhq/client": "^5.4.0",
+    "@types/node": "^24.10.1",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
     "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^2.0.0",
-    "@vercel/edge-config": "^1.4.0",
+    "@vercel/edge-config": "^1.4.3",
     "eslint": "^9.38.0",
     "eslint-config-next": "16.0.3",
     "fs": "^0.0.1-security",
@@ -35,7 +35,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.39.1",
     "eslint-plugin-next": "^0.0.0",
-    "typescript-plugin-css-modules": "^5.1.0"
+    "typescript-plugin-css-modules": "^5.2.0"
   },
   "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
   "pnpm": {
