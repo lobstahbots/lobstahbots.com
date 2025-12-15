@@ -132,6 +132,8 @@ export const POST = async () => {
     },
   });
 
+  const extantNewsletters = await Newsletter.find().select("slug updatedAt createdAt");
+
   const slugs: string[] = [];
 
   for (const pageResult of newslettersPage.results) {
@@ -143,6 +145,11 @@ export const POST = async () => {
       continue;
     }
     const slug = slugProp.rich_text.map((rich_text) => rich_text.plain_text).join("");
+    const found = extantNewsletters.find((newsletter) => newsletter.slug === slug);
+    if (found && (found as any).updatedAt >= new Date(pageResult.last_edited_time)) {
+      slugs.push(slug);
+      continue;
+    }
     currSlug = slug;
     const titleProp = pageResult.properties.Title;
     if (titleProp.type !== "title") {
@@ -186,6 +193,9 @@ export const POST = async () => {
     };
     if (coverImgMap.has(currSlug)) {
       properties.coverImage = coverImgMap.get(currSlug)!._id;
+    }
+    if (found && (found as any).createdAt) {
+      (properties as any).createdAt = (found as any).createdAt as Date;
     }
     await Newsletter.findOneAndReplace({ slug }, properties, { upsert: true });
     slugs.push(slug);

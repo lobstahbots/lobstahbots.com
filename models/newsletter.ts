@@ -49,6 +49,8 @@ const NewsletterSchema: Schema<INewsletter> = new Schema({
     type: [{ type: Schema.Types.ObjectId, ref: "Image" }],
     required: true,
   },
+}, {
+  timestamps: true,
 });
 
 // Create and export the model
