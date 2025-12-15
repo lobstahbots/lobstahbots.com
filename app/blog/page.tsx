@@ -2,6 +2,7 @@ import { getAllPosts } from "../../lib/api";
 import PostPreview from "../../components/postPreview";
 import PageTitle from "../../components/page-title";
 import styles from "./styles.module.css";
+import { Document } from "mongoose";
 
 export default async function Posts() {
   const posts = await getAllPosts();

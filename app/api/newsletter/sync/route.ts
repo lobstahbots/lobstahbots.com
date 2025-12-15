@@ -14,6 +14,9 @@ import Newsletter from "../../../../models/newsletter";
 import dbConnect from "../../../../lib/dbConnect";
 import { NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
+import { bucket, bucketName } from "../../../../lib/r2";
+import { _Object, ListObjectsV2Command, ListObjectsV2CommandOutput, PutObjectCommand } from "@aws-sdk/client-s3";
+import ImageModel, { IImage } from "../../../../models/image";
 
 export const POST = async () => {
   await dbConnect();
@@ -44,37 +47,44 @@ export const POST = async () => {
 
   let currSlug = "default";
 
-  const coverImgMap = new Map<string, string>();
+  const coverImgMap = new Map<string, IImage>();
 
-  const extantBlobs = await list({ prefix: "newsletter/" });
+  const imgMap = new Map<string, IImage[]>();
 
-  const imgMap = new Map<string, string[]>();
-
-  const getImageUrl = async (unparsedUrl: string): Promise<string> => {
+  const getImageUrl = async (unparsedUrl: string): Promise<IImage> => {
     const url = new URL(unparsedUrl);
     const fileUrlName = `newsletter/${currSlug}/${createHash("md5")
       .update(url.pathname)
       .digest("hex")}${path.extname(url.pathname)}`;
     const fileUploaded =
-      extantBlobs.blobs.find((blob) => blob.pathname === fileUrlName) ??
+      (await ImageModel.findOne({ key: fileUrlName })) ??
       (await fetch(url.toString()).then(async (res) => {
         if (!res.ok) {
           throw new Error(`Failed to fetch image: ${res.status} ${res.statusText}`);
         }
-        const buffer = await res.arrayBuffer();
-        const webp = await sharp(Buffer.from(buffer)).rotate().webp({ quality: 80 }).toBuffer();
-        const uploaded = await put(fileUrlName, webp, {
-          access: "public",
-        });
-        return uploaded;
+        const buffer = Buffer.from(await res.arrayBuffer());
+        const putRes = await bucket.send(new PutObjectCommand({
+          Bucket: bucketName,
+          Key: fileUrlName,
+          Body: buffer,
+          ContentType: res.headers.get("Content-Type") || undefined,
+        }));
+        const metadata = await sharp(buffer).metadata();
+        const imageDoc = await new ImageModel({
+          key: fileUrlName,
+          width: metadata.width,
+          height: metadata.height,
+          alt: url.pathname,
+        }).save();
+        return imageDoc;
       }));
     if (!fileUploaded) {
       throw new Error("Failed to upload image");
     }
-    if (!coverImgMap.has(currSlug)) coverImgMap.set(currSlug, fileUploaded.url);
+    if (!coverImgMap.has(currSlug)) coverImgMap.set(currSlug, fileUploaded);
     if (!imgMap.has(currSlug)) imgMap.set(currSlug, []);
-    imgMap.get(currSlug)!.push(fileUploaded.url);
-    return fileUploaded.url;
+    imgMap.get(currSlug)!.push(fileUploaded);
+    return fileUploaded;
   };
 
   toMarkdown.setCustomTransformer("image", async (block) => {
@@ -83,7 +93,7 @@ export const POST = async () => {
     return (
       (await md.image(
         image.caption.map((rich_text) => rich_text.plain_text).join(""),
-        await getImageUrl(url),
+        "https://r2.lobstahbots.com/" + (await getImageUrl(url)).key,
         false,
       )) +
       "\n#### " +
@@ -169,20 +179,20 @@ export const POST = async () => {
       numericalDate: new Date(dateProp.date!.start),
       date: `${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`,
       ...fundraiseTextObject,
-      coverImage: "/newsletter/default.png",
+      coverImage: (await ImageModel.findOne({ key: "newsletter/placeholder-claw.png" }))?._id,
       slug,
       content: markdown,
-      images: imgMap.get(currSlug) ?? [],
+      images: imgMap.get(currSlug)?.map((image) => image._id) ?? [],
     };
     if (coverImgMap.has(currSlug)) {
-      properties.coverImage = coverImgMap.get(currSlug)!;
+      properties.coverImage = coverImgMap.get(currSlug)!._id;
     }
     await Newsletter.findOneAndReplace({ slug }, properties, { upsert: true });
     slugs.push(slug);
   }
 
-  for (const newsletter of await Newsletter.find({ slug: { $nin: slugs } }).select("_id images")) {
-    await del(newsletter.images);
+  for (const newsletter of await Newsletter.find({ slug: { $nin: slugs } }).select("_id")) {
+    // await del(newsletter.images);
     await Newsletter.deleteOne({ _id: newsletter._id });
   }
 

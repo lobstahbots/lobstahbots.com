@@ -1,4 +1,5 @@
-import mongoose, { Schema, Document, Model } from "mongoose";
+import mongoose, { Schema, Document, Model, Types } from "mongoose";
+import { IImage } from "./image";
 
 // Define the interface for the document
 export interface INewsletter extends Document {
@@ -7,9 +8,9 @@ export interface INewsletter extends Document {
   numericalDate: Date;
   date: string;
   fundraiseText?: string;
-  coverImage?: string;
+  coverImage?: Types.ObjectId | IImage;
   content: string;
-  images: string[];
+  images: (Types.ObjectId | IImage)[];
 }
 
 // Define the schema
@@ -36,7 +37,8 @@ const NewsletterSchema: Schema<INewsletter> = new Schema({
     required: false,
   },
   coverImage: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: "Image",
     required: false,
   },
   content: {
@@ -44,7 +46,7 @@ const NewsletterSchema: Schema<INewsletter> = new Schema({
     required: true,
   },
   images: {
-    type: [String],
+    type: [{ type: Schema.Types.ObjectId, ref: "Image" }],
     required: true,
   },
 });
