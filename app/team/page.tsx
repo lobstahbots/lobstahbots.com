@@ -7,6 +7,7 @@ import Profile from "../../components/profile";
 import { unstable_cache } from "next/cache";
 import dbConnect from "../../lib/dbConnect";
 import Member, { IMember } from "../../models/member";
+import ImageModel from "../../models/image";
 
 export const metadata = {
   title: "Our Team",
