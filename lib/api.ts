@@ -2,7 +2,7 @@ import dbConnect from "./dbConnect";
 import Newsletter, { INewsletter } from "../models/newsletter";
 import { unstable_cache } from "next/cache";
 import { HydratedDocument } from "mongoose";
-import ImageModel from "../models/image";
+import "../models/image";
 
 export const getPostSlugs = unstable_cache(
   async () => {

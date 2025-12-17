@@ -6,7 +6,7 @@ import dbConnect from "../../../lib/dbConnect";
 import Member, { IMember } from "../../../models/member";
 import MemberList from "./components/MemberList";
 import styles from "./styles.module.css";
-import ImageModel from "../../../models/image";
+import "../../../models/image";
 
 export const metadata = {
   title: "Manage Team Members",
