@@ -4,6 +4,8 @@ import { PutBlobResult, del, put } from "@vercel/blob";
 import dbConnect from "../../../lib/dbConnect";
 import Member from "../../../models/member";
 import { revalidateTag } from "next/cache";
+import { deleteImage } from "../../../lib/images";
+import ImageModel, { IImage } from "../../../models/image";
 
 export const deleteMember = async (formData: FormData) => {
   await dbConnect();
@@ -11,10 +13,10 @@ export const deleteMember = async (formData: FormData) => {
   if (typeof _id !== "string") {
     return false;
   }
-  const member = await Member.findByIdAndDelete(_id);
+  const member = await Member.findByIdAndDelete(_id).populate("image");
   if (!member) return false;
   if (member.image) {
-    await del(member.image);
+    await deleteImage(member.image as IImage);
   }
   revalidateTag("members", "max");
   return true;
@@ -26,16 +28,24 @@ export const updateMember = async (formData: FormData) => {
   const name = formData.get("name");
   const roles = formData.getAll("roles").filter((role) => typeof role === "string") as string[];
   const type = formData.get("type");
-  const image = formData.get("image") as File | null;
+  const imageKey = formData.get("imageKey");
+  const imageWidth = formData.get("imageWidth");
+  const imageHeight = formData.get("imageHeight");
   if (typeof _id !== "string" || typeof name !== "string" || typeof type !== "string") {
     return null;
   }
-  let imageResult: PutBlobResult | undefined;
-  if (image && image.size > 0) {
-    imageResult = await put(`team/${image.name}`, image, {
-      access: "public",
-      addRandomSuffix: true,
-    });
+  let image: IImage | undefined = undefined;
+  if (
+    typeof imageKey === "string" &&
+    Number.isInteger(parseInt(imageWidth as string)) &&
+    Number.isInteger(parseInt(imageHeight as string))
+  ) {
+    image = await new ImageModel({
+      key: imageKey,
+      width: parseInt(imageWidth as string),
+      height: parseInt(imageHeight as string),
+      alt: `${name}'s profile image`,
+    }).save();
   }
   const result = await Member.findByIdAndUpdate(
     _id,
@@ -43,12 +53,12 @@ export const updateMember = async (formData: FormData) => {
       name,
       roles,
       type,
-      ...(imageResult ? { image: imageResult.url } : {}),
+      ...(image ? { image: image._id } : {}),
     },
     { new: true },
   );
   revalidateTag("members", "max");
-  return result?.toObject?.() ?? null;
+  return result ? JSON.parse(JSON.stringify(result.toObject())) : null;
 };
 
 export const createMember = async (formData: FormData) => {
@@ -56,24 +66,32 @@ export const createMember = async (formData: FormData) => {
   const name = formData.get("name");
   const roles = formData.getAll("roles").filter((role) => typeof role === "string") as string[];
   const type = formData.get("type");
-  const image = formData.get("image") as File | null;
+  const imageKey = formData.get("imageKey");
+  const imageWidth = formData.get("imageWidth");
+  const imageHeight = formData.get("imageHeight");
   if (typeof name !== "string" || typeof type !== "string") {
     return null;
   }
-  let imageResult: PutBlobResult | undefined;
-  if (image && image.size > 0) {
-    imageResult = await put(`team/${image.name}`, image, {
-      access: "public",
-      addRandomSuffix: true,
-    });
+  let image: IImage | undefined = undefined;
+  if (
+    typeof imageKey === "string" &&
+    Number.isInteger(parseInt(imageWidth as string)) &&
+    Number.isInteger(parseInt(imageHeight as string))
+  ) {
+    image = await new ImageModel({
+      key: imageKey,
+      width: parseInt(imageWidth as string),
+      height: parseInt(imageHeight as string),
+      alt: `${name}'s profile image`,
+    }).save();
   }
   const member = new Member({
     name,
     roles,
     type,
-    ...(imageResult ? { image: imageResult.url } : {}),
+    ...(image ? { image: image._id } : {}),
   });
   await member.save();
   revalidateTag("members", "max");
-  return member.toObject();
+  return JSON.parse(JSON.stringify(member.toObject()));
 };

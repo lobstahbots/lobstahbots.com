@@ -14,7 +14,7 @@ export const metadata = {
 const getAllMembers = unstable_cache(
   async (): Promise<IMember[]> => {
     await dbConnect();
-    return (await Member.find({}).sort({ type: 1, name: 1 })).map((member) =>
+    return (await Member.find({}).sort({ type: 1, name: 1 }).populate("image")).map((member) =>
       JSON.parse(JSON.stringify(member.toObject())),
     );
   },

@@ -1,11 +1,12 @@
 import mongoose, { Document, Model, Schema } from "mongoose";
+import { IImage } from "./image";
 
 // Define the interface for the document
 export interface IMember extends Document {
   name: string;
   roles: string[];
   type: "student" | "mentor" | "studentleader";
-  image?: string;
+  image?: Schema.Types.ObjectId | IImage;
 }
 
 const MemberSchema: Schema<IMember> = new Schema({
@@ -23,7 +24,8 @@ const MemberSchema: Schema<IMember> = new Schema({
     required: true,
   },
   image: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: "Image",
   },
 });
 

@@ -15,7 +15,7 @@ export const metadata = {
 const getMentors = unstable_cache(
   async (): Promise<IMember[]> => {
     await dbConnect();
-    return await Member.find({ type: "mentor" }).sort({ name: 1 });
+    return await Member.find({ type: "mentor" }).sort({ name: 1 }).populate("image");
   },
   [],
   { tags: ["members"] },
@@ -24,7 +24,7 @@ const getMentors = unstable_cache(
 const getStudentLeadership = unstable_cache(
   async (): Promise<IMember[]> => {
     await dbConnect();
-    return await Member.find({ type: "studentleader" }).sort({ name: 1 });
+    return await Member.find({ type: "studentleader" }).sort({ name: 1 }).populate("image");
   },
   [],
   { tags: ["members"] },
@@ -33,7 +33,7 @@ const getStudentLeadership = unstable_cache(
 const getStudentMembers = unstable_cache(
   async (): Promise<IMember[]> => {
     await dbConnect();
-    return await Member.find({ type: "student" }).sort({ name: 1 });
+    return await Member.find({ type: "student" }).sort({ name: 1 }).populate("image");
   },
   [],
   { tags: ["members"] },

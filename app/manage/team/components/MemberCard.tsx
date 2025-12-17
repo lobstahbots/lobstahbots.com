@@ -5,6 +5,7 @@ import { Save, X, Trash2, Upload, User } from "react-feather";
 import { updateMember, deleteMember, createMember } from "../actions";
 import { IMember } from "../../../../models/member";
 import styles from "../styles.module.css";
+import { getUploadURL } from "../../actions";
 
 const memberTypes = [
   { value: "mentor", label: "Mentor" },
@@ -17,10 +18,7 @@ interface MemberCardProps {
   idx: number;
 }
 
-export default function MemberCard({
-  member,
-  idx,
-}: MemberCardProps) {
+export default function MemberCard({ member, idx }: MemberCardProps) {
   const [isPending, startTransition] = useTransition();
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
@@ -34,7 +32,9 @@ export default function MemberCard({
   const [currentRole, setCurrentRole] = useState("");
   const [imageChanged, setImageChanged] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(member?.image || null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(
+    member?.image ? "https://r2.lobstahbots.com/" + (member.image as any).key : null,
+  );
 
   // Track changes for save button
   const [hasChanges, setHasChanges] = useState(!member);
@@ -118,7 +118,35 @@ export default function MemberCard({
       roles.forEach((role) => formData.append("roles", role));
 
       if (selectedFile) {
-        formData.append("image", selectedFile);
+        const urlFormData = new FormData();
+        urlFormData.append("filename", "profile/" + selectedFile.name);
+        urlFormData.append("contentType", selectedFile.type);
+        const { key, url } = await getUploadURL(urlFormData);
+        const res = await fetch(url, {
+          method: "PUT",
+          headers: {
+            "Content-Type": selectedFile.type,
+          },
+          body: selectedFile,
+        });
+        if (!res.ok) {
+          alert("Failed to upload image");
+          return;
+        }
+        const dataURL = URL.createObjectURL(selectedFile);
+        const { width, height } = await new Promise<{ width: number; height: number }>((resolve) => {
+          const img = new Image();
+          img.onload = () => {
+            resolve({
+              height: img.height,
+              width: img.width,
+            });
+          };
+          img.src = dataURL;
+        });
+        formData.append("imageKey", key);
+        formData.append("imageWidth", width.toString());
+        formData.append("imageHeight", height.toString());
       }
 
       startTransition(async () => {
@@ -134,7 +162,37 @@ export default function MemberCard({
 
       // Only append image if it has changed
       if (imageChanged && selectedFile) {
-        formData.append("image", selectedFile);
+        const urlFormData = new FormData();
+        urlFormData.append("filename", "profile/" + selectedFile.name);
+        urlFormData.append("contentType", selectedFile.type);
+        const { key, url } = await getUploadURL(urlFormData);
+        const res = await fetch(url, {
+          method: "PUT",
+          headers: {
+            "Content-Type": selectedFile.type,
+          },
+          body: selectedFile,
+        });
+        if (!res.ok) {
+          alert("Failed to upload image");
+          return;
+        }
+        const dataURL = URL.createObjectURL(selectedFile);
+        const { width, height } = await new Promise<{ width: number; height: number }>(
+          (resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              resolve({
+                height: img.height,
+                width: img.width,
+              });
+            };
+            img.src = dataURL;
+          },
+        );
+        formData.append("imageKey", key);
+        formData.append("imageWidth", width.toString());
+        formData.append("imageHeight", height.toString());
       }
 
       startTransition(async () => {
