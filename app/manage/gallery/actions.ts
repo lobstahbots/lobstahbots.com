@@ -27,7 +27,7 @@ export const addImage = async (formData: FormData) => {
     alt: "gallery image",
   }).save();
   await GallerySection.findByIdAndUpdate(_id, { $push: { images: image._id } });
-  return image._id;
+  return (image._id as any).toString();
 };
 
 export const refresh = async (formData: FormData) => {

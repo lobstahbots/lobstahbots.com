@@ -14,9 +14,7 @@ export const metadata = {
 const getSections = unstable_cache(
   async (): Promise<IGallerySection[]> => {
     await dbConnect();
-    return (await GallerySection.find({}).sort({ title: -1 }).populate("images")).map((section) =>
-      JSON.parse(JSON.stringify(section.toObject())),
-    );
+    return JSON.parse(JSON.stringify(await GallerySection.find({}).sort({ title: -1 }).populate("images").lean()));
   },
   [],
   { tags: ["gallery"] },
@@ -37,7 +35,6 @@ export default async function ManageGalleryPage() {
         Manage images across all gallery sections. Upload new images with drag-and-drop or click to
         browse.
       </p>
-
       {sections.map((section) => (
         <GalleryPart key={section._id as string} section={section} />
       ))}
