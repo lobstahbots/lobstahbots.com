@@ -144,6 +144,7 @@ export default function MemberCard({ member, idx }: MemberCardProps) {
           };
           img.src = dataURL;
         });
+        URL.revokeObjectURL(dataURL);
         formData.append("imageKey", key);
         formData.append("imageWidth", width.toString());
         formData.append("imageHeight", height.toString());
@@ -190,6 +191,7 @@ export default function MemberCard({ member, idx }: MemberCardProps) {
             img.src = dataURL;
           },
         );
+        URL.revokeObjectURL(dataURL);
         formData.append("imageKey", key);
         formData.append("imageWidth", width.toString());
         formData.append("imageHeight", height.toString());

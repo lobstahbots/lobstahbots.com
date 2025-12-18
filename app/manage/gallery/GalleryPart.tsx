@@ -6,29 +6,44 @@ import { IGallerySection } from "../../../models/gallerySection";
 import { addImage, refresh } from "./actions";
 import GalleryImageCard from "./GalleryImageCard";
 import styles from "./styles.module.css";
+import { IImage } from "../../../models/image";
+import { getUploadURL } from "../actions";
 
-const addImgToWebp = async (file: File, _id: any) => {
-  const image = new Image();
-  image.src = URL.createObjectURL(file);
-  await new Promise<void>((resolve) => {
-    if (image.complete) resolve();
-    image.onload = (_) => resolve();
-  });
-  const canvas = document.createElement("canvas");
-  canvas.style.display = "none";
-  canvas.width = image.naturalWidth;
-  canvas.height = image.naturalHeight;
-  canvas.getContext("2d")?.drawImage(image, 0, 0);
-  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/webp", 0.8));
-  URL.revokeObjectURL(image.src);
-  canvas.remove();
-  if (!blob) throw new Error("Could not convert image to WebP");
-  const webp = new File([blob], file.name.replace(/\.[^/.]+$/, ".webp"), { type: "image/webp" });
+const addImgToWebp = async (selectedFile: File, section: IGallerySection) => {
   const formData = new FormData();
-  formData.append("_id", _id);
-  formData.append("image", webp);
+  formData.append("_id", section._id as string);
+  const urlFormData = new FormData();
+  urlFormData.append("filename", `gallery/${section.title}/${selectedFile.name}`);
+  urlFormData.append("contentType", selectedFile.type);
+  const { key, url } = await getUploadURL(urlFormData);
+  const res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": selectedFile.type,
+    },
+    body: selectedFile,
+  });
+  if (!res.ok) {
+    alert("Failed to upload image");
+    return;
+  }
+  const dataURL = URL.createObjectURL(selectedFile);
+  const { width, height } = await new Promise<{ width: number; height: number }>((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      resolve({
+        height: img.height,
+        width: img.width,
+      });
+    };
+    img.src = dataURL;
+  });
+  URL.revokeObjectURL(dataURL);
+  formData.append("imageKey", key);
+  formData.append("imageWidth", width.toString());
+  formData.append("imageHeight", height.toString());
   await addImage(formData);
-}
+};
 
 export default function GalleryPart({ section }: { section: IGallerySection }) {
   const [isPending, startTransition] = useTransition();
@@ -40,10 +55,10 @@ export default function GalleryPart({ section }: { section: IGallerySection }) {
       startTransition(async () => {
         await Promise.all(
           Array.from(files).map((file) => {
-            return addImgToWebp(file, section._id);
+            return addImgToWebp(file, section);
           }),
         );
-      await refresh(new FormData());
+        await refresh(new FormData());
       });
     }
   };
@@ -83,7 +98,11 @@ export default function GalleryPart({ section }: { section: IGallerySection }) {
       {section.images.length > 0 ? (
         <div className={styles.galleryGrid}>
           {section.images.map((image) => (
-            <GalleryImageCard key={image} sectionId={section._id as string} imageUrl={image} />
+            <GalleryImageCard
+              key={(image as IImage)._id as any}
+              sectionId={section._id as string}
+              imageKey={(image as IImage).key}
+            />
           ))}
         </div>
       ) : (

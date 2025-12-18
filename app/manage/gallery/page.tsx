@@ -5,6 +5,7 @@ import GalleryPart from "./GalleryPart";
 import { auth } from "../../../auth";
 import { redirect } from "next/navigation";
 import styles from "./styles.module.css";
+import "../../../models/image";
 
 export const metadata = {
   title: "Manage Gallery",
@@ -13,7 +14,7 @@ export const metadata = {
 const getSections = unstable_cache(
   async (): Promise<IGallerySection[]> => {
     await dbConnect();
-    return (await GallerySection.find({}).sort({ title: -1 })).map((section) =>
+    return (await GallerySection.find({}).sort({ title: -1 }).populate("images")).map((section) =>
       JSON.parse(JSON.stringify(section.toObject())),
     );
   },

@@ -7,17 +7,17 @@ import styles from "./styles.module.css";
 
 export default function GalleryImageCard({
   sectionId,
-  imageUrl,
+  imageKey,
 }: {
   sectionId: string;
-  imageUrl: string;
+  imageKey: string;
 }) {
   const [isPending, startTransition] = useTransition();
 
   const handleRemove = () => {
     const formData = new FormData();
     formData.append("_id", sectionId);
-    formData.append("imageUrl", imageUrl);
+    formData.append("imageKey", imageKey);
     startTransition(async () => {
       await removeImage(formData);
     });
@@ -25,7 +25,11 @@ export default function GalleryImageCard({
 
   return (
     <div className={styles.imageCard}>
-      <img src={imageUrl} alt={`Gallery image`} className={styles.galleryImage} />
+      <img
+        src={"https://r2.lobstahbots.com/" + imageKey}
+        alt={`Gallery image`}
+        className={styles.galleryImage}
+      />
       <button
         onClick={handleRemove}
         disabled={isPending}

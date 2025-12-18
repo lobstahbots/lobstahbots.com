@@ -1,18 +1,20 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from "./galleryImage.module.css";
+import { IImage } from "../models/image";
 
 interface GalleryImageProps {
-  src: string;
-  alt: string;
+  image: IImage;
   className?: string;
 }
 
-export default function GalleryImage({ src, alt, className = "" }: GalleryImageProps) {
+export default function GalleryImage({ image, className = "" }: GalleryImageProps) {
   return (
-    <img
+    <Image
       className={`responsive-image brand-border ${styles.galleryImage} ${className}`}
-      src={src}
-      alt={alt}
+      src={"https://r2.lobstahbots.com/" + image.key}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
     />
   );
 }
