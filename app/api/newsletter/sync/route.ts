@@ -9,7 +9,6 @@ import { ListBlockChildrenResponseResult } from "notion-to-md/build/types";
 import md from "notion-to-md/build/utils/md.js";
 import sharp from "sharp";
 import path from "path";
-import { list, put, del } from "@vercel/blob";
 import Newsletter from "../../../../models/newsletter";
 import dbConnect from "../../../../lib/dbConnect";
 import { NextResponse } from "next/server";
