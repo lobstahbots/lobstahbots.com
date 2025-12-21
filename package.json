@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^9.39.2",
     "eslint-plugin-next": "^0.0.0",
     "typescript-plugin-css-modules": "^5.2.0"
   },
