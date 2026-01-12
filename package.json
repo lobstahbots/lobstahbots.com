@@ -11,7 +11,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.948.0",
     "@aws-sdk/s3-request-presigner": "^3.948.0",
-    "@notionhq/client": "^5.4.0",
+    "@notionhq/client": "^5.6.0",
     "@types/node": "^24.10.1",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
