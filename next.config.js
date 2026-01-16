@@ -13,6 +13,7 @@ const nextConfig = {
       new URL("https://njju133mvndv7an0.public.blob.vercel-storage.com/**"),
       new URL("https://r2.lobstahbots.com/**"),
     ],
+    
   },
   experimental: {
     serverActions: {
