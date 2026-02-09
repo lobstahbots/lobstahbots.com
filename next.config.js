@@ -13,7 +13,6 @@ const nextConfig = {
       new URL("https://njju133mvndv7an0.public.blob.vercel-storage.com/**"),
       new URL("https://r2.lobstahbots.com/**"),
     ],
-    
   },
   experimental: {
     serverActions: {
@@ -22,6 +21,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/links",
+        destination: "",
+        permanent: false,
+      },
       {
         source: "/mm24f1", // Merrimack 2024 Flyer #1
         destination: "/mm24",
