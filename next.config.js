@@ -53,7 +53,7 @@ const nextConfig = {
       },
       {
         source: "/donate",
-        destination: "https://give.bu.edu/lobstah-bots/",
+        destination: "https://give.bu.edu/campaigns/56409/donations/new?designation_id=9300010620",
         permanent: false,
       },
     ];
