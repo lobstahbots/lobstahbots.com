@@ -15,6 +15,7 @@ export default function Profile({ member }: { member: IMember }) {
           ? "https://r2.lobstahbots.com/" + (member.image as IImage).key
           : placeholder.src}
         alt="Team Member Profile"
+        sizes="(max-width: 400px) 90vw, 20em"
       />
       <div className={styles.name}>{member.name}</div>
       {member.roles && (
