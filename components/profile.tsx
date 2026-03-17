@@ -9,12 +9,18 @@ import { IImage } from "../models/image";
 export default function Profile({ member }: { member: IMember }) {
   return (
     <div className={styles.profile}>
-      <img
+      <Image
         className={`responsive-image brand-border ${styles.profilePhoto}`}
         src={member.image && typeof member.image !== "string"
           ? "https://r2.lobstahbots.com/" + (member.image as IImage).key
           : placeholder.src}
         alt="Team Member Profile"
+        width={(member.image && typeof member.image !== "string"
+          ? (member.image as IImage).width
+          : placeholder.width)}
+        height={(member.image && typeof member.image !== "string"
+          ? (member.image as IImage).height
+          : placeholder.height)}
         sizes="(max-width: 400px) 90vw, 20em"
       />
       <div className={styles.name}>{member.name}</div>
