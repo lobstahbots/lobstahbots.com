@@ -53,6 +53,7 @@ export default async function Team() {
             src={teamPhoto}
             className={`brand-border ${styles.headerImage}`}
             alt="team photo"
+            sizes="90vw"
           />
         </div>
       </section>
