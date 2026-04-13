@@ -13,7 +13,7 @@
     "@aws-sdk/s3-request-presigner": "^3.948.0",
     "@notionhq/client": "^5.6.0",
     "@types/node": "^25.5.0",
-    "@types/react": "19.1.12",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.1.9",
     "@vercel/analytics": "^1.5.0",
     "@vercel/edge-config": "^1.4.3",
@@ -23,7 +23,7 @@
     "next": "16.1.7",
     "next-auth": "5.0.0-beta.30",
     "notion-to-md": "^3.1.9",
-    "react": "19.1.1",
+    "react": "19.2.5",
     "react-dom": "19.1.1",
     "react-feather": "^2.0.10",
     "react-markdown": "^10.1.0",
@@ -39,7 +39,7 @@
   "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
   "pnpm": {
     "overrides": {
-      "@types/react": "19.1.12",
+      "@types/react": "19.2.14",
       "@types/react-dom": "19.1.9"
     },
     "onlyBuiltDependencies": [
