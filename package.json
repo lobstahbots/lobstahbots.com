@@ -9,7 +9,7 @@
     "build:scripts": "tsc -p tsconfig-scripts.json"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.948.0",
+    "@aws-sdk/client-s3": "^3.1029.0",
     "@aws-sdk/s3-request-presigner": "^3.948.0",
     "@notionhq/client": "^5.6.0",
     "@types/node": "^25.5.0",
