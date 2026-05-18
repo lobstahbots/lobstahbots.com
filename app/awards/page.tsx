@@ -18,6 +18,7 @@ import judges2024 from "../../images/awards/judges2024.jpg";
 import placeholder from "../../images/profiles/placeholder-claw.png";
 import ee2025 from "../../images/awards/ee2025.jpg";
 import spirit2025 from "../../images/awards/spirit2025.jpg";
+import imagery2026 from "../../images/awards/imagery2026.jpg";
 import { Award, AwardProps } from "../../components/award";
 import gp2025 from "../../images/awards/gp2025.jpg";
 import styles from "./styles.module.css";
@@ -42,6 +43,7 @@ export const metadata = {
 };
 
 const awardImages = new Map<string, StaticImageData>([
+  ["Imagery Award 2026", imagery2026],
   ["Excellence in Engineering Award 2025", ee2025],
   ["Team Spirit Award 2025", spirit2025],
   ["Gracious Professionalism® Award 2025", gp2025],

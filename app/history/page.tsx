@@ -4,6 +4,7 @@ import lobstah from "../../images/history/lobstah.jpeg";
 import popcorn from "../../images/history/popcorn.jpg";
 import burrito from "../../images/history/burrito.jpg";
 import beluga from "../../images/history/beluga.jpg";
+import pufferfish from "../../images/history/pufferfish.png";
 import PageTitle from "../../components/page-title";
 import Year, { YearProps } from "../../components/historyYear";
 import PoweredByTba from "../../components/poweredByTba";
@@ -28,12 +29,18 @@ export const yearPropOverrides: Pick<
   "year" | "link" | "title" | "robotName" | "robotImage" | "showRobot"
 >[] = [
   {
+    year: 2026,
+    link: "https://www.youtube.com/watch?v=_fybREErgyM",
+    title: "Rebuilt",
+    robotName: "Pufferfish",
+    robotImage: pufferfish,
+  },
+  {
     year: 2025,
     link: "https://www.youtube.com/watch?v=YWbxcjlY9JY",
     title: "Reefscape",
     robotName: "Beluga",
     robotImage: beluga,
-    showRobot: true,
   },
   {
     year: 2024,
